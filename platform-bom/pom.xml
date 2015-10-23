@@ -43,6 +43,7 @@
         <asm.entity-module.version>1.1.0-SNAPSHOT</asm.entity-module.version>
         <asm.file-manager-module.version>1.0.0-SNAPSHOT</asm.file-manager-module.version>
         <asm.spring-batch-module.version>1.0.0-SNAPSHOT</asm.spring-batch-module.version>
+        <asm.spring-mobile-module.version>1.0.0-SNAPSHOT</asm.spring-mobile-module.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -438,6 +439,11 @@
                         <artifactId>across-web</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.foreach.across.modules</groupId>
+                <artifactId>spring-mobile-module</artifactId>
+                <version>${asm.spring-mobile-module.version}</version>
             </dependency>
 
             <!-- Contributed modules -->
