@@ -31,9 +31,9 @@
         <hikaricp.version>2.3.5</hikaricp.version>
         <asm.across-hibernate-module.version>1.0.0.RELEASE</asm.across-hibernate-module.version>
         <asm.ehcache-module.version>1.0.0-SNAPSHOT</asm.ehcache-module.version>
-        <asm.logging-module.version>1.0.0-SNAPSHOT</asm.logging-module.version>
+        <asm.logging-module.version>1.0.0.RELEASE</asm.logging-module.version>
         <asm.application-info-module.version>1.0.0-SNAPSHOT</asm.application-info-module.version>
-        <asm.debug-web-module.version>1.0.0-SNAPSHOT</asm.debug-web-module.version>
+        <asm.debug-web-module.version>1.0.0.RELEASE</asm.debug-web-module.version>
         <asm.admin-web-module.version>1.0.0-SNAPSHOT</asm.admin-web-module.version>
         <asm.spring-security-module.version>1.0.0-SNAPSHOT</asm.spring-security-module.version>
         <asm.user-module.version>1.0.0-SNAPSHOT</asm.user-module.version>
