@@ -24,7 +24,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <across.version>1.1.1-SNAPSHOT</across.version>
+        <across.version>1.1.1.RELEASE</across.version>
         <spring.platform.version>1.1.1.RELEASE</spring.platform.version>
         <foreach.common.version>0.12</foreach.common.version>
         <querydsl.version>3.5.1</querydsl.version>
