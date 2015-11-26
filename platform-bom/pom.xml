@@ -58,14 +58,14 @@
         <asm.admin-web-module.version>1.2.0-SNAPSHOT</asm.admin-web-module.version>
         <asm.spring-security-module.version>1.1.0.RELEASE</asm.spring-security-module.version>
         <asm.user-module.version>1.2.0-SNAPSHOT</asm.user-module.version>
-        <asm.properties-module.version>1.1.0-SNAPSHOT</asm.properties-module.version>
+        <asm.properties-module.version>1.1.0.RELEASE</asm.properties-module.version>
         <asm.spring-security-acl-module.version>1.2.0-SNAPSHOT</asm.spring-security-acl-module.version>
         <asm.oauth2-module.version>1.2.0-SNAPSHOT</asm.oauth2-module.version>
         <asm.entity-module.version>1.2.0-SNAPSHOT</asm.entity-module.version>
         <asm.file-manager-module.version>1.0.0.RELEASE</asm.file-manager-module.version>
         <asm.spring-batch-module.version>1.0.0.RELEASE</asm.spring-batch-module.version>
         <asm.bootstrap-ui-module.version>1.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
-        <asm.spring-mobile-module.version>1.0.0-SNAPSHOT</asm.spring-mobile-module.version>
+        <asm.spring-mobile-module.version>1.0.0.RELEASE</asm.spring-mobile-module.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
