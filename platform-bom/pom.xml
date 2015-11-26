@@ -20,7 +20,7 @@
 
     <groupId>com.foreach.across</groupId>
     <artifactId>platform-bom</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.1.1.RELEASE</version>
     <packaging>pom</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
