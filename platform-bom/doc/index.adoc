@@ -1,0 +1,137 @@
+= Across Platform BOM
+Arne Vandamme
+1.1.2-SNAPSHOT
+:toc: left
+:sectanchors:
+:across-platform-version: 1.1.2-SNAPSHOT
+:spring-platform-version: 1.1.1.RELEASE
+:spring-platform-url: http://docs.spring.io/platform/docs/1.1.1.RELEASE/reference/htmlsingle/#appendix-dependency-versions
+:across-version: 1.1.2-SNAPSHOT
+:foreach-common-version: 0.12
+:commons-collections-version: 4.1
+:liquibase-version: 3.1.0
+:querydsl-version: 3.5.1
+:hikaricp-version: 2.3.12
+:mbassador-version: 1.2.0
+:hibernate-version: 4.2.14.Final
+:hibernate-validator-version: 4.3.2.Final
+:jboss-logging-version: 3.1.3.GA
+:validation-api-version: 1.0.0.GA
+:cglib-version: 3.1
+:mysql-connector-version: 5.1.31
+:ojdbc6-version: 11.2.0
+:jtds-version: 1.3.1
+:asm-across-hibernate-module-version: 1.1.0.RELEASE
+:asm-ehcache-module-version: 1.0.0.RELEASE
+:asm-logging-module-version: 1.0.0.RELEASE
+:asm-application-info-module-version: 1.0.0.RELEASE
+:asm-debug-web-module-version: 1.0.0.RELEASE
+:asm-admin-web-module-version: 1.1.0.RELEASE
+:asm-spring-security-module-version: 1.1.0.RELEASE
+:asm-user-module-version: 1.1.0.RELEASE
+:asm-properties-module-version: 1.1.0.RELEASE
+:asm-spring-security-acl-module-version: 1.1.0.RELEASE
+:asm-oauth2-module-version: 1.1.0.RELEASE
+:asm-entity-module-version: 1.1.0.RELEASE
+:asm-file-manager-module-version: 1.0.0.RELEASE
+:asm-spring-batch-module-version: 1.0.0.RELEASE
+:asm-spring-mobile-module-version: 1.0.0.RELEASE
+
+--
+Copyright (C) 2014-2015 +
+[small]#Copies of this document may be made for your own use and for distribution to others, provided that you do not charge any fee for such copies and further provided that each copy contains this Copyright Notice, whether distributed in print or electronically.#
+--
+
+[abstract]
+== About
+The Across Platform BOM is a so called *bill of material* POM that provides a curated list of Across related dependencies, including all standard modules.
+Using this BOM pom is advised as it helps you to avoid dependency conflicts and gives you the confidence that dependency versions work together correctly.
+
+== Using the Platform BOM
+Using the BOM can be done by including it in the `dependencyManagement` section of your Maven build file.
+Dependencies known in the platform BOM do not need a version element to be specified.
+If a version is omitted, the version from the BOM will be used.
+
+[source,xml,indent=0]
+[subs="verbatim,quotes,attributes"]
+----
+<!-- Include the platform BOM with scope import -->
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.foreach.across</groupId>
+            <artifactId>platform-bom</artifactId>
+            <version>{across-platform-version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+<!-- Specific dependencies do not need a version -->
+<dependencies>
+    <dependency>
+        <groupId>across</groupId>
+        <artifactId>across-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>across-standard-modules</groupId>
+        <artifactId>debug-web</artifactId>
+    </dependency>
+</dependencies>
+----
+
+== Dependency versions
+Across Platform BOM {across-platform-version} extends the *Spring IO Platform BOM {spring-platform-version}*, the base list of dependencies can be found in the {spring-platform-url}[Spring IO Platform documentation].
+Additionally Across platform BOM defines and overrides the following dependencies:
+
+|===
+
+| Group | Artifact | Version
+| org.liquibase | liquibase.core | {liquibase-version}
+| com.mattbertolini | liquibase-slf4j | 1.2.1
+| org.apache.commons | commons-collections4 | {commons-collections-version}
+| net.engio | mbassador | {mbassador-version}
+
+| com.mysema.querydsl | querydsl-core | {querydsl-version}
+| com.mysema.querydsl | querydsl-apt | {querydsl-version}
+| com.mysema.querydsl | querydsl-jpa | {querydsl-version}
+
+| org.hibernate | hibernate-core | {hibernate-version}
+| org.hibernate | hibernate-entitymanager | {hibernate-version}
+| org.hibernate | hibernate-validator | {hibernate-validator-version}
+| org.jboss.logging | jboss-logging | {jboss-logging-version}
+
+| javax.validator | validation-api | {validation-api-version}
+| cglib | cglib | {cglib-version}
+
+| mysql | mysql-connector-java | {mysql-connector-version}
+| com.oracle | ojdbc6 | {ojdbc6-version}
+| net.sourceforge.jtds | jtds | {jtds-version}
+| com.zaxxer | HikariCP-java6 | {hikaricp-version}
+
+| com.foreach.libs | common-concurrent | {foreach-common-version}
+| com.foreach.libs | common-spring | {foreach-common-version}
+| com.foreach.libs | common-web | {foreach-common-version}
+| com.foreach.libs | common-test | {foreach-common-version}
+
+| com.foreach.across | across-core | {across-version}
+| com.foreach.across | across-web | {across-version}
+| com.foreach.across | across-test | {across-version}
+| com.foreach.across.modules | across-hibernate-module | {asm-across-hibernate-module-version}
+| com.foreach.across.modules | ehcache-module | {asm-ehcache-module-version}
+| com.foreach.across.modules | debug-web-module | {asm-debug-web-module-version}
+| com.foreach.across.modules | admin-web-module | {asm-admin-web-module-version}
+| com.foreach.across.modules | spring-security-module | {asm-spring-security-module-version}
+| com.foreach.across.modules | spring-security-acl-module | {asm-spring-security-acl-module-version}
+| com.foreach.across.modules | oauth2-module | {asm-oauth2-module-version}
+| com.foreach.across.modules | properties-module | {asm-properties-module-version}
+| com.foreach.across.modules | entity-module | {asm-entity-module-version}
+| com.foreach.across.modules | user-module | {asm-user-module-version}
+| com.foreach.across.modules | application-info-module | {asm-application-info-module-version}
+| com.foreach.across.modules | logging-module | {asm-logging-module-version}
+| com.foreach.across.modules | file-manager-module | {asm-file-manager-module-version}
+| com.foreach.across.modules | spring-batch-module | {asm-spring-batch-module-version}
+| com.foreach.across.modules | spring-mobile-module | {asm-spring-mobile-module-version}
+
+|===
