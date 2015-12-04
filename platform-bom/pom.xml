@@ -20,7 +20,7 @@
 
     <groupId>com.foreach.across</groupId>
     <artifactId>platform-bom</artifactId>
-    <version>1.1.1.RELEASE</version>
+    <version>1.1.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
@@ -45,7 +45,7 @@
     </developers>
 
     <properties>
-        <across.version>1.1.1.RELEASE</across.version>
+        <across.version>1.1.2-SNAPSHOT</across.version>
         <spring.platform.version>1.1.1.RELEASE</spring.platform.version>
         <foreach.common.version>0.12</foreach.common.version>
         <querydsl.version>3.5.1</querydsl.version>
