@@ -20,7 +20,7 @@
 
     <groupId>com.foreach.across</groupId>
     <artifactId>platform-bom</artifactId>
-    <version>1.2.0.FREEZE</version>
+    <version>1.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
@@ -45,7 +45,7 @@
     </developers>
 
     <properties>
-        <across.version>1.2.0.FREEZE</across.version>
+        <across.version>1.2.0-SNAPSHOT</across.version>
         <spring.platform.version>1.1.1.RELEASE</spring.platform.version>
         <foreach.common.version>1.0</foreach.common.version>
         <querydsl.version>3.5.1</querydsl.version>
@@ -55,16 +55,16 @@
         <asm.logging-module.version>1.0.0.RELEASE</asm.logging-module.version>
         <asm.application-info-module.version>1.0.0.RELEASE</asm.application-info-module.version>
         <asm.debug-web-module.version>1.0.0.RELEASE</asm.debug-web-module.version>
-        <asm.admin-web-module.version>1.2.0.FREEZE</asm.admin-web-module.version>
+        <asm.admin-web-module.version>1.2.0-SNAPSHOT</asm.admin-web-module.version>
         <asm.spring-security-module.version>1.1.0.RELEASE</asm.spring-security-module.version>
-        <asm.user-module.version>1.2.0.FREEZE</asm.user-module.version>
+        <asm.user-module.version>1.2.0-SNAPSHOT</asm.user-module.version>
         <asm.properties-module.version>1.1.0.RELEASE</asm.properties-module.version>
-        <asm.spring-security-acl-module.version>1.2.0.FREEZE</asm.spring-security-acl-module.version>
-        <asm.oauth2-module.version>1.2.0.FREEZE</asm.oauth2-module.version>
-        <asm.entity-module.version>1.2.0.FREEZE</asm.entity-module.version>
+        <asm.spring-security-acl-module.version>1.2.0-SNAPSHOT</asm.spring-security-acl-module.version>
+        <asm.oauth2-module.version>1.2.0-SNAPSHOT</asm.oauth2-module.version>
+        <asm.entity-module.version>1.2.0-SNAPSHOT</asm.entity-module.version>
         <asm.file-manager-module.version>1.0.0.RELEASE</asm.file-manager-module.version>
         <asm.spring-batch-module.version>1.0.0.RELEASE</asm.spring-batch-module.version>
-        <asm.bootstrap-ui-module.version>1.0.0.FREEZE</asm.bootstrap-ui-module.version>
+        <asm.bootstrap-ui-module.version>1.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
         <asm.spring-mobile-module.version>1.0.0.RELEASE</asm.spring-mobile-module.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
