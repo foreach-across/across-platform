@@ -50,11 +50,11 @@
         <foreach.common.version>1.0</foreach.common.version>
         <querydsl.version>3.5.1</querydsl.version>
         <hikaricp.version>2.3.12</hikaricp.version>
-        <asm.across-hibernate-module.version>1.1.0.RELEASE</asm.across-hibernate-module.version>
+        <asm.across-hibernate-module.version>1.1.1-SNAPSHOT</asm.across-hibernate-module.version>
         <asm.ehcache-module.version>1.0.0.RELEASE</asm.ehcache-module.version>
         <asm.logging-module.version>1.0.0.RELEASE</asm.logging-module.version>
-        <asm.application-info-module.version>1.0.0.RELEASE</asm.application-info-module.version>
-        <asm.debug-web-module.version>1.0.0.RELEASE</asm.debug-web-module.version>
+        <asm.application-info-module.version>1.0.1-SNAPSHOT</asm.application-info-module.version>
+        <asm.debug-web-module.version>1.0.1-SNAPSHOT</asm.debug-web-module.version>
         <asm.admin-web-module.version>1.2.0-SNAPSHOT</asm.admin-web-module.version>
         <asm.spring-security-module.version>1.1.0.RELEASE</asm.spring-security-module.version>
         <asm.user-module.version>1.2.0-SNAPSHOT</asm.user-module.version>
