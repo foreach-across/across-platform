@@ -29,6 +29,7 @@
 
 	<modules>
 		<module>platform-bom</module>
+		<module>platform-bom-test</module>
 	</modules>
 
 </project>
