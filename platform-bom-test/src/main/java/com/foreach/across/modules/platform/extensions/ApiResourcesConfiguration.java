@@ -1,11 +1,12 @@
-package com.foreach.across.modules.platform.application.config;
+package com.foreach.across.modules.platform.extensions;
 
-import org.springframework.context.annotation.Configuration;
+import com.foreach.across.core.annotations.ModuleConfiguration;
+import com.foreach.across.modules.oauth2.OAuth2Module;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 
-@Configuration
+@ModuleConfiguration(OAuth2Module.NAME)
 public class ApiResourcesConfiguration extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
@@ -14,8 +15,15 @@ public class ApiResourcesConfiguration extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.antMatcher("/api/**")
-                .authorizeRequests().anyRequest().authenticated();
+        http
+                .authorizeRequests()
+                .antMatchers(
+                        "/api/**",
+                        "/oauth/user_token").authenticated()
+                .and()
+                .headers().cacheControl().xssProtection()
+                .and()
+                .anonymous();
     }
 }
 
