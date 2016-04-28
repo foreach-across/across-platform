@@ -1,4 +1,4 @@
-package com.foreach.across.modules.platform.test;
+package com.foreach.across.modules.it.platform;
 
 import com.foreach.across.modules.platform.PlatformTestApplication;
 import com.foreach.across.modules.platform.extensions.DebugWebSecurityConfiguration;
