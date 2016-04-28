@@ -20,7 +20,7 @@
 
     <groupId>com.foreach.across</groupId>
     <artifactId>platform-bom-test</artifactId>
-    <version>1.1.2-SNAPSHOT</version>
+    <version>1.2.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
@@ -118,7 +118,7 @@
             <dependency>
                 <groupId>com.foreach.across</groupId>
                 <artifactId>platform-bom</artifactId>
-                <version>1.1.2-SNAPSHOT</version>
+                <version>1.2.0-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -188,6 +188,10 @@
             <artifactId>logging-module</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.foreach.across</groupId>
+            <artifactId>across-test</artifactId>
+        </dependency>
         <dependency>
             <!-- jsoup HTML parser library @ http://jsoup.org/ -->
             <groupId>org.jsoup</groupId>
