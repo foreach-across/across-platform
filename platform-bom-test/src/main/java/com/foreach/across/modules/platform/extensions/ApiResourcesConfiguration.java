@@ -21,7 +21,7 @@ public class ApiResourcesConfiguration extends ResourceServerConfigurerAdapter {
                         "/api/**",
                         "/oauth/user_token").authenticated()
                 .and()
-                .headers().cacheControl().and().xssProtection().and()
+                .headers().cacheControl().xssProtection()
                 .and()
                 .anonymous();
     }
