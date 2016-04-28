@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/platform.iml" filepath="$PROJECT_DIR$/platform.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-bom/platform-bom.iml" filepath="$PROJECT_DIR$/platform-bom/platform-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-bom-test/platform-bom-test.iml" filepath="$PROJECT_DIR$/platform-bom-test/platform-bom-test.iml" />
     </modules>
   </component>
 </project>
