@@ -62,7 +62,7 @@
           <element id="library" level="project" name="Maven: com.mysema.commons:mysema-commons-lang:0.2.4" />
           <element id="library" level="project" name="Maven: com.infradna.tool:bridge-method-annotation:1.13" />
           <element id="library" level="project" name="Maven: com.foreach.across.modules:properties-module:1.2.0-SNAPSHOT" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-security-module:1.1.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-security-module:1.2.0-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.0.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.0.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.0.3.RELEASE" />
