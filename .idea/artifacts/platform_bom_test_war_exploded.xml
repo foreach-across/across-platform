@@ -12,7 +12,7 @@
           <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:7.0.67" />
           <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-logging-juli:7.0.67" />
           <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:7.0.67" />
-          <element id="library" level="project" name="Maven: com.foreach.across:across-core:1.1.2-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-core:1.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:1.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.14" />
@@ -32,7 +32,7 @@
           <element id="library" level="project" name="Maven: org.liquibase:liquibase-core:3.1.0" />
           <element id="library" level="project" name="Maven: com.mattbertolini:liquibase-slf4j:1.2.1" />
           <element id="library" level="project" name="Maven: net.engio:mbassador:1.2.0" />
-          <element id="library" level="project" name="Maven: com.foreach.across:across-web:1.1.2-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-web:1.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.18.1-GA" />
           <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:2.1.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:2.1.4.RELEASE" />
@@ -110,7 +110,7 @@
           <element id="library" level="project" name="Maven: org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE" />
           <element id="library" level="project" name="Maven: com.foreach.across.modules:admin-web-module:1.1.1-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.thymeleaf.extras:thymeleaf-extras-springsecurity3:2.1.2.RELEASE" />
-          <element id="library" level="project" name="Maven: com.foreach.across:across-test:1.1.2-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-test:1.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP-java6:2.3.12" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:4.1.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:2.3.3" />
