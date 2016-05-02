@@ -14,6 +14,7 @@ import com.foreach.across.modules.spring.mobile.SpringMobileModule;
 import com.foreach.across.modules.spring.security.acl.SpringSecurityAclModule;
 import com.foreach.across.modules.user.UserModule;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.ConfigurableEnvironment;
@@ -31,7 +32,7 @@ import javax.sql.DataSource;
         ApplicationInfoModule.NAME, SpringBatchModule.NAME, FileManagerModule.NAME, EntityModule.NAME, AdminWebModule.NAME,
         SpringSecurityAclModule.NAME
 })
-public class PlatformTestApplication {
+public class PlatformTestApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(PlatformTestApplication.class);
