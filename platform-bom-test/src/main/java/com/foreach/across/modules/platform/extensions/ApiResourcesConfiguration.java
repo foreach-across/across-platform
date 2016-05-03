@@ -7,23 +7,24 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 
 @ModuleConfiguration(OAuth2Module.NAME)
-public class ApiResourcesConfiguration extends ResourceServerConfigurerAdapter {
-    @Override
-    public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-        resources.resourceId("platform-test-app");
-    }
+public class ApiResourcesConfiguration extends ResourceServerConfigurerAdapter
+{
+	@Override
+	public void configure( ResourceServerSecurityConfigurer resources ) throws Exception {
+		resources.resourceId( "platform-test-app" );
+	}
 
-    @Override
-    public void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                .antMatchers(
-                        "/api/**",
-                        "/oauth/user_token").authenticated()
-                .and()
-                .headers().cacheControl().xssProtection()
-                .and()
-                .anonymous();
-    }
+	@Override
+	public void configure( HttpSecurity http ) throws Exception {
+		http
+				.authorizeRequests()
+				.antMatchers(
+						"/api/**",
+						"/oauth/user_token" ).authenticated()
+				.and()
+				.headers().cacheControl().xssProtection()
+				.and()
+				.anonymous();
+	}
 }
 
