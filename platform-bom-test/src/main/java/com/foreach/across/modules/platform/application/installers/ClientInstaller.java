@@ -19,41 +19,42 @@ import java.util.HashSet;
  * @author Marc Vanbrabant
  */
 @Installer(
-        description = "Installs a dummy client id.",
-        version = 1,
-        phase = InstallerPhase.AfterModuleBootstrap
+		description = "Installs a dummy client id.",
+		version = 1,
+		phase = InstallerPhase.AfterModuleBootstrap
 )
-public class ClientInstaller extends AcrossLiquibaseInstaller {
+public class ClientInstaller extends AcrossLiquibaseInstaller
+{
 
-    @Autowired
-    private OAuth2Service oAuth2Service;
-    @Autowired
-    private RoleService roleService;
+	@Autowired
+	private OAuth2Service oAuth2Service;
+	@Autowired
+	private RoleService roleService;
 
-    @Override
-    public void install() throws LiquibaseException {
-        OAuth2Scope oAuth2Scope = new OAuth2Scope();
-        oAuth2Scope.setName("full");
-        oAuth2Service.saveScope(oAuth2Scope);
+	@Override
+	public void install() throws LiquibaseException {
+		OAuth2Scope oAuth2Scope = new OAuth2Scope();
+		oAuth2Scope.setName( "full" );
+		oAuth2Service.saveScope( oAuth2Scope );
 
-        OAuth2Client client = new OAuth2Client();
-        client.setClientId("client.com");
-        client.setClientSecret("t3st");
-        client.setSecretRequired(true);
-        HashSet<String> trustedGrantTypes = new HashSet<>();
-        trustedGrantTypes.add("client_credentials");
-        trustedGrantTypes.add("password");
-        trustedGrantTypes.add("refresh_token");
-        client.getAuthorizedGrantTypes().addAll(trustedGrantTypes);
-        client.getResourceIds().addAll(Collections.singleton("platform-test-app"));
-        Role role = roleService.getRole("ROLE_ADMIN");
-        client.getRoles().addAll(Collections.singleton(role));
+		OAuth2Client client = new OAuth2Client();
+		client.setClientId( "client.com" );
+		client.setClientSecret( "t3st" );
+		client.setSecretRequired( true );
+		HashSet<String> trustedGrantTypes = new HashSet<>();
+		trustedGrantTypes.add( "client_credentials" );
+		trustedGrantTypes.add( "password" );
+		trustedGrantTypes.add( "refresh_token" );
+		client.getAuthorizedGrantTypes().addAll( trustedGrantTypes );
+		client.getResourceIds().addAll( Collections.singleton( "platform-test-app" ) );
+		Role role = roleService.getRole( "ROLE_ADMIN" );
+		client.getRoles().addAll( Collections.singleton( role ) );
 
-        OAuth2ClientScope clientScope = new OAuth2ClientScope();
-        clientScope.setAutoApprove(false);
-        clientScope.setOAuth2Scope(oAuth2Scope);
-        clientScope.setOAuth2Client(client);
+		OAuth2ClientScope clientScope = new OAuth2ClientScope();
+		clientScope.setAutoApprove( false );
+		clientScope.setOAuth2Scope( oAuth2Scope );
+		clientScope.setOAuth2Client( client );
 
-        oAuth2Service.saveClient(client);
-    }
+		oAuth2Service.saveClient( client );
+	}
 }

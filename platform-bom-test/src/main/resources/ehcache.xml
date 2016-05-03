@@ -3,11 +3,11 @@
          xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
          updateCheck="false" monitoring="autodetect" dynamicConfig="false">
 
-    <cache name="securityAclCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
-           memoryStoreEvictionPolicy="LRU">
-        <cacheEventListenerFactory
-                class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
-                properties="replicateAsynchronously=true, replicatePuts=false, replicateUpdates=false,
+	<cache name="securityAclCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
+	       memoryStoreEvictionPolicy="LRU">
+		<cacheEventListenerFactory
+				class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
+				properties="replicateAsynchronously=true, replicatePuts=false, replicateUpdates=false,
 replicateUpdatesViaCopy=false, replicateRemovals=true "/>
-    </cache>
+	</cache>
 </ehcache>

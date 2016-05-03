@@ -27,25 +27,28 @@ import javax.sql.DataSource;
 
 @Configuration
 @AcrossApplication(modules = {
-        DebugWebModule.NAME, EhcacheModule.NAME, UserModule.NAME, LoggingModule.NAME, SpringMobileModule.NAME,
-        ApplicationInfoModule.NAME, SpringBatchModule.NAME, FileManagerModule.NAME, EntityModule.NAME, AdminWebModule.NAME,
-        SpringSecurityAclModule.NAME
+		DebugWebModule.NAME, EhcacheModule.NAME, UserModule.NAME, LoggingModule.NAME, SpringMobileModule.NAME,
+		ApplicationInfoModule.NAME, SpringBatchModule.NAME, FileManagerModule.NAME, EntityModule.NAME,
+		AdminWebModule.NAME,
+		SpringSecurityAclModule.NAME
 })
-public class PlatformTestApplication {
+public class PlatformTestApplication
+{
 
-    public static void main(String[] args) {
-        SpringApplication.run(PlatformTestApplication.class);
-    }
+	public static void main( String[] args ) {
+		SpringApplication.run( PlatformTestApplication.class );
+	}
 
-    @Bean
-    public DataSource acrossDataSource(ConfigurableEnvironment configurableEnvironment) {
-        return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.HSQL).build();
-    }
+	@Bean
+	public DataSource acrossDataSource( ConfigurableEnvironment configurableEnvironment ) {
+		return new EmbeddedDatabaseBuilder().setType( EmbeddedDatabaseType.HSQL ).build();
+	}
 
-    @Bean
-    public OAuth2Module oauth2module() {
-        OAuth2Module oauth2module = new OAuth2Module();
-        oauth2module.expose(AuthorizationServerTokenServices.class, AuthorizationServerEndpointsConfiguration.class, TokenStore.class);
-        return oauth2module;
-    }
+	@Bean
+	public OAuth2Module oauth2module() {
+		OAuth2Module oauth2module = new OAuth2Module();
+		oauth2module.expose( AuthorizationServerTokenServices.class, AuthorizationServerEndpointsConfiguration.class,
+		                     TokenStore.class );
+		return oauth2module;
+	}
 }

@@ -10,9 +10,10 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
  * @author Marc Vanbrabant
  */
 @ModuleConfiguration(OAuth2Module.NAME)
-public class TokenEndpointsConfigurer extends AuthorizationServerConfigurerAdapter {
-    @Override
-    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        endpoints.allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);
-    }
+public class TokenEndpointsConfigurer extends AuthorizationServerConfigurerAdapter
+{
+	@Override
+	public void configure( AuthorizationServerEndpointsConfigurer endpoints ) throws Exception {
+		endpoints.allowedTokenEndpointRequestMethods( HttpMethod.GET, HttpMethod.POST );
+	}
 }
