@@ -189,6 +189,11 @@
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>logging-module</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.foreach.across</groupId>
+			<artifactId>across-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 
 		<dependency>
 			<!-- jsoup HTML parser library @ http://jsoup.org/ -->
