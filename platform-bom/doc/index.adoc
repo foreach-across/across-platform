@@ -6,7 +6,7 @@ Arne Vandamme
 :across-platform-version: 1.1.2-SNAPSHOT
 :spring-platform-version: 1.1.1.RELEASE
 :spring-platform-url: http://docs.spring.io/platform/docs/1.1.5.RELEASE/reference/htmlsingle/#appendix-dependency-versions
-:across-version: 1.1.2-SNAPSHOT
+:across-version: 1.1.2.RELEASE
 :foreach-common-version: 1.0
 :commons-collections-version: 4.1
 :liquibase-version: 3.1.0
@@ -25,7 +25,7 @@ Arne Vandamme
 :asm-ehcache-module-version: 1.0.0.RELEASE
 :asm-logging-module-version: 1.0.0.RELEASE
 :asm-application-info-module-version: 1.0.0.RELEASE
-:asm-debug-web-module-version: 1.0.0.RELEASE
+:asm-debug-web-module-version: 1.0.1.RELEASE
 :asm-admin-web-module-version: 1.1.0.RELEASE
 :asm-spring-security-module-version: 1.1.0.RELEASE
 :asm-user-module-version: 1.1.0.RELEASE
