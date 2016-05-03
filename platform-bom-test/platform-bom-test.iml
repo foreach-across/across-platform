@@ -116,7 +116,7 @@
     <orderEntry type="library" name="Maven: com.foreach.across.modules:spring-security-acl-module:1.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-acl:3.2.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
-    <orderEntry type="library" name="Maven: com.foreach.across.modules:application-info-module:1.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.foreach.across.modules:application-info-module:1.0.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.foreach.libs:common-spring:1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.1" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1.1" level="project" />

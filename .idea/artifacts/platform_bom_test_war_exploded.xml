@@ -86,7 +86,7 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-security-acl-module:1.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:3.2.9.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:application-info-module:1.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:application-info-module:1.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: com.foreach.libs:common-spring:1.0" />
           <element id="library" level="project" name="Maven: javax.mail:mail:1.4.1" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1.1" />
