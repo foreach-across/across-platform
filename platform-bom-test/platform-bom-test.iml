@@ -135,7 +135,7 @@
     <orderEntry type="library" name="Maven: com.foreach.across.modules:user-module:1.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: javax.el:javax.el-api:2.2.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.1" level="project" />
-    <orderEntry type="library" name="Maven: com.foreach.across.modules:spring-mobile-module:1.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.foreach.across.modules:spring-mobile-module:1.0.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.foreach.across.modules:admin-web-module:1.1.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.thymeleaf.extras:thymeleaf-extras-springsecurity3:2.1.2.RELEASE" level="project" />
