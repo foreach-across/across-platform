@@ -59,7 +59,7 @@
 		<asm.user-module.version>1.1.0.RELEASE</asm.user-module.version>
 		<asm.properties-module.version>1.1.0.RELEASE</asm.properties-module.version>
 		<asm.spring-security-acl-module.version>1.1.0.RELEASE</asm.spring-security-acl-module.version>
-		<asm.oauth2-module.version>1.1.1-SNAPSHOT</asm.oauth2-module.version>
+		<asm.oauth2-module.version>1.1.1.RELEASE</asm.oauth2-module.version>
 		<asm.entity-module.version>1.1.0.RELEASE</asm.entity-module.version>
 		<asm.file-manager-module.version>1.0.0.RELEASE</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.0.RELEASE</asm.spring-batch-module.version>
