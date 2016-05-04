@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="platform-bom-test:war">
     <output-path>$PROJECT_DIR$/platform-bom-test/target</output-path>
-    <root id="archive" name="platform-bom-test-1.1.2.RELEASE.war">
+    <root id="archive" name="platform-bom-test-1.2.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="platform-bom-test:war exploded" />
     </root>
   </artifact>
