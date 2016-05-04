@@ -50,9 +50,9 @@
         <querydsl.version>3.5.1</querydsl.version>
         <hikaricp.version>2.3.12</hikaricp.version>
 		<asm.across-hibernate-module.version>1.2.0-SNAPSHOT</asm.across-hibernate-module.version>
-		<asm.ehcache-module.version>1.0.1-SNAPSHOT</asm.ehcache-module.version>
-		<asm.logging-module.version>1.0.1-SNAPSHOT</asm.logging-module.version>
-        <asm.application-info-module.version>1.0.1-SNAPSHOT</asm.application-info-module.version>
+		<asm.ehcache-module.version>1.0.0.RELEASE</asm.ehcache-module.version>
+		<asm.logging-module.version>1.0.1.RELEASE</asm.logging-module.version>
+        <asm.application-info-module.version>1.0.1.RELEASE</asm.application-info-module.version>
         <asm.debug-web-module.version>1.0.1.RELEASE</asm.debug-web-module.version>
         <asm.admin-web-module.version>1.2.0-SNAPSHOT</asm.admin-web-module.version>
 		<asm.spring-security-module.version>1.2.0-SNAPSHOT</asm.spring-security-module.version>
@@ -61,10 +61,10 @@
         <asm.spring-security-acl-module.version>1.2.0-SNAPSHOT</asm.spring-security-acl-module.version>
         <asm.oauth2-module.version>1.2.0-SNAPSHOT</asm.oauth2-module.version>
         <asm.entity-module.version>1.2.0-SNAPSHOT</asm.entity-module.version>
-		<asm.file-manager-module.version>1.0.1-SNAPSHOT</asm.file-manager-module.version>
-		<asm.spring-batch-module.version>1.0.1-SNAPSHOT</asm.spring-batch-module.version>
+		<asm.file-manager-module.version>1.0.0.RELEASE</asm.file-manager-module.version>
+		<asm.spring-batch-module.version>1.0.0.RELEASE</asm.spring-batch-module.version>
         <asm.bootstrap-ui-module.version>1.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
-        <asm.spring-mobile-module.version>1.0.1-SNAPSHOT</asm.spring-mobile-module.version>
+        <asm.spring-mobile-module.version>1.0.1.RELEASE</asm.spring-mobile-module.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -375,6 +375,26 @@
 						<phase>prepare-package</phase>
 						<goals>
 							<goal>process-asciidoc</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.5</version>
+				<inherited>false</inherited>
+				<configuration>
+
+					<finalName>${project.artifactId}</finalName>
+					<descriptors>
+						<descriptor>site.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<goals>
+							<goal>single</goal>
 						</goals>
 					</execution>
 				</executions>
