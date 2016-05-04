@@ -1,10 +1,10 @@
 = Across Platform BOM
 Arne Vandamme
-1.1.2-SNAPSHOT
+1.1.2.RELEASE
 :toc: left
 :sectanchors:
-:across-platform-version: 1.1.2-SNAPSHOT
-:spring-platform-version: 1.1.1.RELEASE
+:across-platform-version: 1.1.2.RELEASE
+:spring-platform-version: 1.1.5.RELEASE
 :spring-platform-url: http://docs.spring.io/platform/docs/1.1.5.RELEASE/reference/htmlsingle/#appendix-dependency-versions
 :across-version: 1.1.2.RELEASE
 :foreach-common-version: 1.0
@@ -23,7 +23,7 @@ Arne Vandamme
 :jtds-version: 1.3.1
 :asm-across-hibernate-module-version: 1.1.1.RELEASE
 :asm-ehcache-module-version: 1.0.0.RELEASE
-:asm-logging-module-version: 1.0.0.RELEASE
+:asm-logging-module-version: 1.0.1.RELEASE
 :asm-application-info-module-version: 1.0.1.RELEASE
 :asm-debug-web-module-version: 1.0.1.RELEASE
 :asm-admin-web-module-version: 1.1.1.RELEASE
@@ -82,7 +82,8 @@ If a version is omitted, the version from the BOM will be used.
 ----
 
 == Dependency versions
-Across Platform BOM {across-platform-version} extends the *Spring IO Platform BOM {spring-platform-version}*, the base list of dependencies can be found in the {spring-platform-url}[Spring IO Platform documentation].
+Across Platform BOM {across-platform-version} extends the *Spring IO Platform BOM {spring-platform-version}*.
+The base list of dependencies can be found in the {spring-platform-url}[Spring IO Platform documentation].
 Additionally Across platform BOM defines and overrides the following dependencies:
 
 |===
