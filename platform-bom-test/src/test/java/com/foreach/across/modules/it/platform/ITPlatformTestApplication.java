@@ -23,8 +23,7 @@ import java.net.HttpURLConnection;
 import java.util.LinkedHashMap;
 import java.util.UUID;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 /**
  * @author Marc Vanbrabant
@@ -153,9 +152,21 @@ public class ITPlatformTestApplication
 		assertEquals( "admin@localhost", apiRestResponse.getBody().get( "email" ) );
 	}
 
-	private String url( String relativePath ) {
-		return "http://localhost:" + port + relativePath;
-	}
+    @Test
+    public void testThatSpringSecurityDialectLoads() {
+        RestTemplate restTemplate = restTemplate(false);
+
+        ResponseEntity<String> loginPage = restTemplate.getForEntity(url("/admin/login"), String.class);
+        Document doc = Jsoup.parse(loginPage.getBody());
+        assertEquals(1, doc.select("input[name=username]").size());
+        assertEquals(1, doc.select("input[name=password]").size());
+        assertTrue(!loginPage.getBody().contains("sec:authorize"));
+        assertTrue(!loginPage.getBody().contains("isAuthenticated()"));
+    }
+
+    private String url(String relativePath) {
+        return "http://localhost:" + port + relativePath;
+    }
 
 	private RestTemplate restTemplate() {
 		return restTemplate( false );

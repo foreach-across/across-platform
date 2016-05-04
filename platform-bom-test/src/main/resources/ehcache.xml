@@ -3,11 +3,26 @@
          xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
          updateCheck="false" monitoring="autodetect" dynamicConfig="false">
 
-	<cache name="securityAclCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
-	       memoryStoreEvictionPolicy="LRU">
-		<cacheEventListenerFactory
-				class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
-				properties="replicateAsynchronously=true, replicatePuts=false, replicateUpdates=false,
-replicateUpdatesViaCopy=false, replicateRemovals=true "/>
-	</cache>
+    <cache name="securityAclCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+    <cache name="oauth2ClientCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+    <cache name="oauth2AuthenticationByAccessTokenCache" statistics="true" maxElementsInMemory="10"
+           timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+    <cache name="userCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+    <cache name="userPropertiesCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+    <cache name="groupCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+    <cache name="groupPropertiesCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
 </ehcache>

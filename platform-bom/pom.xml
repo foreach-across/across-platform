@@ -49,13 +49,13 @@
         <foreach.common.version>1.0</foreach.common.version>
         <querydsl.version>3.5.1</querydsl.version>
         <hikaricp.version>2.3.12</hikaricp.version>
-        <asm.across-hibernate-module.version>1.1.1-SNAPSHOT</asm.across-hibernate-module.version>
+		<asm.across-hibernate-module.version>1.2.0-SNAPSHOT</asm.across-hibernate-module.version>
 		<asm.ehcache-module.version>1.0.1-SNAPSHOT</asm.ehcache-module.version>
 		<asm.logging-module.version>1.0.1-SNAPSHOT</asm.logging-module.version>
         <asm.application-info-module.version>1.0.1-SNAPSHOT</asm.application-info-module.version>
         <asm.debug-web-module.version>1.0.1.RELEASE</asm.debug-web-module.version>
         <asm.admin-web-module.version>1.2.0-SNAPSHOT</asm.admin-web-module.version>
-		<asm.spring-security-module.version>1.1.1-SNAPSHOT</asm.spring-security-module.version>
+		<asm.spring-security-module.version>1.2.0-SNAPSHOT</asm.spring-security-module.version>
         <asm.user-module.version>1.2.0-SNAPSHOT</asm.user-module.version>
 		<asm.properties-module.version>1.2.0-SNAPSHOT</asm.properties-module.version>
         <asm.spring-security-acl-module.version>1.2.0-SNAPSHOT</asm.spring-security-acl-module.version>
@@ -191,6 +191,12 @@
 				<artifactId>hibernate-validator</artifactId>
 				<!-- Version 5.x.x has issues on Jboss with javax.validation.api 1.1.0 -->
 				<version>4.3.2.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate.javax.persistence</groupId>
+				<artifactId>hibernate-jpa-2.0-api</artifactId>
+				<!-- Spring Platform BOM 2.0.5 replaces org.hibernate.javax.persistence:hibernate-jpa-2.0-api by org.eclipse.persistence:javax.persistence -->
+				<version>1.0.1.Final</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jboss.logging</groupId>

@@ -14,17 +14,17 @@ public class ApiResourcesConfiguration extends ResourceServerConfigurerAdapter
 		resources.resourceId( "platform-test-app" );
 	}
 
-	@Override
-	public void configure( HttpSecurity http ) throws Exception {
-		http
-				.authorizeRequests()
-				.antMatchers(
-						"/api/**",
-						"/oauth/user_token" ).authenticated()
-				.and()
-				.headers().cacheControl().xssProtection()
-				.and()
-				.anonymous();
-	}
+    @Override
+    public void configure(HttpSecurity http) throws Exception {
+        http
+                .authorizeRequests()
+                .antMatchers(
+                        "/api/**",
+                        "/oauth/user_token").authenticated()
+                .and()
+                .headers().cacheControl().and().xssProtection().and()
+                .and()
+                .anonymous();
+    }
 }
 
