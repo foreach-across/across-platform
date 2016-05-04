@@ -9,9 +9,10 @@ import org.springframework.context.annotation.Configuration;
  * @since 1.1.2
  */
 @Configuration
-public class PlatformTestApplicationControllerConfiguration {
-    @Bean
-    public PreAuthorizedController preAuthorizedController() {
-        return new PreAuthorizedController();
-    }
+public class PlatformTestApplicationControllerConfiguration
+{
+	@Bean
+	public PreAuthorizedController preAuthorizedController() {
+		return new PreAuthorizedController();
+	}
 }

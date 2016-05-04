@@ -15,15 +15,17 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 1.1.2
  */
 @RestController
-public class PreAuthorizedController {
-    @RequestMapping(value = "/api/testshouldbeauthenticated", produces = {MediaType.APPLICATION_JSON_VALUE})
-    @PreAuthorize("isAuthenticated() && hasRole('ROLE_ADMIN')")
-    public ResponseEntity<UserResponse> authenticatedPage(OAuth2Authentication authentication) {
-        UserResponse response = new UserResponse();
-        BeanUtils.copyProperties(authentication.getPrincipal(), response, "roles");
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
+public class PreAuthorizedController
+{
+	@RequestMapping(value = "/api/testshouldbeauthenticated", produces = { MediaType.APPLICATION_JSON_VALUE })
+	@PreAuthorize("isAuthenticated() && hasRole('ROLE_ADMIN')")
+	public ResponseEntity<UserResponse> authenticatedPage( OAuth2Authentication authentication ) {
+		UserResponse response = new UserResponse();
+		BeanUtils.copyProperties( authentication.getPrincipal(), response, "roles" );
+		return new ResponseEntity<>( response, HttpStatus.OK );
+	}
 
-    public static class UserResponse extends User {
-    }
+	public static class UserResponse extends User
+	{
+	}
 }
