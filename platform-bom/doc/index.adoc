@@ -1,12 +1,12 @@
 = Across Platform BOM
 Arne Vandamme
-1.1.2.RELEASE
+2.0.0-SNAPSHOT
 :toc: left
 :sectanchors:
-:across-platform-version: 1.2.0-SNAPSHOT
-:spring-platform-version: 1.1.1.RELEASE
-:spring-platform-url: http://docs.spring.io/platform/docs/1.1.5.RELEASE/reference/htmlsingle/#appendix-dependency-versions
-:across-version: 1.2.0-SNAPSHOT
+:across-platform-version: 2.0.0-SNAPSHOT
+:spring-platform-version: 2.0.3.RELEASE
+:spring-platform-url: http://docs.spring.io/platform/docs/2.0.3.RELEASE/reference/htmlsingle/#appendix-dependency-versions
+:across-version: 2.0.0-SNAPSHOT
 :foreach-common-version: 1.0
 :commons-collections-version: 4.1
 :liquibase-version: 3.1.0
