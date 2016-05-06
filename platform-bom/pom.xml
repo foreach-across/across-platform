@@ -18,10 +18,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.foreach.across</groupId>
-    <artifactId>platform-bom</artifactId>
+	<groupId>com.foreach.across</groupId>
+	<artifactId>platform-bom</artifactId>
 	<version>2.0.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+	<packaging>pom</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>
@@ -44,27 +44,26 @@
 		</developer>
 	</developers>
 
-    <properties>
-	    <across.version>2.0.0-SNAPSHOT</across.version>
-        <foreach.common.version>1.0</foreach.common.version>
-	    <querydsl.version>3.6.9</querydsl.version>
-	    <hikaricp.version>2.4.5</hikaricp.version>
-	    <asm.across-hibernate-module.version>2.0.0-SNAPSHOT</asm.across-hibernate-module.version>
+	<properties>
+		<across.version>2.0.0-SNAPSHOT</across.version>
+		<foreach.common.version>1.0</foreach.common.version>
+		<hikaricp.version>2.4.5</hikaricp.version>
+		<asm.across-hibernate-module.version>2.0.0-SNAPSHOT</asm.across-hibernate-module.version>
 		<asm.ehcache-module.version>1.0.0.RELEASE</asm.ehcache-module.version>
 		<asm.logging-module.version>1.0.1.RELEASE</asm.logging-module.version>
-        <asm.application-info-module.version>1.0.1.RELEASE</asm.application-info-module.version>
-        <asm.debug-web-module.version>1.0.1.RELEASE</asm.debug-web-module.version>
-	    <asm.admin-web-module.version>2.0.0-SNAPSHOT</asm.admin-web-module.version>
-	    <asm.spring-security-module.version>2.0.0-SNAPSHOT</asm.spring-security-module.version>
-	    <asm.user-module.version>2.0.0-SNAPSHOT</asm.user-module.version>
-	    <asm.properties-module.version>2.0.0-SNAPSHOT</asm.properties-module.version>
-	    <asm.spring-security-acl-module.version>2.0.0-SNAPSHOT</asm.spring-security-acl-module.version>
-	    <asm.oauth2-module.version>2.0.0-SNAPSHOT</asm.oauth2-module.version>
-	    <asm.entity-module.version>2.0.0-SNAPSHOT</asm.entity-module.version>
+		<asm.application-info-module.version>1.0.1.RELEASE</asm.application-info-module.version>
+		<asm.debug-web-module.version>1.0.1.RELEASE</asm.debug-web-module.version>
+		<asm.admin-web-module.version>2.0.0-SNAPSHOT</asm.admin-web-module.version>
+		<asm.spring-security-module.version>2.0.0-SNAPSHOT</asm.spring-security-module.version>
+		<asm.user-module.version>2.0.0-SNAPSHOT</asm.user-module.version>
+		<asm.properties-module.version>2.0.0-SNAPSHOT</asm.properties-module.version>
+		<asm.spring-security-acl-module.version>2.0.0-SNAPSHOT</asm.spring-security-acl-module.version>
+		<asm.oauth2-module.version>2.0.0-SNAPSHOT</asm.oauth2-module.version>
+		<asm.entity-module.version>2.0.0-SNAPSHOT</asm.entity-module.version>
 		<asm.file-manager-module.version>1.0.0.RELEASE</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.0.RELEASE</asm.spring-batch-module.version>
-        <asm.bootstrap-ui-module.version>1.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
-        <asm.spring-mobile-module.version>1.0.1.RELEASE</asm.spring-mobile-module.version>
+		<asm.bootstrap-ui-module.version>1.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
+		<asm.spring-mobile-module.version>1.0.1.RELEASE</asm.spring-mobile-module.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -88,74 +87,57 @@
 				<scope>import</scope>
 			</dependency>
 
-            <!-- Non-spring managed -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-collections4</artifactId>
-                <version>4.1</version>
-            </dependency>
-            <dependency>
-                <groupId>com.mattbertolini</groupId>
-                <artifactId>liquibase-slf4j</artifactId>
-                <version>1.2.1</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.liquibase</groupId>
-                        <artifactId>liquibase-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-api</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>net.engio</groupId>
-                <artifactId>mbassador</artifactId>
-                <version>1.2.0</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>javax.el</groupId>
-                        <artifactId>el-api</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.31</version>
-            </dependency>
-            <dependency>
-                <groupId>com.zaxxer</groupId>
-	            <artifactId>HikariCP-java</artifactId>
-                <version>${hikaricp.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.oracle</groupId>
-                <artifactId>ojdbc6</artifactId>
-                <version>11.2.0</version>
-            </dependency>
-            <dependency>
-                <groupId>net.sourceforge.jtds</groupId>
-                <artifactId>jtds</artifactId>
-                <version>1.3.1</version>
-            </dependency>
-
-			<!-- QueryDSL -->
+			<!-- Non-spring managed -->
 			<dependency>
-				<groupId>com.mysema.querydsl</groupId>
-				<artifactId>querydsl-core</artifactId>
-				<version>${querydsl.version}</version>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-collections4</artifactId>
+				<version>4.1</version>
 			</dependency>
 			<dependency>
-				<groupId>com.mysema.querydsl</groupId>
-				<artifactId>querydsl-apt</artifactId>
-				<version>${querydsl.version}</version>
+				<groupId>com.mattbertolini</groupId>
+				<artifactId>liquibase-slf4j</artifactId>
+				<version>1.2.1</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.liquibase</groupId>
+						<artifactId>liquibase-core</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-api</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
-				<groupId>com.mysema.querydsl</groupId>
-				<artifactId>querydsl-jpa</artifactId>
-				<version>${querydsl.version}</version>
+				<groupId>net.engio</groupId>
+				<artifactId>mbassador</artifactId>
+				<version>1.2.0</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.el</groupId>
+						<artifactId>el-api</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.31</version>
+			</dependency>
+			<dependency>
+				<groupId>com.zaxxer</groupId>
+				<artifactId>HikariCP-java</artifactId>
+				<version>${hikaricp.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.oracle</groupId>
+				<artifactId>ojdbc6</artifactId>
+				<version>11.2.0</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sourceforge.jtds</groupId>
+				<artifactId>jtds</artifactId>
+				<version>1.3.1</version>
 			</dependency>
 
 			<dependency>
@@ -203,87 +185,87 @@
 			</dependency>
 
 
-            <!-- Across standard modules -->
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>across-hibernate-module</artifactId>
-                <version>${asm.across-hibernate-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>ehcache-module</artifactId>
-                <version>${asm.ehcache-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>debug-web-module</artifactId>
-                <version>${asm.debug-web-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>admin-web-module</artifactId>
-                <version>${asm.admin-web-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>spring-security-module</artifactId>
-                <version>${asm.spring-security-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>spring-security-acl-module</artifactId>
-                <version>${asm.spring-security-acl-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>oauth2-module</artifactId>
-                <version>${asm.oauth2-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>properties-module</artifactId>
-                <version>${asm.properties-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>entity-module</artifactId>
-                <version>${asm.entity-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>user-module</artifactId>
-                <version>${asm.user-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>application-info-module</artifactId>
-                <version>${asm.application-info-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>logging-module</artifactId>
-                <version>${asm.logging-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>file-manager-module</artifactId>
-                <version>${asm.file-manager-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>spring-batch-module</artifactId>
-                <version>${asm.spring-batch-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>bootstrap-ui-module</artifactId>
-                <version>${asm.bootstrap-ui-module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.foreach.across.modules</groupId>
-                <artifactId>spring-mobile-module</artifactId>
-                <version>${asm.spring-mobile-module.version}</version>
-            </dependency>
+			<!-- Across standard modules -->
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>across-hibernate-module</artifactId>
+				<version>${asm.across-hibernate-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>ehcache-module</artifactId>
+				<version>${asm.ehcache-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>debug-web-module</artifactId>
+				<version>${asm.debug-web-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>admin-web-module</artifactId>
+				<version>${asm.admin-web-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>spring-security-module</artifactId>
+				<version>${asm.spring-security-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>spring-security-acl-module</artifactId>
+				<version>${asm.spring-security-acl-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>oauth2-module</artifactId>
+				<version>${asm.oauth2-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>properties-module</artifactId>
+				<version>${asm.properties-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>entity-module</artifactId>
+				<version>${asm.entity-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>user-module</artifactId>
+				<version>${asm.user-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>application-info-module</artifactId>
+				<version>${asm.application-info-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>logging-module</artifactId>
+				<version>${asm.logging-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>file-manager-module</artifactId>
+				<version>${asm.file-manager-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>spring-batch-module</artifactId>
+				<version>${asm.spring-batch-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>bootstrap-ui-module</artifactId>
+				<version>${asm.bootstrap-ui-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>spring-mobile-module</artifactId>
+				<version>${asm.spring-mobile-module.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
