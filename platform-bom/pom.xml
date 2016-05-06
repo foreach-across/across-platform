@@ -284,24 +284,6 @@
                 <artifactId>spring-mobile-module</artifactId>
                 <version>${asm.spring-mobile-module.version}</version>
             </dependency>
-
-			<!-- Contributed modules - to be removed!-->
-			<dependency>
-				<groupId>across-standard-modules</groupId>
-				<artifactId>metric-module</artifactId>
-				<version>${across.standard.modules.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>across</groupId>
-						<artifactId>across-core</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>across</groupId>
-						<artifactId>across-web</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-
 		</dependencies>
 	</dependencyManagement>
 
