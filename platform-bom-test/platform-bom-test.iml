@@ -37,12 +37,6 @@
     <orderEntry type="library" name="Maven: com.foreach.across:across-core:1.1.2-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.foreach.across:across-web:1.1.2-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.foreach.across:across-test:1.1.2-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: com.foreach.across.modules:oauth2-module:1.1.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.foreach.across.modules:across-hibernate-module:1.1.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.foreach.across.modules:application-info-module:1.0.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.foreach.across.modules:spring-mobile-module:1.0.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.foreach.across.modules:admin-web-module:1.1.1.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.foreach.across.modules:debug-web-module:1.0.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:1.2.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:7.0.67" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:7.0.67" level="project" />
