@@ -67,7 +67,9 @@
       </SHUTDOWN>
     </ConfigurationWrapper>
     <method>
-      <option name="BuildArtifacts" enabled="true" />
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="platform-bom-test:war exploded" />
+      </option>
     </method>
   </configuration>
 </component>
