@@ -238,5 +238,9 @@
 				</dependency>
 			</dependencies>
 		</profile>
+		<profile>
+			<id>container-jboss7</id>
+			<!-- no spring boot dependencies -->
+		</profile>
 	</profiles>
 </project>
