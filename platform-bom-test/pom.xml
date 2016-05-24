@@ -261,6 +261,15 @@
 			</dependencies>
 		</profile>
 		<profile>
+			<id>container-jetty</id>
+			<dependencies>
+				<dependency>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-jetty</artifactId>
+				</dependency>
+			</dependencies>
+		</profile>
+		<profile>
 			<id>container-jboss7</id>
 			<!-- no spring boot dependencies -->
 		</profile>
