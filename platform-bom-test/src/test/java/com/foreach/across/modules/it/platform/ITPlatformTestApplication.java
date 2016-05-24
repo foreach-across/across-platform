@@ -41,8 +41,8 @@ public class ITPlatformTestApplication
 	@Test
 	public void testThatDebugModuleRedirectsToApplicationInfoModuleDashboard() throws Exception {
 		RestTemplate restTemplate = restTemplate();
-		ResponseEntity<String> response = restTemplate.exchange( url( "/debug" ), HttpMethod.GET, createHeaders(
-				DebugWebSecurityConfiguration.DEBUG_USERNAME, DebugWebSecurityConfiguration.DEBUG_PASSWORD ),
+		ResponseEntity<String> response = restTemplate.exchange( url( "/debug" ), HttpMethod.GET,
+		                                                         defaultDebugAuthentication(),
 		                                                         String.class );
 		assertNotNull( response );
 		assertEquals( response.getStatusCode(), HttpStatus.FOUND );
@@ -60,9 +60,7 @@ public class ITPlatformTestApplication
 	public void testThatDebugModuleIsSecuredForAuthenticatedUser() throws Exception {
 		RestTemplate restTemplate = restTemplate();
 		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/applicationInfo" ), HttpMethod.GET,
-		                                                         createHeaders(
-				                                                         DebugWebSecurityConfiguration.DEBUG_USERNAME,
-				                                                         DebugWebSecurityConfiguration.DEBUG_PASSWORD ),
+		                                                         defaultDebugAuthentication(),
 		                                                         String.class );
 		assertEquals( response.getStatusCode(), HttpStatus.OK );
 	}
@@ -154,7 +152,7 @@ public class ITPlatformTestApplication
 
     @Test
     public void testThatSpringSecurityDialectLoads() {
-        RestTemplate restTemplate = restTemplate(false);
+	    RestTemplate restTemplate = restTemplate();
 
         ResponseEntity<String> loginPage = restTemplate.getForEntity(url("/admin/login"), String.class);
         Document doc = Jsoup.parse(loginPage.getBody());
@@ -164,8 +162,55 @@ public class ITPlatformTestApplication
         assertTrue(!loginPage.getBody().contains("isAuthenticated()"));
     }
 
-    private String url(String relativePath) {
-        return "http://localhost:" + port + relativePath;
+	@Test
+	public void acrossContextBrowserInfoPageWorks() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/across/browser/info/-1" ), HttpMethod.GET,
+		                                                         defaultDebugAuthentication(),
+		                                                         String.class );
+		assertNotNull( response );
+	}
+
+	@Test
+	public void acrossContextBrowserBeansPageWorks() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/across/browser/beans/1" ), HttpMethod.GET,
+		                                                         defaultDebugAuthentication(),
+		                                                         String.class );
+		assertNotNull( response );
+	}
+
+	@Test
+	public void acrossContextBrowserPropertiesPageWorks() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/across/browser/properties/1" ),
+		                                                         HttpMethod.GET,
+		                                                         defaultDebugAuthentication(),
+		                                                         String.class );
+		assertNotNull( response );
+	}
+
+	@Test
+	public void acrossContextBrowserEventHandlersPageWorks() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/across/browser/handlers/1" ),
+		                                                         HttpMethod.GET,
+		                                                         defaultDebugAuthentication(),
+		                                                         String.class );
+		assertNotNull( response );
+	}
+
+	private HttpEntity defaultDebugAuthentication() {
+		return createHeaders(
+				DebugWebSecurityConfiguration.DEBUG_USERNAME, DebugWebSecurityConfiguration.DEBUG_PASSWORD );
+	}
+
+	private String url( String relativePath ) {
+		return "http://localhost:" + port + relativePath;
     }
 
 	private RestTemplate restTemplate() {
