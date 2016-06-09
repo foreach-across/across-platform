@@ -27,14 +27,13 @@ import static org.junit.Assert.*;
 
 /**
  * @author Marc Vanbrabant
- * @since 1.1.2
+ * @since 2.0.0
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebIntegrationTest(randomPort = true)
 @SpringApplicationConfiguration(classes = PlatformTestApplication.class)
 public class ITPlatformTestApplication
 {
-
 	@Value("${local.server.port}")
 	private int port;
 
@@ -150,17 +149,17 @@ public class ITPlatformTestApplication
 		assertEquals( "admin@localhost", apiRestResponse.getBody().get( "email" ) );
 	}
 
-    @Test
-    public void testThatSpringSecurityDialectLoads() {
-	    RestTemplate restTemplate = restTemplate();
+	@Test
+	public void testThatSpringSecurityDialectLoads() {
+		RestTemplate restTemplate = restTemplate();
 
-        ResponseEntity<String> loginPage = restTemplate.getForEntity(url("/admin/login"), String.class);
-        Document doc = Jsoup.parse(loginPage.getBody());
-        assertEquals(1, doc.select("input[name=username]").size());
-        assertEquals(1, doc.select("input[name=password]").size());
-        assertTrue(!loginPage.getBody().contains("sec:authorize"));
-        assertTrue(!loginPage.getBody().contains("isAuthenticated()"));
-    }
+		ResponseEntity<String> loginPage = restTemplate.getForEntity( url( "/admin/login" ), String.class );
+		Document doc = Jsoup.parse( loginPage.getBody() );
+		assertEquals( 1, doc.select( "input[name=username]" ).size() );
+		assertEquals( 1, doc.select( "input[name=password]" ).size() );
+		assertTrue( !loginPage.getBody().contains( "sec:authorize" ) );
+		assertTrue( !loginPage.getBody().contains( "isAuthenticated()" ) );
+	}
 
 	@Test
 	public void acrossContextBrowserInfoPageWorks() {
@@ -211,7 +210,7 @@ public class ITPlatformTestApplication
 
 	private String url( String relativePath ) {
 		return "http://localhost:" + port + relativePath;
-    }
+	}
 
 	private RestTemplate restTemplate() {
 		return restTemplate( false );
