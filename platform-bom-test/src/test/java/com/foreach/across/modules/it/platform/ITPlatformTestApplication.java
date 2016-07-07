@@ -35,7 +35,6 @@ import static org.junit.Assert.assertNotNull;
 @SpringApplicationConfiguration(classes = PlatformTestApplication.class)
 public class ITPlatformTestApplication
 {
-
 	@Value("${local.server.port}")
 	private int port;
 
