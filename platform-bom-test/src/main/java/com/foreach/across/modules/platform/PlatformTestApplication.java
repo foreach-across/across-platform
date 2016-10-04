@@ -16,7 +16,7 @@ import com.foreach.across.modules.user.UserModule;
 import com.foreach.across.test.support.config.ResetDatabaseConfigurer;
 import com.foreach.across.test.support.config.TestDataSourceConfigurer;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -33,7 +33,8 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 }
 )
 @Import({ TestDataSourceConfigurer.class, ResetDatabaseConfigurer.class })
-public class PlatformTestApplication extends SpringBootServletInitializer {
+public class PlatformTestApplication extends SpringBootServletInitializer
+{
 
 	public static void main( String[] args ) {
 		SpringApplication.run( PlatformTestApplication.class );

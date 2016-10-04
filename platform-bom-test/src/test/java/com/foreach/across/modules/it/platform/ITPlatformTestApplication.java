@@ -8,12 +8,11 @@ import org.jsoup.nodes.Document;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.boot.test.WebIntegrationTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.*;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
@@ -29,9 +28,8 @@ import static org.junit.Assert.*;
  * @author Marc Vanbrabant
  * @since 2.0.0
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@WebIntegrationTest(randomPort = true)
-@SpringApplicationConfiguration(classes = PlatformTestApplication.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = PlatformTestApplication.class)
 public class ITPlatformTestApplication
 {
 	@Value("${local.server.port}")
