@@ -42,7 +42,7 @@ public class ITPlatformTestApplication
 		                                                         defaultDebugAuthentication(),
 		                                                         String.class );
 		assertNotNull( response );
-		assertEquals( response.getStatusCode(), HttpStatus.FOUND );
+		assertEquals( HttpStatus.FOUND, response.getStatusCode() );
 		assertEquals( url( "/debug/applicationInfo" ), response.getHeaders().get( "Location" ).get( 0 ) );
 	}
 
@@ -50,7 +50,7 @@ public class ITPlatformTestApplication
 	public void testThatDebugModuleIsSecuredForUnknownUser() throws Exception {
 		RestTemplate restTemplate = restTemplate( true );
 		ResponseEntity<String> response = restTemplate.getForEntity( url( "/debug/applicationInfo" ), String.class );
-		assertEquals( response.getStatusCode(), HttpStatus.UNAUTHORIZED );
+		assertEquals( HttpStatus.UNAUTHORIZED, response.getStatusCode() );
 	}
 
 	@Test
@@ -59,14 +59,14 @@ public class ITPlatformTestApplication
 		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/applicationInfo" ), HttpMethod.GET,
 		                                                         defaultDebugAuthentication(),
 		                                                         String.class );
-		assertEquals( response.getStatusCode(), HttpStatus.OK );
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
 	}
 
 	@Test
 	public void testThatAdminWebModuleRedirectsToLoginPage() throws Exception {
 		RestTemplate restTemplate = restTemplate();
 		ResponseEntity<String> response = restTemplate.getForEntity( url( "/admin/entities/user" ), String.class );
-		assertEquals( response.getStatusCode(), HttpStatus.FOUND );
+		assertEquals( HttpStatus.FOUND, response.getStatusCode() );
 		assertEquals( url( "/admin/login" ), response.getHeaders().get( "Location" ).get( 0 ) );
 	}
 
@@ -90,7 +90,7 @@ public class ITPlatformTestApplication
 				                                                         set( "X-CSRF-Token", csrf );
 				                                                         set( "Cookie", cookie );
 			                                                         }} ), String.class );
-			assertEquals( response.getStatusCode(), HttpStatus.FOUND );
+			assertEquals( HttpStatus.FOUND, response.getStatusCode() );
 			assertEquals( url( "/admin/" ), response.getHeaders().get( "Location" ).get( 0 ) );
 
 			ResponseEntity<String> responseForUserList = restTemplate.exchange( url( "/admin/entities/user" ),
@@ -103,7 +103,7 @@ public class ITPlatformTestApplication
 				                                                                                                                   .get( 0 ) );
 			                                                                                                      }} ),
 			                                                                    String.class );
-			assertEquals( responseForUserList.getStatusCode(), HttpStatus.OK );
+			assertEquals( HttpStatus.OK, responseForUserList.getStatusCode() );
 		}
 	}
 
@@ -113,7 +113,7 @@ public class ITPlatformTestApplication
 		ResponseEntity<String> response = restTemplate.getForEntity(
 				url( "/api/testshouldbeauthenticated?access_token=" + UUID.randomUUID() ), String.class );
 		assertNotNull( response );
-		assertEquals( response.getStatusCode(), HttpStatus.UNAUTHORIZED );
+		assertEquals( HttpStatus.UNAUTHORIZED, response.getStatusCode() );
 	}
 
 	@Test
@@ -123,7 +123,7 @@ public class ITPlatformTestApplication
 				url( "/oauth/token?client_id=client.com&client_secret=t3st&response_type=token&scope=full&grant_type=client_credentials" ),
 				LinkedHashMap.class );
 		assertNotNull( clientTokenResponse );
-		assertEquals( clientTokenResponse.getStatusCode(), HttpStatus.OK );
+		assertEquals( HttpStatus.OK, clientTokenResponse.getStatusCode() );
 		String client_access_token = (String) clientTokenResponse.getBody().get( "access_token" );
 		assertNotNull( client_access_token );
 
@@ -132,7 +132,7 @@ public class ITPlatformTestApplication
 				url( "/oauth/user_token?access_token=" + client_access_token + "&username=admin&scope=full" ),
 				LinkedHashMap.class );
 		assertNotNull( userTokenResponse );
-		assertEquals( userTokenResponse.getStatusCode(), HttpStatus.OK );
+		assertEquals( HttpStatus.OK, userTokenResponse.getStatusCode() );
 		String user_access_token = (String) userTokenResponse.getBody().get( "access_token" );
 		String user_refresh_token = (String) userTokenResponse.getBody().get( "refresh_token" );
 		assertNotNull( user_access_token );
@@ -142,7 +142,7 @@ public class ITPlatformTestApplication
 		ResponseEntity<LinkedHashMap> apiRestResponse = restTemplate.getForEntity(
 				url( "/api/testshouldbeauthenticated?access_token=" + user_access_token ), LinkedHashMap.class );
 		assertNotNull( apiRestResponse );
-		assertEquals( apiRestResponse.getStatusCode(), HttpStatus.OK );
+		assertEquals( HttpStatus.OK, apiRestResponse.getStatusCode() );
 		assertEquals( "admin", apiRestResponse.getBody().get( "principalName" ) );
 		assertEquals( "admin@localhost", apiRestResponse.getBody().get( "email" ) );
 	}
