@@ -63,7 +63,7 @@
 		<asm.file-manager-module.version>1.0.0.RELEASE</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.0.RELEASE</asm.spring-batch-module.version>
 		<asm.bootstrap-ui-module.version>1.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
-		<asm.spring-mobile-module.version>1.0.1.RELEASE</asm.spring-mobile-module.version>
+		<asm.spring-mobile-module.version>2.0.0-SNAPSHOT</asm.spring-mobile-module.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
