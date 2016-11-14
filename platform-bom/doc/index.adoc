@@ -1,12 +1,12 @@
 = Across Platform BOM
 Arne Vandamme
-1.1.3-SNAPSHOT
+1.1.3.RELEASE
 :toc: left
 :sectanchors:
-:across-platform-version: 1.1.3-SNAPSHOT
+:across-platform-version: 1.1.3.RELEASE
 :spring-platform-version: 1.1.5.RELEASE
 :spring-platform-url: http://docs.spring.io/platform/docs/1.1.5.RELEASE/reference/htmlsingle/#appendix-dependency-versions
-:across-version: 1.1.3-SNAPSHOT
+:across-version: 1.1.3.RELEASE
 :foreach-common-version: 1.0
 :commons-collections-version: 4.1
 :liquibase-version: 3.1.0
@@ -31,8 +31,8 @@ Arne Vandamme
 :asm-user-module-version: 1.1.0.RELEASE
 :asm-properties-module-version: 1.1.0.RELEASE
 :asm-spring-security-acl-module-version: 1.1.0.RELEASE
-:asm-oauth2-module-version: 1.1.2-SNAPSHOT
-:asm-entity-module-version: 1.1.1-SNAPSHOT
+:asm-oauth2-module-version: 1.1.2.RELEASE
+:asm-entity-module-version: 1.1.1.RELEASE
 :asm-file-manager-module-version: 1.0.0.RELEASE
 :asm-spring-batch-module-version: 1.0.0.RELEASE
 :asm-spring-mobile-module-version: 1.0.1.RELEASE
