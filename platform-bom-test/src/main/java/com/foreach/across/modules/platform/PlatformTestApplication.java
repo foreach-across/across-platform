@@ -35,7 +35,7 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 		SpringSecurityAclModule.NAME
 }
 )
-@Import({ TestDataSourceConfigurer.class, ResetDatabaseConfigurer.class })
+@Import({ TestDataSourceConfigurer.class, ResetDatabaseConfigurer.class, LocaleConfigurer.class })
 public class PlatformTestApplication extends SpringBootServletInitializer
 {
 

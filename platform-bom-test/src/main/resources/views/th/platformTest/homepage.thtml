@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Across primer: catalog application</title>
+</head>
+<body>
+<div class="container">
+    <div th:fragment="content">
+        <div th:fragment="content" class="jumbotron">
+            <h1 th:text="#{welcome.message}">Hello world!</h1>
+        </div>
+        <h2>Hello world</h2>
+    </div>
+</div>
+</body>
+</html>
