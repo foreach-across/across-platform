@@ -3,6 +3,7 @@ package com.foreach.across.modules.it.platform;
 import com.foreach.across.modules.platform.PlatformTestApplication;
 import com.foreach.across.modules.platform.extensions.DebugWebSecurityConfiguration;
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.Test;
@@ -36,7 +37,7 @@ public class ITPlatformTestApplication
 	private int port;
 
 	@Test
-	public void testThatDebugModuleRedirectsToApplicationInfoModuleDashboard() throws Exception {
+	public void debugModuleRedirectsToApplicationInfoModuleDashboard() throws Exception {
 		RestTemplate restTemplate = restTemplate();
 		ResponseEntity<String> response = restTemplate.exchange( url( "/debug" ), HttpMethod.GET,
 		                                                         defaultDebugAuthentication(),
@@ -47,14 +48,14 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
-	public void testThatDebugModuleIsSecuredForUnknownUser() throws Exception {
+	public void debugModuleIsSecuredForUnknownUser() throws Exception {
 		RestTemplate restTemplate = restTemplate( true );
 		ResponseEntity<String> response = restTemplate.getForEntity( url( "/debug/applicationInfo" ), String.class );
 		assertEquals( HttpStatus.UNAUTHORIZED, response.getStatusCode() );
 	}
 
 	@Test
-	public void testThatDebugModuleIsSecuredForAuthenticatedUser() throws Exception {
+	public void debugModuleIsSecuredForAuthenticatedUser() throws Exception {
 		RestTemplate restTemplate = restTemplate();
 		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/applicationInfo" ), HttpMethod.GET,
 		                                                         defaultDebugAuthentication(),
@@ -63,7 +64,7 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
-	public void testThatAdminWebModuleRedirectsToLoginPage() throws Exception {
+	public void adminWebModuleRedirectsToLoginPage() throws Exception {
 		RestTemplate restTemplate = restTemplate();
 		ResponseEntity<String> response = restTemplate.getForEntity( url( "/admin/entities/user" ), String.class );
 		assertEquals( HttpStatus.FOUND, response.getStatusCode() );
@@ -71,7 +72,7 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
-	public void testThatAdminWebModuleListsUserOverviewForAuthenticatedUser() {
+	public void adminWebModuleListsUserOverviewForAuthenticatedUser() {
 		RestTemplate restTemplate = restTemplate( true );
 
 		ResponseEntity<String> loginPage = restTemplate.getForEntity( url( "/admin/login" ), String.class );
@@ -108,7 +109,7 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
-	public void testThatPreAuthorizedControllerIsOnlyAccessibleWhenAuthenticated() throws Exception {
+	public void preAuthorizedControllerIsOnlyAccessibleWhenAuthenticated() throws Exception {
 		RestTemplate restTemplate = restTemplate( true );
 		ResponseEntity<String> response = restTemplate.getForEntity(
 				url( "/api/testshouldbeauthenticated?access_token=" + UUID.randomUUID() ), String.class );
@@ -117,7 +118,7 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
-	public void testThatOauthClientTokenFlowWorksForAdmin() {
+	public void oauthClientTokenFlowWorksForAdmin() {
 		RestTemplate restTemplate = restTemplate( true );
 		ResponseEntity<LinkedHashMap> clientTokenResponse = restTemplate.getForEntity(
 				url( "/oauth/token?client_id=client.com&client_secret=t3st&response_type=token&scope=full&grant_type=client_credentials" ),
@@ -148,7 +149,7 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
-	public void testThatSpringSecurityDialectLoads() {
+	public void springSecurityDialectLoads() {
 		RestTemplate restTemplate = restTemplate();
 
 		ResponseEntity<String> loginPage = restTemplate.getForEntity( url( "/admin/login" ), String.class );
@@ -199,6 +200,75 @@ public class ITPlatformTestApplication
 		                                                         defaultDebugAuthentication(),
 		                                                         String.class );
 		assertNotNull( response );
+	}
+
+	@Test
+	public void mainTemplateIsAppliedByDefault() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/" ),
+		                                                         HttpMethod.GET,
+		                                                         null,
+		                                                         String.class );
+		assertNotNull( response );
+		assertFalse( StringUtils.contains( response.getBody(), "Custom category content" ) );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( 1, doc.select( "h1" ).size() );
+		assertEquals( 1, doc.select( "h2" ).size() );
+
+		assertEquals( "Across bids you a warm welcome!", doc.select( "h1" ).get( 0 ).text() );
+		assertEquals( "Hello world", doc.select( "h2" ).get( 0 ).text() );
+	}
+
+	@Test
+	public void categoryTemplateIsAppliedToCategoriesMapping() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/category/tv" ),
+		                                                         HttpMethod.GET,
+		                                                         null,
+		                                                         String.class );
+		assertNotNull( response );
+		assertTrue( StringUtils.contains( response.getBody(), "Custom category content" ) );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( 1, doc.select( "h1" ).size() );
+		assertEquals( 0, doc.select( "h2" ).size() );
+
+		assertEquals( "Products for category: TV", doc.select( "h1" ).get( 0 ).text() );
+	}
+
+	@Test
+	public void categoryTemplateIsAppliedToCategoriesMappingInDutch() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/category/tv?language=nl" ),
+		                                                         HttpMethod.GET,
+		                                                         null,
+		                                                         String.class );
+		assertNotNull( response );
+		assertTrue( StringUtils.contains( response.getBody(), "Custom category content" ) );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( 1, doc.select( "h1" ).size() );
+		assertEquals( 0, doc.select( "h2" ).size() );
+
+		assertEquals( "Producten voor categorie: TV", doc.select( "h1" ).get( 0 ).text() );
+	}
+
+	@Test
+	public void unknownCategoryUsesExceptionHandlerAndCustomTemplate() {
+		RestTemplate restTemplate = restTemplate( true );
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/category/foobar" ),
+		                                                         HttpMethod.GET,
+		                                                         null,
+		                                                         String.class );
+		assertNotNull( response );
+		assertFalse( StringUtils.contains( response.getBody(), "Custom category content" ) );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( 0, doc.select( "h1" ).size() );
+		assertEquals( 1, doc.select( "h2" ).size() );
+
+		assertEquals( "Oops, we could not find what you're looking for.", doc.select( "h2" ).get( 0 ).text() );
 	}
 
 	private HttpEntity defaultDebugAuthentication() {
