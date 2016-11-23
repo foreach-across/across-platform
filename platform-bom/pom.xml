@@ -45,7 +45,7 @@
 	</developers>
 
 	<properties>
-		<across.version>2.0.0-SNAPSHOT</across.version>
+		<across.version>2.0.0.M1</across.version>
 		<foreach.common.version>1.0</foreach.common.version>
 		<hikaricp.version>2.4.5</hikaricp.version>
 		<asm.across-hibernate-module.version>2.0.0-SNAPSHOT</asm.across-hibernate-module.version>
