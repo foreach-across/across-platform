@@ -1,7 +1,6 @@
 package com.foreach.across.modules.it.platform;
 
 import com.foreach.across.modules.platform.PlatformTestApplication;
-import com.foreach.across.modules.platform.extensions.DebugWebSecurityConfiguration;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
@@ -272,8 +271,7 @@ public class ITPlatformTestApplication
 	}
 
 	private HttpEntity defaultDebugAuthentication() {
-		return createHeaders(
-				DebugWebSecurityConfiguration.DEBUG_USERNAME, DebugWebSecurityConfiguration.DEBUG_PASSWORD );
+		return createHeaders( "debug", "test" );
 	}
 
 	private String url( String relativePath ) {
