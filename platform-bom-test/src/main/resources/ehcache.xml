@@ -6,6 +6,9 @@
     <cache name="securityAclCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
            memoryStoreEvictionPolicy="LRU">
     </cache>
+    <cache name="securityPrincipalCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
     <cache name="oauth2ClientCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
            memoryStoreEvictionPolicy="LRU">
     </cache>
