@@ -108,6 +108,24 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
+	public void ehCacheModuleLoadsAndCachesSystemUser() throws Exception {
+		RestTemplate restTemplate = restTemplate();
+		ResponseEntity<String> response = restTemplate.exchange(
+				url( "/debug/ehcache/view?managerName=__DEFAULT__&cache=securityPrincipalCache" ), HttpMethod.GET,
+				defaultDebugAuthentication(),
+				String.class );
+		assertNotNull( response );
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
+		Document jsoup = Jsoup.parse( response.getBody() );
+		assertEquals( "securityPrincipalCache", jsoup.select( "h3" ).first().text() );
+
+		jsoup.select( "tr > td:first-child" ).stream().filter( e -> e.text().equals( "system" ) ).findFirst()
+		     .orElseThrow( AssertionError::new );
+		jsoup.select( "tr > td:first-child" ).stream().filter( e -> e.text().equals( "1" ) ).findFirst().orElseThrow(
+				AssertionError::new );
+	}
+
+	@Test
 	public void preAuthorizedControllerIsOnlyAccessibleWhenAuthenticated() throws Exception {
 		RestTemplate restTemplate = restTemplate( true );
 		ResponseEntity<String> response = restTemplate.getForEntity(
