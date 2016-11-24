@@ -42,7 +42,7 @@ public class PlatformTestApplication extends SpringBootServletInitializer
 {
 
 	public static void main( String[] args ) {
-		SpringApplication.run( PlatformTestApplication.class );
+		SpringApplication.run( PlatformTestApplication.class, args );
 	}
 
 	@Bean
