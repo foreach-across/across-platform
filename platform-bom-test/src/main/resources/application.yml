@@ -1,0 +1,18 @@
+acrossHibernate:
+  persistence-context-in-view:
+    handler: filter
+
+debugWebModule:
+  security:
+    password: test
+    ip-addresses:
+
+logging:
+  request-response:
+    enabled: true
+    paused: false
+  method:
+    enabled: true
+    default-minimum-duration: 5
+
+

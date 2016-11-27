@@ -9,8 +9,6 @@ import com.foreach.across.modules.entity.EntityModule;
 import com.foreach.across.modules.filemanager.FileManagerModule;
 import com.foreach.across.modules.hibernate.jpa.AcrossHibernateJpaModule;
 import com.foreach.across.modules.logging.LoggingModule;
-import com.foreach.across.modules.logging.LoggingModuleSettings;
-import com.foreach.across.modules.logging.method.MethodLogConfiguration;
 import com.foreach.across.modules.oauth2.OAuth2Module;
 import com.foreach.across.modules.spring.batch.SpringBatchModule;
 import com.foreach.across.modules.spring.mobile.SpringMobileModule;
@@ -33,8 +31,7 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 @AcrossApplication(modules = {
 		DebugWebModule.NAME, EhcacheModule.NAME, UserModule.NAME, LoggingModule.NAME, SpringMobileModule.NAME,
 		ApplicationInfoModule.NAME, SpringBatchModule.NAME, FileManagerModule.NAME, EntityModule.NAME,
-		AdminWebModule.NAME,
-		SpringSecurityAclModule.NAME
+		AdminWebModule.NAME, LoggingModule.NAME, SpringSecurityAclModule.NAME
 }
 )
 @Import({ TestDataSourceConfigurer.class, ResetDatabaseConfigurer.class, LocaleConfigurer.class })
@@ -61,13 +58,5 @@ public class PlatformTestApplication extends SpringBootServletInitializer
 			                                               SQLServer2008Dialect.class.getName() );
 		}
 		return acrossHibernateJpaModule;
-	}
-
-	@Bean
-	public LoggingModule loggingModule() {
-		LoggingModule lm = new LoggingModule();
-		lm.setProperty( LoggingModuleSettings.METHOD_LOG_ENABLED, true );
-		lm.setProperty( LoggingModuleSettings.METHOD_LOG_CONFIGURATION, MethodLogConfiguration.all( 10 ) );
-		return lm;
 	}
 }
