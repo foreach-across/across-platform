@@ -94,17 +94,37 @@ public class ITPlatformTestApplication
 			assertEquals( HttpStatus.FOUND, response.getStatusCode() );
 			assertEquals( url( "/admin/" ), response.getHeaders().get( "Location" ).get( 0 ) );
 
-			ResponseEntity<String> responseForUserList = restTemplate.exchange( url( "/admin/entities/user" ),
-			                                                                    HttpMethod.GET, new HttpEntity<>( null,
-			                                                                                                      new HttpHeaders()
-			                                                                                                      {{
-				                                                                                                      set( "Cookie",
-				                                                                                                           response.getHeaders()
-				                                                                                                                   .get( "Set-Cookie" )
-				                                                                                                                   .get( 0 ) );
-			                                                                                                      }} ),
-			                                                                    String.class );
-			assertEquals( HttpStatus.OK, responseForUserList.getStatusCode() );
+			{
+				ResponseEntity<String> entityResponse = restTemplate.exchange( url( "/admin/entities/user" ),
+				                                                               HttpMethod.GET, new HttpEntity<>( null,
+				                                                                                                 new HttpHeaders()
+				                                                                                                 {{
+					                                                                                                 set( "Cookie",
+					                                                                                                      response.getHeaders()
+					                                                                                                              .get( "Set-Cookie" )
+					                                                                                                              .get( 0 ) );
+				                                                                                                 }} ),
+				                                                               String.class );
+				assertEquals( HttpStatus.OK, entityResponse.getStatusCode() );
+			}
+
+			{
+				ResponseEntity<String> entityResponse = restTemplate.exchange(
+						url( "/admin/entities/ldapConnector/create" ),
+						HttpMethod.GET, new HttpEntity<>( null,
+						                                  new HttpHeaders()
+						                                  {{
+							                                  set( "Cookie",
+							                                       response.getHeaders()
+							                                               .get( "Set-Cookie" )
+							                                               .get( 0 ) );
+						                                  }} ),
+						String.class );
+				assertEquals( HttpStatus.OK, entityResponse.getStatusCode() );
+				Document jsoup = Jsoup.parse( entityResponse.getBody() );
+				assertEquals( 1, jsoup.select( "div.panel-default.hidden" ).size() );
+				assertEquals( "Create a new ldap connector", jsoup.select( "h4" ).first().text() );
+			}
 		}
 	}
 

@@ -8,6 +8,7 @@ import com.foreach.across.modules.ehcache.EhcacheModule;
 import com.foreach.across.modules.entity.EntityModule;
 import com.foreach.across.modules.filemanager.FileManagerModule;
 import com.foreach.across.modules.hibernate.jpa.AcrossHibernateJpaModule;
+import com.foreach.across.modules.ldap.LdapModule;
 import com.foreach.across.modules.logging.LoggingModule;
 import com.foreach.across.modules.oauth2.OAuth2Module;
 import com.foreach.across.modules.spring.batch.SpringBatchModule;
@@ -31,7 +32,7 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 @AcrossApplication(modules = {
 		DebugWebModule.NAME, EhcacheModule.NAME, UserModule.NAME, LoggingModule.NAME, SpringMobileModule.NAME,
 		ApplicationInfoModule.NAME, SpringBatchModule.NAME, FileManagerModule.NAME, EntityModule.NAME,
-		AdminWebModule.NAME, LoggingModule.NAME, SpringSecurityAclModule.NAME
+		AdminWebModule.NAME, LoggingModule.NAME, SpringSecurityAclModule.NAME, LdapModule.NAME
 }
 )
 @Import({ TestDataSourceConfigurer.class, ResetDatabaseConfigurer.class, LocaleConfigurer.class })
