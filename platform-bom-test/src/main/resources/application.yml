@@ -15,4 +15,5 @@ logging:
     enabled: true
     default-minimum-duration: 5
 
-
+springMobile:
+  device-resolver-registration: interceptor
