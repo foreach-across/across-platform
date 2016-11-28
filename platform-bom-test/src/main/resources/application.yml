@@ -17,3 +17,6 @@ logging:
 
 springMobile:
   device-resolver-registration: interceptor
+
+userModule:
+  enable-default-acls: true

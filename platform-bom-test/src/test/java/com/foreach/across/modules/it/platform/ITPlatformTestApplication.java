@@ -1,6 +1,8 @@
 package com.foreach.across.modules.it.platform;
 
 import com.foreach.across.modules.platform.PlatformTestApplication;
+import com.foreach.across.modules.user.business.Group;
+import com.foreach.across.modules.user.services.GroupService;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
@@ -8,17 +10,20 @@ import org.jsoup.nodes.Document;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.*;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.security.acls.model.ObjectIdentity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.HttpURLConnection;
 import java.util.LinkedHashMap;
 import java.util.UUID;
@@ -35,6 +40,8 @@ public class ITPlatformTestApplication
 {
 	@Value("${local.server.port}")
 	private int port;
+	@Autowired
+	private GroupService groupService;
 
 	@Test
 	public void debugModuleRedirectsToApplicationInfoModuleDashboard() throws Exception {
@@ -196,6 +203,19 @@ public class ITPlatformTestApplication
 		assertEquals( 1, doc.select( "input[name=password]" ).size() );
 		assertTrue( !loginPage.getBody().contains( "sec:authorize" ) );
 		assertTrue( !loginPage.getBody().contains( "isAuthenticated()" ) );
+	}
+
+	@Test
+	public void springSecurityAclEntriesAreCreatedAndReturned() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<CustomObjectIdentity> objectIdentityResponseEntity = restTemplate.getForEntity(
+				url( "/acl/dummy group" ), CustomObjectIdentity.class );
+		assertEquals( HttpStatus.OK, objectIdentityResponseEntity.getStatusCode() );
+		ObjectIdentity body = objectIdentityResponseEntity.getBody();
+		assertEquals( Group.class.getName(), body.getType() );
+		Group group = groupService.getGroupByName( "dummy group" );
+		assertEquals( group.getId(), body.getIdentifier() );
 	}
 
 	@Test
@@ -433,6 +453,30 @@ public class ITPlatformTestApplication
 		@Override
 		public void handleError( ClientHttpResponse response ) throws IOException {
 
+		}
+	}
+
+	public static class CustomObjectIdentity implements ObjectIdentity
+	{
+		private String type;
+		private Long identifier;
+
+		public void setType( String type ) {
+			this.type = type;
+		}
+
+		public void setIdentifier( Long identifier ) {
+			this.identifier = identifier;
+		}
+
+		@Override
+		public Serializable getIdentifier() {
+			return identifier;
+		}
+
+		@Override
+		public String getType() {
+			return type;
 		}
 	}
 }
