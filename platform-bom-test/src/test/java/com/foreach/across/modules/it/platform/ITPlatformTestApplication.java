@@ -7,7 +7,6 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -344,7 +343,6 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
-	@Ignore("https://jira.spring.io/browse/DATACMNS-776")
 	public void springMobileShowsDesktopTemplateForFirefox() {
 		RestTemplate restTemplate = restTemplate( true );
 
@@ -362,7 +360,6 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
-	@Ignore("https://jira.spring.io/browse/DATACMNS-776")
 	public void springMobileShowsDesktopTemplateForIphone() {
 		RestTemplate restTemplate = restTemplate( true );
 
@@ -381,7 +378,6 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
-	@Ignore("https://jira.spring.io/browse/DATACMNS-776")
 	public void springMobileShowsDesktopTemplateForIpad() {
 		RestTemplate restTemplate = restTemplate( true );
 
