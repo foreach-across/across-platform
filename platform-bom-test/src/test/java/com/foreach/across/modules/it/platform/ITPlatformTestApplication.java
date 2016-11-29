@@ -349,7 +349,7 @@ public class ITPlatformTestApplication
 		HttpHeaders headers = new HttpHeaders();
 		headers.set( "User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0" );
 
-		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/thymeleaf" ),
+		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/dialect" ),
 		                                                         HttpMethod.GET,
 		                                                         new HttpEntity<>( headers ),
 		                                                         String.class );
@@ -367,7 +367,7 @@ public class ITPlatformTestApplication
 		headers.set( "User-Agent",
 		             "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16" );
 
-		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/thymeleaf" ),
+		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/dialect" ),
 		                                                         HttpMethod.GET,
 		                                                         new HttpEntity<>( headers ),
 		                                                         String.class );
@@ -385,7 +385,7 @@ public class ITPlatformTestApplication
 		headers.set( "User-Agent",
 		             "Mozilla/5.0(iPad; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B314 Safari/531.21.10" );
 
-		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/thymeleaf" ),
+		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/dialect" ),
 		                                                         HttpMethod.GET,
 		                                                         new HttpEntity<>( headers ),
 		                                                         String.class );
