@@ -7,6 +7,10 @@ debugWebModule:
     password: test
     ip-addresses:
 
+fileManagerModule:
+  local-repositories-root: ./TEST_ITPlatformApp
+  temp-folder: ./TEST_ITPlatformApp_TEMP
+
 logging:
   request-response:
     enabled: true

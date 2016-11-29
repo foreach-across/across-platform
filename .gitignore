@@ -3,3 +3,5 @@ target
 .idea/workspace.xml
 .idea/libraries
 .idea/excludeFromValidation
+
+TEST_ITPlatformApp

@@ -5,6 +5,7 @@ import com.foreach.across.modules.user.business.Group;
 import com.foreach.across.modules.user.services.GroupService;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.Test;
@@ -132,6 +133,24 @@ public class ITPlatformTestApplication
 				assertEquals( "Create a new ldap connector", jsoup.select( "h4" ).first().text() );
 			}
 		}
+	}
+
+	@Test
+	public void fileManagerCreatesFile() {
+		RestTemplate restTemplate = restTemplate( true );
+
+		ResponseEntity<CustomFileDescriptor> response = restTemplate.exchange( url( "/fileManager/create" ),
+		                                                                       HttpMethod.GET,
+		                                                                       null,
+		                                                                       CustomFileDescriptor.class );
+		assertNotNull( response );
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
+
+		CustomFileDescriptor fd = response.getBody();
+		assertEquals( "default", fd.getRepositoryId() );
+		assertEquals( FastDateFormat.getInstance( "yyyy/MM/dd" ).format( System.currentTimeMillis() ),
+		              fd.getFolderId() );
+
 	}
 
 	@Test
@@ -450,6 +469,48 @@ public class ITPlatformTestApplication
 		public void handleError( ClientHttpResponse response ) throws IOException {
 
 		}
+	}
+
+	public static class CustomFileDescriptor
+	{
+		private String repositoryId;
+		private String fileId;
+		private String folderId;
+
+		public String getRepositoryId() {
+			return repositoryId;
+		}
+
+		public void setRepositoryId( String repositoryId ) {
+			this.repositoryId = repositoryId;
+		}
+
+		public String getFileId() {
+			return fileId;
+		}
+
+		public void setFileId( String fileId ) {
+			this.fileId = fileId;
+		}
+
+		public String getFolderId() {
+			return folderId;
+		}
+
+		public void setFolderId( String folderId ) {
+			this.folderId = folderId;
+		}
+
+		public String getUri() {
+			return uri;
+		}
+
+		public void setUri( String uri ) {
+			this.uri = uri;
+		}
+
+		private String uri;
+
 	}
 
 	public static class CustomObjectIdentity implements ObjectIdentity
