@@ -13,6 +13,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
@@ -26,6 +27,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.net.HttpURLConnection;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import static org.junit.Assert.*;
@@ -209,6 +211,20 @@ public class ITPlatformTestApplication
 		assertEquals( HttpStatus.OK, apiRestResponse.getStatusCode() );
 		assertEquals( "admin", apiRestResponse.getBody().get( "principalName" ) );
 		assertEquals( "admin@localhost", apiRestResponse.getBody().get( "email" ) );
+	}
+
+	@Test
+	public void springBatchCanSubmitJob() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<Map<String, Object>> responseEntity = restTemplate.exchange( url( "/springBatch/run" ),
+		                                                                            HttpMethod.GET, null,
+		                                                                            new ParameterizedTypeReference<Map<String, Object>>()
+		                                                                            {
+		                                                                            } );
+		assertNotNull( responseEntity );
+		assertEquals( HttpStatus.OK, responseEntity.getStatusCode() );
+		assertEquals( "ok", responseEntity.getBody().get( "jobDone" ) );
 	}
 
 	@Test
