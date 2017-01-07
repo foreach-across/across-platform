@@ -4,38 +4,34 @@ Arne Vandamme
 :toc: left
 :sectanchors:
 :across-platform-version: 2.0.0-SNAPSHOT
-:spring-platform-version: Athens-RELEASE
-:spring-platform-url: http://docs.spring.io/platform/docs/Athens-RELEASE/reference/htmlsingle/#appendix-dependency-versions
-:across-version: 2.0.0.M1
-:foreach-common-version: 1.0
+:spring-platform-version: Athens-SR2
+:spring-platform-url: http://docs.spring.io/platform/docs/Athens-SR2/reference/htmlsingle/#appendix-dependency-versions
+:across-version: 2.0.0-SNAPSHOT
+:foreach-common-version: 1.1-SNAPSHOT
 :commons-collections-version: 4.1
 :liquibase-version: 3.5.3
-:querydsl-version: 4.1.3
-:hikaricp-version: 2.4.7
 :mbassador-version: 1.2.0
-:hibernate-version: 5.0.9.Final
-:hibernate-validator-version: 5.2.2.Final
-:jboss-logging-version: 3.3.0.FinalA
-:validation-api-version: 1.1.0.Final
 :cglib-version: 3.1
-:mysql-connector-version: 5.1.31
 :ojdbc6-version: 11.2.0
-:jtds-version: 1.3.1
+:thymeleaf-version: 3.0.3.RELEASE
+:thymeleaf-extras-springsecurity4: 3.0.1.RELEASE
 :asm-across-hibernate-module-version: 2.0.0-SNAPSHOT
-:asm-ehcache-module-version: 1.0.0.RELEASE
-:asm-logging-module-version: 1.0.1.RELEASE
+:asm-ehcache-module-version: 1.0.1.M1
+:asm-logging-module-version: 1.1.0.M1
 :asm-application-info-module-version: 1.0.1.RELEASE
-:asm-debug-web-module-version: 1.0.1.RELEASE
+:asm-debug-web-module-version: 2.0.0.M1
 :asm-admin-web-module-version: 2.0.0-SNAPSHOT
-:asm-spring-security-module-version: 2.0.0-SNAPSHOT
+:asm-spring-security-module-version: 2.0.0.M1
 :asm-user-module-version: 2.0.0-SNAPSHOT
-:asm-properties-module-version: 2.0.0-SNAPSHOT
-:asm-spring-security-acl-module-version: 2.0.0-SNAPSHOT
-:asm-oauth2-module-version: 2.0.0-SNAPSHOT
+:asm-properties-module-version: 1.1.1.M1
+:asm-spring-security-acl-module-version: 2.0.0.M1
+:asm-oauth2-module-version: 2.0.0.M1
 :asm-entity-module-version: 2.0.0-SNAPSHOT
-:asm-file-manager-module-version: 1.0.0.RELEASE
+:asm-file-manager-module-version: 1.1.0.M1
 :asm-spring-batch-module-version: 1.0.0.RELEASE
 :asm-spring-mobile-module-version: 1.0.1.RELEASE
+:asm-bootstrap-ui-module-version: 1.0.0.M1
+:asm-ldap-module-version: 1.0.0.M1
 
 --
 Copyright (C) 2014-2015 +
@@ -89,50 +85,45 @@ Additionally Across platform BOM defines and overrides the following dependencie
 |===
 
 | Group | Artifact | Version
-| org.liquibase | liquibase.core | {liquibase-version}
-| com.mattbertolini | liquibase-slf4j | 1.2.1
-| org.apache.commons | commons-collections4 | {commons-collections-version}
-| net.engio | mbassador | {mbassador-version}
 
-| com.mysema.querydsl | querydsl-core | {querydsl-version}
-| com.mysema.querydsl | querydsl-apt | {querydsl-version}
-| com.mysema.querydsl | querydsl-jpa | {querydsl-version}
-
-| org.hibernate | hibernate-core | {hibernate-version}
-| org.hibernate | hibernate-entitymanager | {hibernate-version}
-| org.hibernate | hibernate-validator | {hibernate-validator-version}
-| org.jboss.logging | jboss-logging | {jboss-logging-version}
-
-| javax.validator | validation-api | {validation-api-version}
 | cglib | cglib | {cglib-version}
 
-| mysql | mysql-connector-java | {mysql-connector-version}
-| com.oracle | ojdbc6 | {ojdbc6-version}
-| net.sourceforge.jtds | jtds | {jtds-version}
-| com.zaxxer | HikariCP-java6 | {hikaricp-version}
+| com.foreach.across | across-core | {across-version}
+| com.foreach.across | across-test | {across-version}
+| com.foreach.across | across-web | {across-version}
+
+| com.foreach.across.modules | across-hibernate-module | {asm-across-hibernate-module-version}
+| com.foreach.across.modules | admin-web-module | {asm-admin-web-module-version}
+| com.foreach.across.modules | application-info-module | {asm-application-info-module-version}
+| com.foreach.across.modules | bootstrap-ui-module | {asm-bootstrap-ui-module-version}
+| com.foreach.across.modules | debug-web-module | {asm-debug-web-module-version}
+| com.foreach.across.modules | ehcache-module | {asm-ehcache-module-version}
+| com.foreach.across.modules | entity-module | {asm-entity-module-version}
+| com.foreach.across.modules | file-manager-module | {asm-file-manager-module-version}
+| com.foreach.across.modules | ldap-module | {asm-ldap-module-version}
+| com.foreach.across.modules | logging-module | {asm-logging-module-version}
+| com.foreach.across.modules | oauth2-module | {asm-oauth2-module-version}
+| com.foreach.across.modules | properties-module | {asm-properties-module-version}
+| com.foreach.across.modules | spring-batch-module | {asm-spring-batch-module-version}
+| com.foreach.across.modules | spring-mobile-module | {asm-spring-mobile-module-version}
+| com.foreach.across.modules | spring-security-module | {asm-spring-security-module-version}
+| com.foreach.across.modules | spring-security-acl-module | {asm-spring-security-acl-module-version}
+| com.foreach.across.modules | user-module | {asm-user-module-version}
 
 | com.foreach.libs | common-concurrent | {foreach-common-version}
 | com.foreach.libs | common-spring | {foreach-common-version}
-| com.foreach.libs | common-web | {foreach-common-version}
 | com.foreach.libs | common-test | {foreach-common-version}
+| com.foreach.libs | common-web | {foreach-common-version}
 
-| com.foreach.across | across-core | {across-version}
-| com.foreach.across | across-web | {across-version}
-| com.foreach.across | across-test | {across-version}
-| com.foreach.across.modules | across-hibernate-module | {asm-across-hibernate-module-version}
-| com.foreach.across.modules | ehcache-module | {asm-ehcache-module-version}
-| com.foreach.across.modules | debug-web-module | {asm-debug-web-module-version}
-| com.foreach.across.modules | admin-web-module | {asm-admin-web-module-version}
-| com.foreach.across.modules | spring-security-module | {asm-spring-security-module-version}
-| com.foreach.across.modules | spring-security-acl-module | {asm-spring-security-acl-module-version}
-| com.foreach.across.modules | oauth2-module | {asm-oauth2-module-version}
-| com.foreach.across.modules | properties-module | {asm-properties-module-version}
-| com.foreach.across.modules | entity-module | {asm-entity-module-version}
-| com.foreach.across.modules | user-module | {asm-user-module-version}
-| com.foreach.across.modules | application-info-module | {asm-application-info-module-version}
-| com.foreach.across.modules | logging-module | {asm-logging-module-version}
-| com.foreach.across.modules | file-manager-module | {asm-file-manager-module-version}
-| com.foreach.across.modules | spring-batch-module | {asm-spring-batch-module-version}
-| com.foreach.across.modules | spring-mobile-module | {asm-spring-mobile-module-version}
+| com.mattbertolini | liquibase-slf4j | 1.2.1
+| com.oracle | ojdbc6 | {ojdbc6-version}
+
+| net.engio | mbassador | {mbassador-version}
+
+| org.apache.commons | commons-collections4 | {commons-collections-version}
+
+| org.thymeleaf | thymeleaf | {thymeleaf-version}
+| org.thymeleaf | thymeleaf-spring4 | {thymeleaf-version}
+| org.thymeleaf.extras | thymeleaf-extras-springsecurity4 | {thymeleaf-extras-springsecurity4}
 
 |===
