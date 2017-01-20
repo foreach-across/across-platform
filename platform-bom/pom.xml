@@ -60,7 +60,7 @@
 		<asm.oauth2-module.version>2.0.0.M1</asm.oauth2-module.version>
 		<asm.entity-module.version>2.0.0-SNAPSHOT</asm.entity-module.version>
 		<asm.file-manager-module.version>1.1.0.M1</asm.file-manager-module.version>
-		<asm.spring-batch-module.version>1.0.0.RELEASE</asm.spring-batch-module.version>
+		<asm.spring-batch-module.version>1.0.1-SNAPSHOT</asm.spring-batch-module.version>
 		<asm.bootstrap-ui-module.version>1.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
 		<asm.spring-mobile-module.version>2.0.0.M1</asm.spring-mobile-module.version>
 		<asm.ldap-module.version>1.0.0.M1</asm.ldap-module.version>
@@ -72,7 +72,7 @@
 		<repository>
 			<id>foreach-nexus</id>
 			<name>Foreach nexus</name>
-			<url>https://repository.foreach.be/nexus/repository/public/</url>
+			<url>http://repository.foreach.be/nexus/repository/public/</url>
 		</repository>
 	</repositories>
 
@@ -349,12 +349,12 @@
 				<repository>
 					<id>foreach-nexus</id>
 					<name>Foreach nexus</name>
-					<url>https://repository.foreach.be/nexus/repository/releases/</url>
+					<url>http://repository.foreach.be/nexus/repository/releases/</url>
 				</repository>
 				<snapshotRepository>
 					<id>foreach-nexus</id>
 					<name>Foreach nexus</name>
-					<url>https://repository.foreach.be/nexus/repository/snapshots/</url>
+					<url>http://repository.foreach.be/nexus/repository/snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
 		</profile>

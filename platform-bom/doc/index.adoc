@@ -28,7 +28,7 @@ Arne Vandamme
 :asm-oauth2-module-version: 2.0.0.M1
 :asm-entity-module-version: 2.0.0-SNAPSHOT
 :asm-file-manager-module-version: 1.1.0.M1
-:asm-spring-batch-module-version: 1.0.0.RELEASE
+:asm-spring-batch-module-version: 1.0.1-SNAPSHOT
 :asm-spring-mobile-module-version: 1.0.1.RELEASE
 :asm-bootstrap-ui-module-version: 1.0.0-SNAPSHOT
 :asm-ldap-module-version: 1.0.0.M1
