@@ -31,7 +31,7 @@ Arne Vandamme
 :asm-spring-batch-module-version: 1.0.1-SNAPSHOT
 :asm-spring-mobile-module-version: 1.0.1.RELEASE
 :asm-bootstrap-ui-module-version: 1.0.0-SNAPSHOT
-:asm-ldap-module-version: 1.0.0.M1
+:asm-ldap-module-version: 1.0.0-SNAPSHOT
 
 --
 Copyright (C) 2014-2015 +
