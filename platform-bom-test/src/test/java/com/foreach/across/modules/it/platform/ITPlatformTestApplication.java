@@ -42,6 +42,7 @@ public class ITPlatformTestApplication
 {
 	@Value("${local.server.port}")
 	private int port;
+
 	@Autowired
 	private GroupService groupService;
 
@@ -132,7 +133,7 @@ public class ITPlatformTestApplication
 				assertEquals( HttpStatus.OK, entityResponse.getStatusCode() );
 				Document jsoup = Jsoup.parse( entityResponse.getBody() );
 				assertEquals( 1, jsoup.select( "div.panel-default.hidden" ).size() );
-				assertEquals( "Create a new ldap connector", jsoup.select( "h4" ).first().text() );
+				assertEquals( "Create a new ldap connector", jsoup.select( "header > h3" ).first().text() );
 			}
 		}
 	}

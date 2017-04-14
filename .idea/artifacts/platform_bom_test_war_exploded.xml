@@ -78,7 +78,7 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:ehcache-module:1.0.1.M1" />
           <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.3" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.5.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/entity-module/2.0.0-SNAPSHOT/entity-module-2.0.0-20170411.192616-36.jar" output-file-name="entity-module-2.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/entity-module/2.0.0-SNAPSHOT/entity-module-2.0.0-20170413.143815-38.jar" output-file-name="entity-module-2.0.0-SNAPSHOT.jar" />
           <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/bootstrap-ui-module/1.0.0-SNAPSHOT/bootstrap-ui-module-1.0.0-20170412.082852-25.jar" output-file-name="bootstrap-ui-module-1.0.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:5.2.2.Final" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
@@ -119,7 +119,7 @@
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
           <element id="library" level="project" name="Maven: com.foreach.across.modules:logging-module:1.1.0.M1" />
           <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/libs/common-web/1.1-SNAPSHOT/common-web-1.1-20170206.155448-4.jar" output-file-name="common-web-1.1-SNAPSHOT.jar" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:ldap-module:1.0.0.M1" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/ldap-module/1.0.0-SNAPSHOT/ldap-module-1.0.0-20170322.185643-23.jar" output-file-name="ldap-module-1.0.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.springframework.ldap:spring-ldap-core:2.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-ldap:4.1.4.RELEASE" />
           <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-test/2.0.0-SNAPSHOT/across-test-2.0.0-20170326.173106-50.jar" output-file-name="across-test-2.0.0-SNAPSHOT.jar" />
