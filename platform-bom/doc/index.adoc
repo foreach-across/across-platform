@@ -6,8 +6,8 @@ Arne Vandamme
 :across-platform-version: 2.0.0-SNAPSHOT
 :spring-platform-version: Athens-SR2
 :spring-platform-url: http://docs.spring.io/platform/docs/Athens-SR2/reference/htmlsingle/#appendix-dependency-versions
-:across-version: 2.0.0-SNAPSHOT
-:foreach-common-version: 1.1-SNAPSHOT
+:across-version: 2.0.0.RELEASE
+:foreach-common-version: 1.1
 :commons-collections-version: 4.1
 :liquibase-version: 3.5.3
 :mbassador-version: 1.2.0
