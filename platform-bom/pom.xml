@@ -47,7 +47,7 @@
 	<properties>
 		<across.version>2.0.0.RELEASE</across.version>
 		<foreach.common.version>1.1</foreach.common.version>
-		<asm.across-hibernate-module.version>2.0.0-SNAPSHOT</asm.across-hibernate-module.version>
+		<asm.across-hibernate-module.version>2.0.0.RELEASE</asm.across-hibernate-module.version>
 		<asm.ehcache-module.version>1.0.1.M1</asm.ehcache-module.version>
 		<asm.logging-module.version>1.1.0.M1</asm.logging-module.version>
 		<asm.application-info-module.version>1.0.1.RELEASE</asm.application-info-module.version>
