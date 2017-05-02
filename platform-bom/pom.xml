@@ -52,6 +52,7 @@
 		<asm.debug-web-module.version>2.0.0.RELEASE</asm.debug-web-module.version>
 		<asm.logging-module.version>1.1.0.RELEASE</asm.logging-module.version>
 		<asm.ehcache-module.version>1.0.1.RELEASE</asm.ehcache-module.version>
+		<asm.spring-mobile-module.version>2.0.0.RELEASE</asm.spring-mobile-module.version>
 		<asm.application-info-module.version>1.0.1.RELEASE</asm.application-info-module.version>
 		<asm.admin-web-module.version>2.0.0-SNAPSHOT</asm.admin-web-module.version>
 		<asm.user-module.version>2.0.0-SNAPSHOT</asm.user-module.version>
@@ -62,7 +63,6 @@
 		<asm.file-manager-module.version>1.1.0.M1</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.1-SNAPSHOT</asm.spring-batch-module.version>
 		<asm.bootstrap-ui-module.version>1.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
-		<asm.spring-mobile-module.version>2.0.0.M1</asm.spring-mobile-module.version>
 		<asm.ldap-module.version>1.0.0-SNAPSHOT</asm.ldap-module.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
