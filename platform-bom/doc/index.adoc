@@ -18,8 +18,8 @@ Arne Vandamme
 :asm-across-hibernate-module-version: 2.0.0.RELEASE
 :asm-spring-security-module-version: 2.0.0.RELEASE
 :asm-debug-web-module-version: 2.0.0.RELEASE
+:asm-logging-module-version: 1.1.0.RELEASE
 :asm-ehcache-module-version: 1.0.1.M1
-:asm-logging-module-version: 1.1.0.M1
 :asm-application-info-module-version: 1.0.1.RELEASE
 :asm-admin-web-module-version: 2.0.0-SNAPSHOT
 :asm-user-module-version: 2.0.0-SNAPSHOT

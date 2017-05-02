@@ -50,8 +50,8 @@
 		<asm.across-hibernate-module.version>2.0.0.RELEASE</asm.across-hibernate-module.version>
 		<asm.spring-security-module.version>2.0.0.RELEASE</asm.spring-security-module.version>
 		<asm.debug-web-module.version>2.0.0.RELEASE</asm.debug-web-module.version>
+		<asm.logging-module.version>1.1.0.RELEASE</asm.logging-module.version>
 		<asm.ehcache-module.version>1.0.1.M1</asm.ehcache-module.version>
-		<asm.logging-module.version>1.1.0.M1</asm.logging-module.version>
 		<asm.application-info-module.version>1.0.1.RELEASE</asm.application-info-module.version>
 		<asm.admin-web-module.version>2.0.0-SNAPSHOT</asm.admin-web-module.version>
 		<asm.user-module.version>2.0.0-SNAPSHOT</asm.user-module.version>
