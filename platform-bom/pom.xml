@@ -56,12 +56,12 @@
 		<asm.application-info-module.version>1.0.1.RELEASE</asm.application-info-module.version>
 		<asm.bootstrap-ui-module.version>1.0.0.RELEASE</asm.bootstrap-ui-module.version>
 		<asm.admin-web-module.version>2.0.0.RELEASE</asm.admin-web-module.version>
+		<asm.file-manager-module.version>1.1.0.RELEASE</asm.file-manager-module.version>
 		<asm.user-module.version>2.0.0-SNAPSHOT</asm.user-module.version>
 		<asm.properties-module.version>1.1.1.M1</asm.properties-module.version>
 		<asm.spring-security-acl-module.version>2.0.0.M1</asm.spring-security-acl-module.version>
 		<asm.oauth2-module.version>2.0.0.M1</asm.oauth2-module.version>
 		<asm.entity-module.version>2.0.0-SNAPSHOT</asm.entity-module.version>
-		<asm.file-manager-module.version>1.1.0.M1</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.1-SNAPSHOT</asm.spring-batch-module.version>
 		<asm.ldap-module.version>1.0.0-SNAPSHOT</asm.ldap-module.version>
 
