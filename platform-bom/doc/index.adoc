@@ -23,7 +23,7 @@ Arne Vandamme
 :asm-spring-mobile-module-version: 2.0.0.RELEASE
 :asm-application-info-module-version: 1.0.1.RELEASE
 :asm-bootstrap-ui-module-version: 1.0.0.RELEASE
-:asm-admin-web-module-version: 2.0.0-SNAPSHOT
+:asm-admin-web-module-version: 2.0.0.RELEASE
 :asm-user-module-version: 2.0.0-SNAPSHOT
 :asm-properties-module-version: 1.1.1.M1
 :asm-spring-security-acl-module-version: 2.0.0.M1
