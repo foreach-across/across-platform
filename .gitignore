@@ -1,5 +1,7 @@
 target
-**/target
 .idea/workspace.xml
 .idea/libraries
 .idea/excludeFromValidation
+*.iml
+
+TEST_ITPlatformApp

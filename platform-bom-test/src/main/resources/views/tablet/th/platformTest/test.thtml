@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Demo page</title>
+</head>
+<body>
+
+<div device:replace="th/platformTest/include-override">
+	must be replaced
+</div>
+
+</body>
+</html>

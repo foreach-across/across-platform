@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title th:inline="text">Category: [[${selectedCategory.name}]]</title>
+</head>
+<body>
+<div class="container">
+    <div th:fragment="content" class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li th:each="categoryItem : ${navigationMenu.getItemWithPath('/category').items}"
+                    th:classappend="${categoryItem.selected} ? active">
+                    <a th:href="@{${categoryItem.url}}" href="#"
+                       th:text="${categoryItem.title}">category name</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <h1 th:text="#{selectedCategory.title(${selectedCategory.name})}">Items for selected category</h1>
+            <table class="table table-striped">
+                <thead th:inline="text">
+                <tr>
+                    <th>[[#{item.name}]]</th>
+                    <th>[[#{item.price}]]</th>
+                </tr>
+                </thead>
+                <tr th:each="item : ${selectedCategory.items}">
+                    <td th:text="${item.name}">item name</td>
+                    <td th:text="|$ ${#numbers.formatDecimal(item.price,1,2)}|">item price</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title th:replace="${childPage} :: title">page specific title</title>
+
+    <link rel="stylesheet" type="text/css" th:each="css : ${webResourceRegistry.getResources('css')}"
+          th:href="@{${css.data}}"/>
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <div class="logo">&nbsp;</div>
+            <ul class="nav navbar-nav" th:inline="text">
+                <li th:each="item : ${navigationMenu.items}"
+                    th:class="${item.group} ? dropdown"
+                    th:classappend="${item.selected} ? active">
+                    <a th:unless="${item.group}" th:href="@{${item.url}}">[[${item.title}]]</a>
+                    <a th:if="${item.group}" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">[[${item.title}]] <span class="caret"></span></a>
+
+                    <ul th:if="${item.group}" class="dropdown-menu">
+                        <li th:each="subItem: ${item.items}"
+                            th:classappend="${subItem.selected} ? active">
+                            <a th:href="@{${subItem.url}}">[[${subItem.title}]]</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-success">Custom category content</div>
+        </div>
+    </div>
+    <div th:replace="${childPage} :: content">
+        here comes the body content
+    </div>
+</div>
+
+
+<script th:each="javascript : ${webResourceRegistry.getResources('javascript-page-end')}" th:src="@{${javascript.data}}"
+        th:if="${javascript.location != 'inline'}"></script>
+
+</body>
+</html>

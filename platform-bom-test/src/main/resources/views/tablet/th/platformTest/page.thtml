@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Demo page</title>
+</head>
+<body>
+<p>Simple webapplication demonstrating Spring Mobile integration with both JSP and Thymeleaf rendering.</p>
+<p>
+	<a href="jsp">JSP</a>
+</p>
+
+<ul>
+	<li>template type: thymeleaf</li>
+	<li>template: tablet</li>
+	<li th:text="|currentDevice: ${currentDevice.deviceType}|">currentDevice: xx</li>
+	<li th:text="|deviceType: ${deviceTypeName}|">deviceType lowercase</li>
+</ul>
+
+<div th:replace="th/platformTest/include-override">
+	include: unknown
+</div>
+
+</body>
+</html>

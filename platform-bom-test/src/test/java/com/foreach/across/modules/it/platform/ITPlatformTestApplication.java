@@ -1,82 +1,88 @@
 package com.foreach.across.modules.it.platform;
 
 import com.foreach.across.modules.platform.PlatformTestApplication;
-import com.foreach.across.modules.platform.extensions.DebugWebSecurityConfiguration;
+import com.foreach.across.modules.user.business.Group;
+import com.foreach.across.modules.user.services.GroupService;
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.boot.test.WebIntegrationTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.security.acls.model.ObjectIdentity;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.HttpURLConnection;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.UUID;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 /**
  * @author Marc Vanbrabant
- * @since 1.1.2
+ * @since 2.0.0
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@WebIntegrationTest(randomPort = true)
-@SpringApplicationConfiguration(classes = PlatformTestApplication.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = PlatformTestApplication.class)
 public class ITPlatformTestApplication
 {
 	@Value("${local.server.port}")
 	private int port;
 
+	@Autowired
+	private GroupService groupService;
+
 	@Test
-	public void testThatDebugModuleRedirectsToApplicationInfoModuleDashboard() throws Exception {
+	public void debugModuleRedirectsToApplicationInfoModuleDashboard() throws Exception {
 		RestTemplate restTemplate = restTemplate();
-		ResponseEntity<String> response = restTemplate.exchange( url( "/debug" ), HttpMethod.GET, createHeaders(
-				DebugWebSecurityConfiguration.DEBUG_USERNAME, DebugWebSecurityConfiguration.DEBUG_PASSWORD ),
+		ResponseEntity<String> response = restTemplate.exchange( url( "/debug" ), HttpMethod.GET,
+		                                                         defaultDebugAuthentication(),
 		                                                         String.class );
 		assertNotNull( response );
-		assertEquals( response.getStatusCode(), HttpStatus.FOUND );
+		assertEquals( HttpStatus.FOUND, response.getStatusCode() );
 		assertEquals( url( "/debug/applicationInfo" ), response.getHeaders().get( "Location" ).get( 0 ) );
 	}
 
 	@Test
-	public void testThatDebugModuleIsSecuredForUnknownUser() throws Exception {
+	public void debugModuleIsSecuredForUnknownUser() throws Exception {
 		RestTemplate restTemplate = restTemplate( true );
 		ResponseEntity<String> response = restTemplate.getForEntity( url( "/debug/applicationInfo" ), String.class );
-		assertEquals( response.getStatusCode(), HttpStatus.UNAUTHORIZED );
+		assertEquals( HttpStatus.UNAUTHORIZED, response.getStatusCode() );
 	}
 
 	@Test
-	public void testThatDebugModuleIsSecuredForAuthenticatedUser() throws Exception {
+	public void debugModuleIsSecuredForAuthenticatedUser() throws Exception {
 		RestTemplate restTemplate = restTemplate();
 		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/applicationInfo" ), HttpMethod.GET,
-		                                                         createHeaders(
-				                                                         DebugWebSecurityConfiguration.DEBUG_USERNAME,
-				                                                         DebugWebSecurityConfiguration.DEBUG_PASSWORD ),
+		                                                         defaultDebugAuthentication(),
 		                                                         String.class );
-		assertEquals( response.getStatusCode(), HttpStatus.OK );
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
 	}
 
 	@Test
-	public void testThatAdminWebModuleRedirectsToLoginPage() throws Exception {
+	public void adminWebModuleRedirectsToLoginPage() throws Exception {
 		RestTemplate restTemplate = restTemplate();
 		ResponseEntity<String> response = restTemplate.getForEntity( url( "/admin/entities/user" ), String.class );
-		assertEquals( response.getStatusCode(), HttpStatus.FOUND );
+		assertEquals( HttpStatus.FOUND, response.getStatusCode() );
 		assertEquals( url( "/admin/login" ), response.getHeaders().get( "Location" ).get( 0 ) );
 	}
 
 	@Test
-	public void testThatAdminWebModuleListsUserOverviewForAuthenticatedUser() {
+	public void adminWebModuleListsUserOverviewForAuthenticatedUser() {
 		RestTemplate restTemplate = restTemplate( true );
 
 		ResponseEntity<String> loginPage = restTemplate.getForEntity( url( "/admin/login" ), String.class );
@@ -95,40 +101,96 @@ public class ITPlatformTestApplication
 				                                                         set( "X-CSRF-Token", csrf );
 				                                                         set( "Cookie", cookie );
 			                                                         }} ), String.class );
-			assertEquals( response.getStatusCode(), HttpStatus.FOUND );
+			assertEquals( HttpStatus.FOUND, response.getStatusCode() );
 			assertEquals( url( "/admin/" ), response.getHeaders().get( "Location" ).get( 0 ) );
 
-			ResponseEntity<String> responseForUserList = restTemplate.exchange( url( "/admin/entities/user" ),
-			                                                                    HttpMethod.GET, new HttpEntity<>( null,
-			                                                                                                      new HttpHeaders()
-			                                                                                                      {{
-				                                                                                                      set( "Cookie",
-				                                                                                                           response.getHeaders()
-				                                                                                                                   .get( "Set-Cookie" )
-				                                                                                                                   .get( 0 ) );
-			                                                                                                      }} ),
-			                                                                    String.class );
-			assertEquals( responseForUserList.getStatusCode(), HttpStatus.OK );
+			{
+				ResponseEntity<String> entityResponse = restTemplate.exchange( url( "/admin/entities/user" ),
+				                                                               HttpMethod.GET, new HttpEntity<>( null,
+				                                                                                                 new HttpHeaders()
+				                                                                                                 {{
+					                                                                                                 set( "Cookie",
+					                                                                                                      response.getHeaders()
+					                                                                                                              .get( "Set-Cookie" )
+					                                                                                                              .get( 0 ) );
+				                                                                                                 }} ),
+				                                                               String.class );
+				assertEquals( HttpStatus.OK, entityResponse.getStatusCode() );
+			}
+
+			{
+				ResponseEntity<String> entityResponse = restTemplate.exchange(
+						url( "/admin/entities/ldapConnector/create" ),
+						HttpMethod.GET, new HttpEntity<>( null,
+						                                  new HttpHeaders()
+						                                  {{
+							                                  set( "Cookie",
+							                                       response.getHeaders()
+							                                               .get( "Set-Cookie" )
+							                                               .get( 0 ) );
+						                                  }} ),
+						String.class );
+				assertEquals( HttpStatus.OK, entityResponse.getStatusCode() );
+				Document jsoup = Jsoup.parse( entityResponse.getBody() );
+				assertEquals( 1, jsoup.select( "div.panel-default.hidden" ).size() );
+				assertEquals( "Create a new ldap connector", jsoup.select( "header > h3" ).first().text() );
+			}
 		}
 	}
 
 	@Test
-	public void testThatPreAuthorizedControllerIsOnlyAccessibleWhenAuthenticated() throws Exception {
+	public void fileManagerCreatesFile() {
+		RestTemplate restTemplate = restTemplate( true );
+
+		ResponseEntity<CustomFileDescriptor> response = restTemplate.exchange( url( "/fileManager/create" ),
+		                                                                       HttpMethod.GET,
+		                                                                       null,
+		                                                                       CustomFileDescriptor.class );
+		assertNotNull( response );
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
+
+		CustomFileDescriptor fd = response.getBody();
+		assertEquals( "default", fd.getRepositoryId() );
+		assertEquals( FastDateFormat.getInstance( "yyyy/MM/dd" ).format( System.currentTimeMillis() ),
+		              fd.getFolderId() );
+
+	}
+
+	@Test
+	public void ehCacheModuleLoadsAndCachesSystemUser() throws Exception {
+		RestTemplate restTemplate = restTemplate();
+		ResponseEntity<String> response = restTemplate.exchange(
+				url( "/debug/ehcache/view?managerName=__DEFAULT__&cache=securityPrincipalCache" ), HttpMethod.GET,
+				defaultDebugAuthentication(),
+				String.class );
+		assertNotNull( response );
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
+		Document jsoup = Jsoup.parse( response.getBody() );
+		assertEquals( "securityPrincipalCache", jsoup.select( "h3" ).first().text() );
+
+		jsoup.select( "tr > td:first-child" ).stream().filter( e -> e.text().equals( "system" ) ).findFirst()
+		     .orElseThrow( AssertionError::new );
+		jsoup.select( "tr > td:first-child" ).stream().filter( e -> e.text().equals( "1" ) ).findFirst().orElseThrow(
+				AssertionError::new );
+	}
+
+	@Test
+	public void preAuthorizedControllerIsOnlyAccessibleWhenAuthenticated() throws Exception {
 		RestTemplate restTemplate = restTemplate( true );
 		ResponseEntity<String> response = restTemplate.getForEntity(
 				url( "/api/testshouldbeauthenticated?access_token=" + UUID.randomUUID() ), String.class );
 		assertNotNull( response );
-		assertEquals( response.getStatusCode(), HttpStatus.UNAUTHORIZED );
+		assertEquals( HttpStatus.UNAUTHORIZED, response.getStatusCode() );
 	}
 
 	@Test
-	public void testThatOauthClientTokenFlowWorksForAdmin() {
+	public void oauthClientTokenFlowWorksForAdmin() {
 		RestTemplate restTemplate = restTemplate( true );
 		ResponseEntity<LinkedHashMap> clientTokenResponse = restTemplate.getForEntity(
 				url( "/oauth/token?client_id=client.com&client_secret=t3st&response_type=token&scope=full&grant_type=client_credentials" ),
 				LinkedHashMap.class );
 		assertNotNull( clientTokenResponse );
-		assertEquals( clientTokenResponse.getStatusCode(), HttpStatus.OK );
+		assertEquals( HttpStatus.OK, clientTokenResponse.getStatusCode() );
 		String client_access_token = (String) clientTokenResponse.getBody().get( "access_token" );
 		assertNotNull( client_access_token );
 
@@ -137,7 +199,7 @@ public class ITPlatformTestApplication
 				url( "/oauth/user_token?access_token=" + client_access_token + "&username=admin&scope=full" ),
 				LinkedHashMap.class );
 		assertNotNull( userTokenResponse );
-		assertEquals( userTokenResponse.getStatusCode(), HttpStatus.OK );
+		assertEquals( HttpStatus.OK, userTokenResponse.getStatusCode() );
 		String user_access_token = (String) userTokenResponse.getBody().get( "access_token" );
 		String user_refresh_token = (String) userTokenResponse.getBody().get( "refresh_token" );
 		assertNotNull( user_access_token );
@@ -147,9 +209,232 @@ public class ITPlatformTestApplication
 		ResponseEntity<LinkedHashMap> apiRestResponse = restTemplate.getForEntity(
 				url( "/api/testshouldbeauthenticated?access_token=" + user_access_token ), LinkedHashMap.class );
 		assertNotNull( apiRestResponse );
-		assertEquals( apiRestResponse.getStatusCode(), HttpStatus.OK );
+		assertEquals( HttpStatus.OK, apiRestResponse.getStatusCode() );
 		assertEquals( "admin", apiRestResponse.getBody().get( "principalName" ) );
 		assertEquals( "admin@localhost", apiRestResponse.getBody().get( "email" ) );
+	}
+
+	@Test
+	public void springBatchCanSubmitJob() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<Map<String, Object>> responseEntity = restTemplate.exchange( url( "/springBatch/run" ),
+		                                                                            HttpMethod.GET, null,
+		                                                                            new ParameterizedTypeReference<Map<String, Object>>()
+		                                                                            {
+		                                                                            } );
+		assertNotNull( responseEntity );
+		assertEquals( HttpStatus.OK, responseEntity.getStatusCode() );
+		assertEquals( "ok", responseEntity.getBody().get( "jobDone" ) );
+	}
+
+	@Test
+	public void springSecurityDialectLoads() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> loginPage = restTemplate.getForEntity( url( "/admin/login" ), String.class );
+		Document doc = Jsoup.parse( loginPage.getBody() );
+		assertEquals( 1, doc.select( "input[name=username]" ).size() );
+		assertEquals( 1, doc.select( "input[name=password]" ).size() );
+		assertTrue( !loginPage.getBody().contains( "sec:authorize" ) );
+		assertTrue( !loginPage.getBody().contains( "isAuthenticated()" ) );
+	}
+
+	@Test
+	public void springSecurityAclEntriesAreCreatedAndReturned() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<CustomObjectIdentity> objectIdentityResponseEntity = restTemplate.getForEntity(
+				url( "/acl/dummy group" ), CustomObjectIdentity.class );
+		assertEquals( HttpStatus.OK, objectIdentityResponseEntity.getStatusCode() );
+		ObjectIdentity body = objectIdentityResponseEntity.getBody();
+		assertEquals( Group.class.getName(), body.getType() );
+		Group group = groupService.getGroupByName( "dummy group" );
+		assertEquals( group.getId(), body.getIdentifier() );
+	}
+
+	@Test
+	public void acrossContextBrowserInfoPageWorks() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/across/browser/info/-1" ), HttpMethod.GET,
+		                                                         defaultDebugAuthentication(),
+		                                                         String.class );
+		assertNotNull( response );
+	}
+
+	@Test
+	public void acrossContextBrowserBeansPageWorks() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/across/browser/beans/1" ), HttpMethod.GET,
+		                                                         defaultDebugAuthentication(),
+		                                                         String.class );
+		assertNotNull( response );
+	}
+
+	@Test
+	public void acrossContextBrowserPropertiesPageWorks() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/across/browser/properties/1" ),
+		                                                         HttpMethod.GET,
+		                                                         defaultDebugAuthentication(),
+		                                                         String.class );
+		assertNotNull( response );
+	}
+
+	@Test
+	public void acrossContextBrowserEventHandlersPageWorks() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/debug/across/browser/handlers/1" ),
+		                                                         HttpMethod.GET,
+		                                                         defaultDebugAuthentication(),
+		                                                         String.class );
+		assertNotNull( response );
+	}
+
+	@Test
+	public void mainTemplateIsAppliedByDefault() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/" ),
+		                                                         HttpMethod.GET,
+		                                                         null,
+		                                                         String.class );
+		assertNotNull( response );
+		assertFalse( StringUtils.contains( response.getBody(), "Custom category content" ) );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( 1, doc.select( "h1" ).size() );
+		assertEquals( 1, doc.select( "h2" ).size() );
+
+		assertEquals( "Across bids you a warm welcome!", doc.select( "h1" ).get( 0 ).text() );
+		assertEquals( "Hello world", doc.select( "h2" ).get( 0 ).text() );
+	}
+
+	@Test
+	public void categoryTemplateIsAppliedToCategoriesMapping() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/category/tv" ),
+		                                                         HttpMethod.GET,
+		                                                         null,
+		                                                         String.class );
+		assertNotNull( response );
+		assertTrue( StringUtils.contains( response.getBody(), "Custom category content" ) );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( 1, doc.select( "h1" ).size() );
+		assertEquals( 0, doc.select( "h2" ).size() );
+
+		assertEquals( "Products for category: TV", doc.select( "h1" ).get( 0 ).text() );
+	}
+
+	@Test
+	public void categoryTemplateIsAppliedToCategoriesMappingInDutch() {
+		RestTemplate restTemplate = restTemplate();
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/category/tv?language=nl" ),
+		                                                         HttpMethod.GET,
+		                                                         null,
+		                                                         String.class );
+		assertNotNull( response );
+		assertTrue( StringUtils.contains( response.getBody(), "Custom category content" ) );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( 1, doc.select( "h1" ).size() );
+		assertEquals( 0, doc.select( "h2" ).size() );
+
+		assertEquals( "Producten voor categorie: TV", doc.select( "h1" ).get( 0 ).text() );
+	}
+
+	@Test
+	public void unknownCategoryUsesExceptionHandlerAndCustomTemplate() {
+		RestTemplate restTemplate = restTemplate( true );
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/category/foobar" ),
+		                                                         HttpMethod.GET,
+		                                                         null,
+		                                                         String.class );
+		assertNotNull( response );
+		assertFalse( StringUtils.contains( response.getBody(), "Custom category content" ) );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( 0, doc.select( "h1" ).size() );
+		assertEquals( 1, doc.select( "h2" ).size() );
+
+		assertEquals( "Oops, we could not find what you're looking for.", doc.select( "h2" ).get( 0 ).text() );
+	}
+
+	@Test
+	public void springMobileDialectReplaceWorksCorrectly() {
+		RestTemplate restTemplate = restTemplate( true );
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/dialect" ),
+		                                                         HttpMethod.GET,
+		                                                         null,
+		                                                         String.class );
+		assertNotNull( response );
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( "include: normal", doc.select( "div" ).first().text() );
+	}
+
+	@Test
+	public void springMobileShowsDesktopTemplateForFirefox() {
+		RestTemplate restTemplate = restTemplate( true );
+
+		HttpHeaders headers = new HttpHeaders();
+		headers.set( "User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0" );
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/dialect" ),
+		                                                         HttpMethod.GET,
+		                                                         new HttpEntity<>( headers ),
+		                                                         String.class );
+		assertNotNull( response );
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( "include: normal", doc.select( "div" ).first().text() );
+	}
+
+	@Test
+	public void springMobileShowsDesktopTemplateForIphone() {
+		RestTemplate restTemplate = restTemplate( true );
+
+		HttpHeaders headers = new HttpHeaders();
+		headers.set( "User-Agent",
+		             "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16" );
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/dialect" ),
+		                                                         HttpMethod.GET,
+		                                                         new HttpEntity<>( headers ),
+		                                                         String.class );
+		assertNotNull( response );
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( "include: mobile", doc.select( "div" ).first().text() );
+	}
+
+	@Test
+	public void springMobileShowsDesktopTemplateForIpad() {
+		RestTemplate restTemplate = restTemplate( true );
+
+		HttpHeaders headers = new HttpHeaders();
+		headers.set( "User-Agent",
+		             "Mozilla/5.0(iPad; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B314 Safari/531.21.10" );
+
+		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/dialect" ),
+		                                                         HttpMethod.GET,
+		                                                         new HttpEntity<>( headers ),
+		                                                         String.class );
+		assertNotNull( response );
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
+		Document doc = Jsoup.parse( response.getBody() );
+		assertEquals( "include: tablet", doc.select( "div" ).first().text() );
+	}
+
+
+
+	private HttpEntity defaultDebugAuthentication() {
+		return createHeaders( "debug", "test" );
 	}
 
 	private String url( String relativePath ) {
@@ -200,6 +485,72 @@ public class ITPlatformTestApplication
 		@Override
 		public void handleError( ClientHttpResponse response ) throws IOException {
 
+		}
+	}
+
+	public static class CustomFileDescriptor
+	{
+		private String repositoryId;
+		private String fileId;
+		private String folderId;
+
+		public String getRepositoryId() {
+			return repositoryId;
+		}
+
+		public void setRepositoryId( String repositoryId ) {
+			this.repositoryId = repositoryId;
+		}
+
+		public String getFileId() {
+			return fileId;
+		}
+
+		public void setFileId( String fileId ) {
+			this.fileId = fileId;
+		}
+
+		public String getFolderId() {
+			return folderId;
+		}
+
+		public void setFolderId( String folderId ) {
+			this.folderId = folderId;
+		}
+
+		public String getUri() {
+			return uri;
+		}
+
+		public void setUri( String uri ) {
+			this.uri = uri;
+		}
+
+		private String uri;
+
+	}
+
+	public static class CustomObjectIdentity implements ObjectIdentity
+	{
+		private String type;
+		private Long identifier;
+
+		public void setType( String type ) {
+			this.type = type;
+		}
+
+		public void setIdentifier( Long identifier ) {
+			this.identifier = identifier;
+		}
+
+		@Override
+		public Serializable getIdentifier() {
+			return identifier;
+		}
+
+		@Override
+		public String getType() {
+			return type;
 		}
 	}
 }

@@ -1,0 +1,26 @@
+acrossHibernate:
+  persistence-context-in-view:
+    handler: filter
+
+debugWebModule:
+  security:
+    password: test
+    ip-addresses:
+
+fileManagerModule:
+  local-repositories-root: ./TEST_ITPlatformApp
+  temp-folder: ./TEST_ITPlatformApp_TEMP
+
+logging:
+  request-response:
+    enabled: true
+    paused: false
+  method:
+    enabled: true
+    default-minimum-duration: 5
+
+springMobile:
+  device-resolver-registration: interceptor
+
+userModule:
+  enable-default-acls: true
