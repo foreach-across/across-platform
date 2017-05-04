@@ -30,11 +30,11 @@ Arne Vandamme
 :asm-entity-module-version: 2.0.0.RELEASE
 :asm-spring-security-acl-module-version: 2.0.0.RELEASE
 :asm-user-module-version: 2.0.0.RELEASE
+:asm-ldap-module-version: 1.0.0.RELEASE
 :asm-oauth2-module-version: 2.0.0.M1
-:asm-ldap-module-version: 1.0.0-SNAPSHOT
 
 --
-Copyright (C) 2014-2015 +
+Copyright (C) 2014-2017 +
 [small]#Copies of this document may be made for your own use and for distribution to others, provided that you do not charge any fee for such copies and further provided that each copy contains this Copyright Notice, whether distributed in print or electronically.#
 --
 

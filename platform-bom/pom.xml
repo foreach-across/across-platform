@@ -62,8 +62,8 @@
 		<asm.entity-module.version>2.0.0.RELEASE</asm.entity-module.version>
 		<asm.spring-security-acl-module.version>2.0.0.RELEASE</asm.spring-security-acl-module.version>
 		<asm.user-module.version>2.0.0.RELEASE</asm.user-module.version>
+		<asm.ldap-module.version>1.0.0.RELEASE</asm.ldap-module.version>
 		<asm.oauth2-module.version>2.0.0.M1</asm.oauth2-module.version>
-		<asm.ldap-module.version>1.0.0-SNAPSHOT</asm.ldap-module.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
