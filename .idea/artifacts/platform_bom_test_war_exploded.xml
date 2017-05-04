@@ -36,7 +36,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.5" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.5" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.5" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:oauth2-module:2.0.0.M1" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:oauth2-module:2.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: com.foreach.across.modules:across-hibernate-module:2.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:1.10.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.8.9" />

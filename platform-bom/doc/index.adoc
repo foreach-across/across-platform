@@ -31,7 +31,7 @@ Arne Vandamme
 :asm-spring-security-acl-module-version: 2.0.0.RELEASE
 :asm-user-module-version: 2.0.0.RELEASE
 :asm-ldap-module-version: 1.0.0.RELEASE
-:asm-oauth2-module-version: 2.0.0.M1
+:asm-oauth2-module-version: 2.0.0.RELEASE
 
 --
 Copyright (C) 2014-2017 +
