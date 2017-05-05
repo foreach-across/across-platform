@@ -1,12 +1,12 @@
 = Across Platform BOM
 Arne Vandamme
-2.0.0.RELEASE
+2.0.1-SNAPSHOT
 :toc: left
 :sectanchors:
-:across-platform-version: 2.0.0.RELEASE
+:across-platform-version: 2.0.1-SNAPSHOT
 :spring-platform-version: Athens-SR2
 :spring-platform-url: http://docs.spring.io/platform/docs/Athens-SR2/reference/htmlsingle/#appendix-dependency-versions
-:across-version: 2.0.0.RELEASE
+:across-version: 2.0.1-SNAPSHOT
 :foreach-common-version: 1.1
 :commons-collections-version: 4.1
 :liquibase-version: 3.5.3
@@ -27,7 +27,7 @@ Arne Vandamme
 :asm-file-manager-module-version: 1.1.0.RELEASE
 :asm-spring-batch-module-version: 1.0.1.RELEASE
 :asm-properties-module-version: 1.1.1.RELEASE
-:asm-entity-module-version: 2.0.0.RELEASE
+:asm-entity-module-version: 2.1.0-SNAPSHOT
 :asm-spring-security-acl-module-version: 2.0.0.RELEASE
 :asm-user-module-version: 2.0.0.RELEASE
 :asm-ldap-module-version: 1.0.0.RELEASE
