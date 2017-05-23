@@ -77,6 +77,36 @@ If a version is omitted, the version from the BOM will be used.
 </dependencies>
 ----
 
+== What's new in this version
+=== 2.0.1-SNAPSHOT
+
+.Across dependency upgrades
+
+[cols=3,options=header]
+|===
+
+|Dependency
+|Previous version
+|New version
+
+|Across
+|2.0.0.RELEASE
+|2.0.1-SNAPSHOT
+
+|BootstrapUiModule
+|1.0.0.RELEASE
+|1.1.0-SNAPSHOT
+
+|AdminWebModule
+|2.0.0.RELEASE
+|2.1.0-SNAPSHOT
+
+|EntityModule
+|2.0.0.RELEASE
+|2.1.0-SNAPSHOT
+
+|===
+
 == Dependency versions
 Across Platform BOM {across-platform-version} extends the *Spring IO Platform BOM {spring-platform-version}*.
 The base list of dependencies can be found in the {spring-platform-url}[Spring IO Platform documentation].
