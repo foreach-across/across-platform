@@ -15,7 +15,7 @@ Arne Vandamme
 :ojdbc6-version: 11.2.0
 :thymeleaf-version: 3.0.3.RELEASE
 :thymeleaf-extras-springsecurity4: 3.0.1.RELEASE
-:asm-across-hibernate-module-version: 2.0.0.RELEASE
+:asm-across-hibernate-module-version: 2.0.1-SNAPSHOT
 :asm-spring-security-module-version: 2.0.0.RELEASE
 :asm-debug-web-module-version: 2.0.0.RELEASE
 :asm-logging-module-version: 1.1.0.RELEASE
@@ -24,7 +24,7 @@ Arne Vandamme
 :asm-application-info-module-version: 1.0.1.RELEASE
 :asm-bootstrap-ui-module-version: 1.1.0-SNAPSHOT
 :asm-admin-web-module-version: 2.1.0-SNAPSHOT
-:asm-file-manager-module-version: 1.1.0.RELEASE
+:asm-file-manager-module-version: 1.2.0-SNAPSHOT
 :asm-spring-batch-module-version: 1.0.1.RELEASE
 :asm-properties-module-version: 1.1.1.RELEASE
 :asm-entity-module-version: 2.1.0-SNAPSHOT
@@ -104,6 +104,14 @@ If a version is omitted, the version from the BOM will be used.
 |EntityModule
 |2.0.0.RELEASE
 |2.1.0-SNAPSHOT
+
+|AcrossHibernateJpaModule
+|2.0.0.RELEASE
+|2.0.1-SNAPSHOT
+
+|FileManagerModule
+|1.1.0.RELEASE
+|1.2.0-SNAPSHOT
 
 |===
 
