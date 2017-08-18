@@ -98,23 +98,26 @@ public class ITPlatformTestApplication
 						                                                         set( "password", "admin" );
 					                                                         }}, new HttpHeaders()
 			                                                         {{
-				                                                         set( "X-CSRF-Token", csrf );
+				                                                         set( "X-XSRF-TOKEN", csrf );
 				                                                         set( "Cookie", cookie );
 			                                                         }} ), String.class );
 			assertEquals( HttpStatus.FOUND, response.getStatusCode() );
 			assertEquals( url( "/admin/" ), response.getHeaders().get( "Location" ).get( 0 ) );
 
+			String sessionId = response.getHeaders().get( "Set-Cookie" ).stream()
+			                           .filter( c -> c.contains( "JSESSIONID" ) )
+			                           .findFirst()
+			                           .orElseThrow( () -> new IllegalStateException( "Expected JSESSIONID cookie" ) );
+
 			{
-				ResponseEntity<String> entityResponse = restTemplate.exchange( url( "/admin/entities/user" ),
-				                                                               HttpMethod.GET, new HttpEntity<>( null,
-				                                                                                                 new HttpHeaders()
-				                                                                                                 {{
-					                                                                                                 set( "Cookie",
-					                                                                                                      response.getHeaders()
-					                                                                                                              .get( "Set-Cookie" )
-					                                                                                                              .get( 0 ) );
-				                                                                                                 }} ),
-				                                                               String.class );
+				ResponseEntity<String> entityResponse
+						= restTemplate.exchange( url( "/admin/entities/user" ),
+						                         HttpMethod.GET, new HttpEntity<>( null,
+						                                                           new HttpHeaders()
+						                                                           {{
+							                                                           set( "Cookie", sessionId );
+						                                                           }} ),
+						                         String.class );
 				assertEquals( HttpStatus.OK, entityResponse.getStatusCode() );
 			}
 
@@ -124,10 +127,7 @@ public class ITPlatformTestApplication
 						HttpMethod.GET, new HttpEntity<>( null,
 						                                  new HttpHeaders()
 						                                  {{
-							                                  set( "Cookie",
-							                                       response.getHeaders()
-							                                               .get( "Set-Cookie" )
-							                                               .get( 0 ) );
+							                                  set( "Cookie", sessionId );
 						                                  }} ),
 						String.class );
 				assertEquals( HttpStatus.OK, entityResponse.getStatusCode() );
@@ -431,8 +431,6 @@ public class ITPlatformTestApplication
 		assertEquals( "include: tablet", doc.select( "div" ).first().text() );
 	}
 
-
-
 	private HttpEntity defaultDebugAuthentication() {
 		return createHeaders( "debug", "test" );
 	}
@@ -493,6 +491,7 @@ public class ITPlatformTestApplication
 		private String repositoryId;
 		private String fileId;
 		private String folderId;
+		private String uri;
 
 		public String getRepositoryId() {
 			return repositoryId;
@@ -526,8 +525,6 @@ public class ITPlatformTestApplication
 			this.uri = uri;
 		}
 
-		private String uri;
-
 	}
 
 	public static class CustomObjectIdentity implements ObjectIdentity
@@ -535,8 +532,9 @@ public class ITPlatformTestApplication
 		private String type;
 		private Long identifier;
 
-		public void setType( String type ) {
-			this.type = type;
+		@Override
+		public Serializable getIdentifier() {
+			return identifier;
 		}
 
 		public void setIdentifier( Long identifier ) {
@@ -544,13 +542,12 @@ public class ITPlatformTestApplication
 		}
 
 		@Override
-		public Serializable getIdentifier() {
-			return identifier;
-		}
-
-		@Override
 		public String getType() {
 			return type;
+		}
+
+		public void setType( String type ) {
+			this.type = type;
 		}
 	}
 }
