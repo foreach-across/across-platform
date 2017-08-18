@@ -64,6 +64,9 @@
 		<asm.user-module.version>2.0.0.RELEASE</asm.user-module.version>
 		<asm.ldap-module.version>1.0.0.RELEASE</asm.ldap-module.version>
 		<asm.oauth2-module.version>2.0.0.RELEASE</asm.oauth2-module.version>
+		<asm.webcms-module.version>0.0.2-SNAPSHOT</asm.webcms-module.version>
+
+		<imageserver-version>4.0.0-SNAPSHOT</imageserver-version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -254,6 +257,28 @@
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>ldap-module</artifactId>
 				<version>${asm.ldap-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>web-cms-module</artifactId>
+				<version>${asm.webcms-module.version}</version>
+			</dependency>
+
+			<!-- ImageServer modules -->
+			<dependency>
+				<groupId>com.foreach.imageserver</groupId>
+				<artifactId>imageserver-core</artifactId>
+				<version>${imageserver-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.imageserver</groupId>
+				<artifactId>imageserver-admin</artifactId>
+				<version>${imageserver-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.imageserver</groupId>
+				<artifactId>imageserver-client</artifactId>
+				<version>${imageserver-version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

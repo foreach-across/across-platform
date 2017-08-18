@@ -32,6 +32,8 @@ Arne Vandamme
 :asm-user-module-version: 2.0.0.RELEASE
 :asm-ldap-module-version: 1.0.0.RELEASE
 :asm-oauth2-module-version: 2.0.0.RELEASE
+:ais-image-server-version: 4.0.0-SNAPSHOT
+:asm-web-cms-version: 0.0.2-SNAPSHOT
 
 --
 Copyright (C) 2014-2017 +
@@ -115,6 +117,23 @@ If a version is omitted, the version from the BOM will be used.
 
 |===
 
+.New dependencies added
+
+[cols=2,options=header]
+|===
+
+|Dependency
+|Version
+
+|WebCmsModule
+|0.0.2-SNAPSHOT
+
+|ImageServer modules
+|4.0.0-SNAPSHOT
+
+|===
+
+
 == Dependency versions
 Across Platform BOM {across-platform-version} extends the *Spring IO Platform BOM {spring-platform-version}*.
 The base list of dependencies can be found in the {spring-platform-url}[Spring IO Platform documentation].
@@ -147,6 +166,10 @@ Additionally Across platform BOM defines and overrides the following dependencie
 | com.foreach.across.modules | spring-security-module | {asm-spring-security-module-version}
 | com.foreach.across.modules | spring-security-acl-module | {asm-spring-security-acl-module-version}
 | com.foreach.across.modules | user-module | {asm-user-module-version}
+| com.foreach.across.modules | web-cms-module | {asm-web-cms-version}
+| com.foreach.imageserver  | imageserver-core | {ais-image-server-version}
+| com.foreach.imageserver  | imageserver-admin | {ais-image-server-version}
+| com.foreach.imageserver  | imageserver-client | {ais-image-server-version}
 
 | com.foreach.libs | common-concurrent | {foreach-common-version}
 | com.foreach.libs | common-spring | {foreach-common-version}
