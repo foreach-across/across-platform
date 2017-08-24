@@ -93,7 +93,7 @@ If a version is omitted, the version from the BOM will be used.
 
 |Across
 |2.0.0.RELEASE
-|2.1.0-SNAPSHOT
+|2.1.0.RELEASE
 
 |BootstrapUiModule
 |1.0.0.RELEASE
