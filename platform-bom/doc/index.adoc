@@ -15,7 +15,7 @@ Arne Vandamme
 :ojdbc6-version: 11.2.0
 :thymeleaf-version: 3.0.3.RELEASE
 :thymeleaf-extras-springsecurity4: 3.0.1.RELEASE
-:asm-across-hibernate-module-version: 2.0.1-SNAPSHOT
+:asm-across-hibernate-module-version: 2.0.1.RELEASE
 :asm-spring-security-module-version: 2.0.0.RELEASE
 :asm-debug-web-module-version: 2.0.0.RELEASE
 :asm-logging-module-version: 1.1.0.RELEASE
@@ -109,7 +109,7 @@ If a version is omitted, the version from the BOM will be used.
 
 |AcrossHibernateJpaModule
 |2.0.0.RELEASE
-|2.0.1-SNAPSHOT
+|2.0.1.RELEASE
 
 |FileManagerModule
 |1.1.0.RELEASE
