@@ -23,7 +23,7 @@ Arne Vandamme
 :asm-spring-mobile-module-version: 2.0.0.RELEASE
 :asm-application-info-module-version: 1.0.1.RELEASE
 :asm-bootstrap-ui-module-version: 1.1.0.RELEASE
-:asm-admin-web-module-version: 2.1.0-SNAPSHOT
+:asm-admin-web-module-version: 2.1.0.RELEASE
 :asm-file-manager-module-version: 1.2.0-SNAPSHOT
 :asm-spring-batch-module-version: 1.0.1.RELEASE
 :asm-properties-module-version: 1.1.1.RELEASE
@@ -101,7 +101,7 @@ If a version is omitted, the version from the BOM will be used.
 
 |AdminWebModule
 |2.0.0.RELEASE
-|2.1.0-SNAPSHOT
+|2.1.0.RELEASE
 
 |BootstrapUiModule
 |1.0.0.RELEASE
