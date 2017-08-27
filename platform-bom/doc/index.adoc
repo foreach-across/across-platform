@@ -33,7 +33,7 @@ Arne Vandamme
 :asm-ldap-module-version: 1.0.0.RELEASE
 :asm-oauth2-module-version: 2.0.0.RELEASE
 :asm-web-cms-version: 0.0.2-SNAPSHOT
-:ais-image-server-version: 4.0.0-SNAPSHOT
+:ais-image-server-version: 4.0.0.RELEASE
 
 --
 Copyright (C) 2014-2017 +
@@ -129,7 +129,7 @@ If a version is omitted, the version from the BOM will be used.
 |0.0.2-SNAPSHOT
 
 |ImageServer modules
-|4.0.0-SNAPSHOT
+|4.0.0.RELEASE
 
 |===
 

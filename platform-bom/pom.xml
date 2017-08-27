@@ -66,7 +66,7 @@
 		<asm.oauth2-module.version>2.0.0.RELEASE</asm.oauth2-module.version>
 		<asm.webcms-module.version>0.0.2-SNAPSHOT</asm.webcms-module.version>
 
-		<imageserver-version>4.0.0-SNAPSHOT</imageserver-version>
+		<imageserver-version>4.0.0.RELEASE</imageserver-version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
