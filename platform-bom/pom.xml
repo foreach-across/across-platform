@@ -60,7 +60,7 @@
 		<asm.spring-batch-module.version>1.0.1.RELEASE</asm.spring-batch-module.version>
 		<asm.properties-module.version>1.1.1.RELEASE</asm.properties-module.version>
 		<asm.entity-module.version>2.1.0.RELEASE</asm.entity-module.version>
-		<asm.spring-security-acl-module.version>2.0.0.RELEASE</asm.spring-security-acl-module.version>
+		<asm.spring-security-acl-module.version>2.0.1-SNAPSHOT</asm.spring-security-acl-module.version>
 		<asm.user-module.version>2.0.0.RELEASE</asm.user-module.version>
 		<asm.ldap-module.version>1.0.0.RELEASE</asm.ldap-module.version>
 		<asm.oauth2-module.version>2.0.0.RELEASE</asm.oauth2-module.version>
