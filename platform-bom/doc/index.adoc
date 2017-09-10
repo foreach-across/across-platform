@@ -32,7 +32,7 @@ Arne Vandamme
 :asm-user-module-version: 2.0.0.RELEASE
 :asm-ldap-module-version: 1.0.0.RELEASE
 :asm-oauth2-module-version: 2.0.0.RELEASE
-:asm-web-cms-version: 0.0.2-SNAPSHOT
+:asm-web-cms-version: 0.0.2.RELEASE
 :ais-image-server-version: 4.0.0.RELEASE
 
 --
@@ -130,7 +130,7 @@ If a version is omitted, the version from the BOM will be used.
 |Version
 
 |WebCmsModule
-|0.0.2-SNAPSHOT
+|0.0.2.RELEASE
 
 |ImageServer modules
 |4.0.0.RELEASE
