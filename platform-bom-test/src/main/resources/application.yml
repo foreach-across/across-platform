@@ -1,6 +1,6 @@
 acrossHibernate:
   persistence-context-in-view:
-    handler: filter
+    handler: FILTER
 
 debugWebModule:
   security:
