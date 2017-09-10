@@ -28,7 +28,7 @@ Arne Vandamme
 :asm-spring-batch-module-version: 1.0.1.RELEASE
 :asm-properties-module-version: 1.1.1.RELEASE
 :asm-entity-module-version: 2.1.0.RELEASE
-:asm-spring-security-acl-module-version: 2.0.1-SNAPSHOT
+:asm-spring-security-acl-module-version: 2.0.1.RELEASE
 :asm-user-module-version: 2.0.0.RELEASE
 :asm-ldap-module-version: 1.0.0.RELEASE
 :asm-oauth2-module-version: 2.0.0.RELEASE
@@ -117,7 +117,7 @@ If a version is omitted, the version from the BOM will be used.
 
 |SpringSecurityAclModule
 |2.0.0.RELEASE
-|2.0.1-SNAPSHOT
+|2.0.1.RELEASE
 
 |===
 
