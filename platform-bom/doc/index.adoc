@@ -21,7 +21,7 @@ Arne Vandamme
 :asm-ehcache-module-version: 1.0.1.RELEASE
 :asm-spring-mobile-module-version: 2.0.0.RELEASE
 :asm-application-info-module-version: 1.0.1.RELEASE
-:asm-bootstrap-ui-module-version: 1.2.0-SNAPSHOT
+:asm-bootstrap-ui-module-version: 1.2.0.RELEASE
 :asm-admin-web-module-version: 2.1.1-SNAPSHOT
 :asm-file-manager-module-version: 1.2.0.RELEASE
 :asm-spring-batch-module-version: 1.0.1.RELEASE
@@ -100,7 +100,7 @@ If a version is omitted, the version from the BOM will be used.
 
 |BootstrapUiModule
 |1.1.0.RELEASE
-|1.2.0-SNAPSHOT
+|1.2.0.RELEASE
 
 |EntityModule
 |2.1.0.RELEASE
