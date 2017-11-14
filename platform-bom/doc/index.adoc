@@ -6,7 +6,7 @@ Arne Vandamme
 :across-platform-version: 2.0.2-SNAPSHOT
 :spring-platform-version: Athens-SR6
 :spring-platform-url: http://docs.spring.io/platform/docs/Athens-SR6/reference/htmlsingle/#appendix-dependency-versions
-:across-version: 2.1.1-SNAPSHOT
+:across-version: 2.1.1.RELEASE
 :foreach-common-version: 1.1
 :commons-collections-version: 4.1
 :mbassador-version: 1.2.0
@@ -92,7 +92,7 @@ If a version is omitted, the version from the BOM will be used.
 
 |Across
 |2.1.0.RELEASE
-|2.1.1-SNAPSHOT
+|2.1.1.RELEASE
 
 |AdminWebModule
 |2.1.0.RELEASE
