@@ -20,7 +20,7 @@
 
 	<groupId>com.foreach.across</groupId>
 	<artifactId>platform-bom</artifactId>
-	<version>2.0.1.RELEASE</version>
+	<version>2.0.2.RELEASE</version>
 	<packaging>pom</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
@@ -45,26 +45,26 @@
 	</developers>
 
 	<properties>
-		<across.version>2.1.0.RELEASE</across.version>
+		<across.version>2.1.1.RELEASE</across.version>
 		<foreach.common.version>1.1</foreach.common.version>
 		<asm.across-hibernate-module.version>2.0.1.RELEASE</asm.across-hibernate-module.version>
-		<asm.spring-security-module.version>2.0.0.RELEASE</asm.spring-security-module.version>
+		<asm.spring-security-module.version>2.0.1.RELEASE</asm.spring-security-module.version>
 		<asm.debug-web-module.version>2.0.0.RELEASE</asm.debug-web-module.version>
 		<asm.logging-module.version>1.1.0.RELEASE</asm.logging-module.version>
 		<asm.ehcache-module.version>1.0.1.RELEASE</asm.ehcache-module.version>
 		<asm.spring-mobile-module.version>2.0.0.RELEASE</asm.spring-mobile-module.version>
 		<asm.application-info-module.version>1.0.1.RELEASE</asm.application-info-module.version>
-		<asm.bootstrap-ui-module.version>1.1.0.RELEASE</asm.bootstrap-ui-module.version>
-		<asm.admin-web-module.version>2.1.0.RELEASE</asm.admin-web-module.version>
+		<asm.bootstrap-ui-module.version>1.2.0.RELEASE</asm.bootstrap-ui-module.version>
+		<asm.admin-web-module.version>2.1.1.RELEASE</asm.admin-web-module.version>
 		<asm.file-manager-module.version>1.2.0.RELEASE</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.1.RELEASE</asm.spring-batch-module.version>
 		<asm.properties-module.version>1.1.1.RELEASE</asm.properties-module.version>
-		<asm.entity-module.version>2.1.0.RELEASE</asm.entity-module.version>
+		<asm.entity-module.version>2.2.0.RELEASE</asm.entity-module.version>
 		<asm.spring-security-acl-module.version>2.0.1.RELEASE</asm.spring-security-acl-module.version>
 		<asm.user-module.version>2.0.0.RELEASE</asm.user-module.version>
 		<asm.ldap-module.version>1.0.0.RELEASE</asm.ldap-module.version>
 		<asm.oauth2-module.version>2.0.0.RELEASE</asm.oauth2-module.version>
-		<asm.webcms-module.version>0.0.2.RELEASE</asm.webcms-module.version>
+		<asm.webcms-module.version>0.0.3.RELEASE</asm.webcms-module.version>
 
 		<imageserver-version>4.0.0.RELEASE</imageserver-version>
 
