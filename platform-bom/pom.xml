@@ -46,6 +46,7 @@
 
 	<properties>
 		<across.version>3.0.0-SNAPSHOT</across.version>
+		<across.autoconfigure.version>1.0.0-SNAPSHOT</across.autoconfigure.version>
 		<foreach.common.version>1.1</foreach.common.version>
 		<asm.across-hibernate-module.version>3.0.0-SNAPSHOT</asm.across-hibernate-module.version>
 		<asm.spring-security-module.version>3.0.0-SNAPSHOT</asm.spring-security-module.version>
@@ -88,6 +89,13 @@
 				<version>${across.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+
+			<!-- Across autoconfiguration -->
+			<dependency>
+				<groupId>com.foreach.across</groupId>
+				<artifactId>across-autoconfigure</artifactId>
+				<version>${across.autoconfigure.version}</version>
 			</dependency>
 
 			<!-- Spring managed -->
@@ -178,7 +186,6 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
-
 
 			<!-- Across standard modules -->
 			<dependency>

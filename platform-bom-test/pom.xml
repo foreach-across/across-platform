@@ -146,13 +146,10 @@
 	</dependencyManagement>
 
 	<dependencies>
+		<!-- Auto configuration -->
 		<dependency>
 			<groupId>com.foreach.across</groupId>
-			<artifactId>across-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.foreach.across</groupId>
-			<artifactId>across-web</artifactId>
+			<artifactId>across-autoconfigure</artifactId>
 		</dependency>
 		<!-- Modules -->
 		<dependency>
