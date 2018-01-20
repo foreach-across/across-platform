@@ -4,16 +4,20 @@ Arne Vandamme
 :toc: left
 :sectanchors:
 :across-platform-version: 2.1.0-SNAPSHOT
-:spring-platform-version: Athens-SR6
-:spring-platform-url: http://docs.spring.io/platform/docs/Athens-SR6/reference/htmlsingle/#appendix-dependency-versions
+:spring-platform-version: Brussels-SR6
+:spring-platform-url: http://docs.spring.io/platform/docs/Brussels-SR6/reference/htmlsingle/#appendix-dependency-versions
 :across-version: 3.0.0-SNAPSHOT
+:across-autoconfigure-version: 1.0.0-SNAPSHOT
 :foreach-common-version: 1.1
 :commons-collections-version: 4.1
+:commons-lang-version: 3.7
+:assertj-core-version: 3.9.0
 :mbassador-version: 1.2.0
 :cglib-version: 3.1
 :ojdbc6-version: 11.2.0
-:thymeleaf-version: 3.0.7.RELEASE
+:thymeleaf-version: 3.0.9.RELEASE
 :thymeleaf-extras-springsecurity4: 3.0.2.RELEASE
+:thymeleaf-extras-java8time: 3.0.1.RELEASE
 :asm-across-hibernate-module-version: 3.0.0-SNAPSHOT
 :asm-spring-security-module-version: 3.0.0-SNAPSHOT
 :asm-debug-web-module-version: 2.0.0.RELEASE
@@ -21,13 +25,13 @@ Arne Vandamme
 :asm-ehcache-module-version: 1.0.1.RELEASE
 :asm-spring-mobile-module-version: 2.0.0.RELEASE
 :asm-application-info-module-version: 1.0.1.RELEASE
-:asm-bootstrap-ui-module-version: 1.2.0.RELEASE
-:asm-admin-web-module-version: 2.1.1.RELEASE
+:asm-bootstrap-ui-module-version: 2.0.0-SNAPSHOT
+:asm-admin-web-module-version: 3.0.0-SNAPSHOT
 :asm-file-manager-module-version: 1.2.0.RELEASE
 :asm-spring-batch-module-version: 1.0.1.RELEASE
 :asm-properties-module-version: 1.1.1.RELEASE
-:asm-entity-module-version: 2.2.1-SNAPSHOT
-:asm-spring-security-acl-module-version: 2.0.1.RELEASE
+:asm-entity-module-version: 3.0.0-SNAPSHOT
+:asm-spring-security-acl-module-version: 3.0.0-SNAPSHOT
 :asm-user-module-version: 2.0.0.RELEASE
 :asm-ldap-module-version: 1.0.0.RELEASE
 :asm-oauth2-module-version: 2.0.0.RELEASE
@@ -93,19 +97,53 @@ If a version is omitted, the version from the BOM will be used.
 
 |Across
 |2.1.1.RELEASE
-|3.0.0.RELEASE
+|3.0.0-SNAPSHOT
 
-|AcrossHibernateModule
+|AcrossHibernateJpaModule
 |2.0.1.RELEASE
-|3.0.0.RELEASE
+|3.0.0-SNAPSHOT
+
+|AdminWebModule
+|2.1.1.RELEASE
+|3.0.0-SNAPSHOT
+
+|BootstrapUiModule
+|1.2.0.RELEASE
+|2.0.0-SNAPSHOT
 
 |EntityModule
 |2.2.0.RELEASE
-|2.2.1-SNAPSHOT
+|3.0.0-SNAPSHOT
 
 |SpringSecurityModule
 |2.0.1.RELEASE
 |3.0.0-SNAPSHOT
+
+|===
+
+.Other dependency upgrades
+[cols="3,1,1",options=header]
+|===
+
+|Dependency
+|Previous version
+|New version
+
+|AssertJ Core
+|&nbsp;
+|3.9.0
+
+|Spring Platform
+|Athens-SR6
+|Brussels-SR6
+
+|Thymeleaf
+|3.0.7.RELEASE
+|3.0.9.RELEASE
+
+|Thymeleaf extras: Java8 time
+|&nbsp;
+|3.0.1.RELEASE
 
 |===
 
@@ -240,6 +278,7 @@ Additionally Across platform BOM defines and overrides the following dependencie
 | com.foreach.across | across-core | {across-version}
 | com.foreach.across | across-test | {across-version}
 | com.foreach.across | across-web | {across-version}
+| com.foreach.across | across-autoconfigure | {across-autoconfigure-version}
 
 | com.foreach.across.modules | across-hibernate-module | {asm-across-hibernate-module-version}
 | com.foreach.across.modules | admin-web-module | {asm-admin-web-module-version}
@@ -273,10 +312,13 @@ Additionally Across platform BOM defines and overrides the following dependencie
 
 | net.engio | mbassador | {mbassador-version}
 
+| org.assertj | assertj-core | {assertj-core-version}
 | org.apache.commons | commons-collections4 | {commons-collections-version}
+| org.apache.commons | commons-lang3 | {commons-lang-version}
 
 | org.thymeleaf | thymeleaf | {thymeleaf-version}
 | org.thymeleaf | thymeleaf-spring4 | {thymeleaf-version}
 | org.thymeleaf.extras | thymeleaf-extras-springsecurity4 | {thymeleaf-extras-springsecurity4}
+| org.thymeleaf.extras | thymeleaf-extras-java8time | {thymeleaf-extras-java8time}
 
 |===
