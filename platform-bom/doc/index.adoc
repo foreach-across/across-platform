@@ -4,7 +4,7 @@ Arne Vandamme
 :toc: left
 :sectanchors:
 :across-platform-version: 2.1.0-SNAPSHOT
-:spring-platform-version: Brussels-SR6
+:spring-platform-version: Brussels-SR7
 :spring-platform-url: http://docs.spring.io/platform/docs/Brussels-SR6/reference/htmlsingle/#appendix-dependency-versions
 :across-version: 3.0.0-SNAPSHOT
 :across-autoconfigure-version: 1.0.0-SNAPSHOT
@@ -12,7 +12,6 @@ Arne Vandamme
 :commons-collections-version: 4.1
 :commons-lang-version: 3.7
 :assertj-core-version: 3.9.0
-:mbassador-version: 1.2.0
 :cglib-version: 3.1
 :ojdbc6-version: 11.2.0
 :thymeleaf-version: 3.0.9.RELEASE
@@ -309,8 +308,6 @@ Additionally Across platform BOM defines and overrides the following dependencie
 
 | com.mattbertolini | liquibase-slf4j | 1.2.1
 | com.oracle | ojdbc6 | {ojdbc6-version}
-
-| net.engio | mbassador | {mbassador-version}
 
 | org.assertj | assertj-core | {assertj-core-version}
 | org.apache.commons | commons-collections4 | {commons-collections-version}
