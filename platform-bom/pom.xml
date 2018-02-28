@@ -65,7 +65,7 @@
 		<asm.user-module.version>2.0.0.RELEASE</asm.user-module.version>
 		<asm.ldap-module.version>1.0.0.RELEASE</asm.ldap-module.version>
 		<asm.oauth2-module.version>2.0.0.RELEASE</asm.oauth2-module.version>
-		<asm.webcms-module.version>0.0.3.RELEASE</asm.webcms-module.version>
+		<asm.webcms-module.version>0.0.4-SNAPSHOT</asm.webcms-module.version>
 
 		<imageserver-version>4.0.0.RELEASE</imageserver-version>
 

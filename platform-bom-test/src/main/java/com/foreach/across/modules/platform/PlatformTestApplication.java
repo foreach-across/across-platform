@@ -15,6 +15,7 @@ import com.foreach.across.modules.spring.batch.SpringBatchModule;
 import com.foreach.across.modules.spring.mobile.SpringMobileModule;
 import com.foreach.across.modules.spring.security.acl.SpringSecurityAclModule;
 import com.foreach.across.modules.user.UserModule;
+import com.foreach.across.modules.webcms.WebCmsModule;
 import com.foreach.across.test.support.config.ResetDatabaseConfigurer;
 import com.foreach.across.test.support.config.TestDataSourceConfigurer;
 import org.hibernate.cfg.AvailableSettings;
@@ -32,7 +33,7 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 @AcrossApplication(modules = {
 		DebugWebModule.NAME, EhcacheModule.NAME, UserModule.NAME, LoggingModule.NAME, SpringMobileModule.NAME,
 		ApplicationInfoModule.NAME, SpringBatchModule.NAME, FileManagerModule.NAME, EntityModule.NAME,
-		AdminWebModule.NAME, LoggingModule.NAME, SpringSecurityAclModule.NAME, LdapModule.NAME
+		AdminWebModule.NAME, LoggingModule.NAME, SpringSecurityAclModule.NAME, LdapModule.NAME, WebCmsModule.NAME
 }
 )
 @Import({ TestDataSourceConfigurer.class, ResetDatabaseConfigurer.class, LocaleConfigurer.class })

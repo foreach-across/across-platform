@@ -137,11 +137,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-validator</artifactId>
-				<version>5.2.2.Final</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -183,6 +178,10 @@
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>user-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>web-cms-module</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
