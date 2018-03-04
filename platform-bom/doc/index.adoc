@@ -5,7 +5,7 @@ Arne Vandamme
 :sectanchors:
 :across-platform-version: 2.1.0-SNAPSHOT
 :spring-platform-version: Brussels-SR7
-:spring-platform-url: http://docs.spring.io/platform/docs/Brussels-SR6/reference/htmlsingle/#appendix-dependency-versions
+:spring-platform-url: http://docs.spring.io/platform/docs/Brussels-SR7/reference/htmlsingle/#appendix-dependency-versions
 :across-version: 3.0.0-SNAPSHOT
 :across-autoconfigure-version: 1.0.0-SNAPSHOT
 :foreach-common-version: 1.1
