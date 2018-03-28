@@ -49,7 +49,7 @@
 		<across.autoconfigure.version>1.0.0.RELEASE</across.autoconfigure.version>
 		<foreach.common.version>1.1</foreach.common.version>
 		<asm.across-hibernate-module.version>3.0.0.RELEASE</asm.across-hibernate-module.version>
-		<asm.spring-security-module.version>3.0.0-SNAPSHOT</asm.spring-security-module.version>
+		<asm.spring-security-module.version>3.0.0.RELEASE</asm.spring-security-module.version>
 		<asm.debug-web-module.version>2.0.0.RELEASE</asm.debug-web-module.version>
 		<asm.logging-module.version>1.1.0.RELEASE</asm.logging-module.version>
 		<asm.ehcache-module.version>1.0.1.RELEASE</asm.ehcache-module.version>
