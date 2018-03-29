@@ -72,7 +72,7 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:ehcache-module:1.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.4" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.14.RELEASE" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:entity-module:3.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:entity-module:3.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:5.3.6.Final" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
@@ -81,7 +81,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.10" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.10" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-security-acl-module/3.0.0-SNAPSHOT/spring-security-acl-module-3.0.0-20180201.173234-6.jar" output-file-name="spring-security-acl-module-3.0.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-security-acl-module:3.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.14.RELEASE" />
