@@ -20,7 +20,7 @@
 
 	<groupId>com.foreach.across</groupId>
 	<artifactId>platform-bom-test</artifactId>
-	<version>2.0.2.RELEASE</version>
+	<version>2.1.0.RELEASE</version>
 	<packaging>war</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
@@ -133,26 +133,18 @@
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>platform-bom</artifactId>
-				<version>2.0.2.RELEASE</version>
+				<version>2.1.0.RELEASE</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-validator</artifactId>
-				<version>5.2.2.Final</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
+		<!-- Auto configuration -->
 		<dependency>
 			<groupId>com.foreach.across</groupId>
-			<artifactId>across-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.foreach.across</groupId>
-			<artifactId>across-web</artifactId>
+			<artifactId>across-autoconfigure</artifactId>
 		</dependency>
 		<!-- Modules -->
 		<dependency>
@@ -186,6 +178,10 @@
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>user-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>web-cms-module</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
@@ -248,6 +244,10 @@
 			<artifactId>jsoup</artifactId>
 			<version>1.9.1</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 	</dependencies>
 	<profiles>

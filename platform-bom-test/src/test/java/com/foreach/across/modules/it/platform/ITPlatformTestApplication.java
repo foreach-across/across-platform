@@ -431,6 +431,23 @@ public class ITPlatformTestApplication
 		assertEquals( "include: tablet", doc.select( "div" ).first().text() );
 	}
 
+	@Test
+	public void securityIsAppliedToActuatorEndpoints() {
+		RestTemplate restTemplate = restTemplate( true );
+		ResponseEntity<String> response = restTemplate.getForEntity( url( "/health" ), String.class );
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
+		assertFalse( StringUtils.contains( response.getBody(), "diskSpace" ) );
+
+		response = restTemplate.exchange(
+				url( "/health" ),
+				HttpMethod.GET,
+				createHeaders( "admin", "admin" ),
+				String.class
+		);
+		assertEquals( HttpStatus.OK, response.getStatusCode() );
+		assertTrue( StringUtils.contains( response.getBody(), "diskSpace" ) );
+	}
+
 	private HttpEntity defaultDebugAuthentication() {
 		return createHeaders( "debug", "test" );
 	}

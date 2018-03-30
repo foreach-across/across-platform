@@ -24,3 +24,8 @@ springMobile:
 
 userModule:
   enable-default-acls: true
+
+management:
+  security:
+    roles: ADMIN
+
