@@ -8,7 +8,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.foreach.across:across-autoconfigure:1.0.0.RELEASE" />
-          <element id="library" level="project" name="Maven: com.foreach.across:across-web:3.1.0-SNAPSHOT" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-web/3.1.0-SNAPSHOT/across-web-3.1.0-20180425.092649-3.jar" output-file-name="across-web-3.1.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.21.0-GA" />
           <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:3.0.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.9.RELEASE" />
@@ -19,7 +19,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.10" />
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.17" />
-          <element id="library" level="project" name="Maven: com.foreach.across:across-core:3.1.0-SNAPSHOT" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-core/3.1.0-SNAPSHOT/across-core-3.1.0-20180425.092640-3.jar" output-file-name="across-core-3.1.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: com.foreach.libs:common-concurrent:1.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.14.RELEASE" />
@@ -72,7 +72,7 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:ehcache-module:1.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.4" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.14.RELEASE" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:entity-module:3.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:entity-module:3.1.0-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:5.3.6.Final" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
@@ -109,7 +109,7 @@
           <element id="library" level="project" name="Maven: org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: com.foreach.across.modules:admin-web-module:3.0.1.RELEASE" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:bootstrap-ui-module:2.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:bootstrap-ui-module:2.1.0-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.thymeleaf.extras:thymeleaf-extras-springsecurity4:3.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: com.foreach.across.modules:debug-web-module:2.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.slf4j:log4j-over-slf4j:1.7.25" />
@@ -119,7 +119,7 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:ldap-module:1.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.ldap:spring-ldap-core:2.3.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-ldap:4.2.4.RELEASE" />
-          <element id="library" level="project" name="Maven: com.foreach.across:across-test:3.1.0-SNAPSHOT" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-test/3.1.0-SNAPSHOT/across-test-3.1.0-20180425.092654-3.jar" output-file-name="across-test-3.1.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:2.5.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-test:1.5.10.RELEASE" />

@@ -60,7 +60,7 @@
 		<asm.file-manager-module.version>1.2.0.RELEASE</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.1.RELEASE</asm.spring-batch-module.version>
 		<asm.properties-module.version>1.1.1.RELEASE</asm.properties-module.version>
-		<asm.entity-module.version>3.0.1.RELEASE</asm.entity-module.version>
+		<asm.entity-module.version>3.1.0-SNAPSHOT</asm.entity-module.version>
 		<asm.spring-security-acl-module.version>3.0.1.RELEASE</asm.spring-security-acl-module.version>
 		<asm.user-module.version>3.0.0.RELEASE</asm.user-module.version>
 		<asm.ldap-module.version>1.0.1.RELEASE</asm.ldap-module.version>
