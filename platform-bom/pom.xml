@@ -64,7 +64,7 @@
 		<asm.spring-security-acl-module.version>3.0.1.RELEASE</asm.spring-security-acl-module.version>
 		<asm.user-module.version>3.0.0.RELEASE</asm.user-module.version>
 		<asm.ldap-module.version>1.0.1.RELEASE</asm.ldap-module.version>
-		<asm.oauth2-module.version>2.0.1-SNAPSHOT</asm.oauth2-module.version>
+		<asm.oauth2-module.version>2.0.1.RELEASE</asm.oauth2-module.version>
 		<asm.webcms-module.version>0.0.4.RELEASE</asm.webcms-module.version>
 
 		<imageserver-version>4.0.0.RELEASE</imageserver-version>
