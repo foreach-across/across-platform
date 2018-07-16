@@ -45,7 +45,7 @@
 	</developers>
 
 	<properties>
-		<across.version>3.1.0-SNAPSHOT</across.version>
+		<across.version>3.1.0.RELEASE</across.version>
 		<across.autoconfigure.version>1.0.1-SNAPSHOT</across.autoconfigure.version>
 		<foreach.common.version>1.1</foreach.common.version>
 		<asm.across-hibernate-module.version>3.0.0.RELEASE</asm.across-hibernate-module.version>
