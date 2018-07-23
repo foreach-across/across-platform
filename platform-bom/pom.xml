@@ -66,6 +66,7 @@
 		<asm.ldap-module.version>1.0.1.RELEASE</asm.ldap-module.version>
 		<asm.oauth2-module.version>2.0.1.RELEASE</asm.oauth2-module.version>
 		<asm.webcms-module.version>0.0.5.RELEASE</asm.webcms-module.version>
+		<asm.dynamic-forms-module.version>0.0.1.RELEASE</asm.dynamic-forms-module.version>
 
 		<imageserver-version>4.0.0.RELEASE</imageserver-version>
 
@@ -277,6 +278,11 @@
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>web-cms-module</artifactId>
 				<version>${asm.webcms-module.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across.modules</groupId>
+				<artifactId>dynamic-forms-module</artifactId>
+				<version>${asm.dynamic-forms-module.version}</version>
 			</dependency>
 
 			<!-- ImageServer modules -->
