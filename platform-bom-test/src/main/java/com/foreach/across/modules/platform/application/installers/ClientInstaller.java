@@ -4,12 +4,10 @@ import com.foreach.across.core.annotations.Installer;
 import com.foreach.across.core.installers.AcrossLiquibaseInstaller;
 import com.foreach.across.core.installers.InstallerPhase;
 import com.foreach.across.modules.oauth2.business.OAuth2Client;
-import com.foreach.across.modules.oauth2.business.OAuth2ClientScope;
 import com.foreach.across.modules.oauth2.business.OAuth2Scope;
 import com.foreach.across.modules.oauth2.services.OAuth2Service;
 import com.foreach.across.modules.user.business.Role;
 import com.foreach.across.modules.user.services.RoleService;
-import liquibase.exception.LiquibaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collections;
@@ -32,7 +30,7 @@ public class ClientInstaller extends AcrossLiquibaseInstaller
 	private RoleService roleService;
 
 	@Override
-	public void install() throws LiquibaseException {
+	public void install() {
 		OAuth2Scope oAuth2Scope = new OAuth2Scope();
 		oAuth2Scope.setName( "full" );
 		oAuth2Service.saveScope( oAuth2Scope );
@@ -48,13 +46,8 @@ public class ClientInstaller extends AcrossLiquibaseInstaller
 		client.getAuthorizedGrantTypes().addAll( trustedGrantTypes );
 		client.getResourceIds().addAll( Collections.singleton( "platform-test-app" ) );
 		Role role = roleService.getRole( "ROLE_ADMIN" );
-		client.getRoles().addAll( Collections.singleton( role ) );
-
-		OAuth2ClientScope clientScope = new OAuth2ClientScope();
-		clientScope.setAutoApprove( false );
-		clientScope.setOAuth2Scope( oAuth2Scope );
-		clientScope.setOAuth2Client( client );
-
+		client.addRole( role );
+		client.addScope( oAuth2Scope, false );
 		oAuth2Service.saveClient( client );
 	}
 }
