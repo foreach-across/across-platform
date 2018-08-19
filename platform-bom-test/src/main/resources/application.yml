@@ -4,7 +4,7 @@ acrossHibernate:
 
 debugWebModule:
   security:
-    password: test
+    password: "{noop}test"
     ip-addresses:
 
 fileManagerModule:
@@ -24,8 +24,4 @@ springMobile:
 
 userModule:
   enable-default-acls: true
-
-management:
-  security:
-    roles: ADMIN
 

@@ -21,7 +21,7 @@ import com.foreach.across.test.support.config.TestDataSourceConfigurer;
 import org.hibernate.cfg.AvailableSettings;
 import org.hibernate.dialect.SQLServer2008Dialect;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

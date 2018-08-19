@@ -32,9 +32,9 @@ public class GroupInstaller extends AcrossLiquibaseInstaller
 
 	@Override
 	public void install() throws LiquibaseException {
-		MachinePrincipal system = machinePrincipalService.getMachinePrincipalByName( "system" );
+		MachinePrincipal system = machinePrincipalService.getMachinePrincipalByName( "system" ).orElse( null );
 		try (CloseableAuthentication ignored = securityPrincipalService.authenticate( system )) {
-			Group group = groupService.findOne( QGroup.group.name.eq( "dummy group" ) );
+			Group group = groupService.findOne( QGroup.group.name.eq( "dummy group" ) ).orElse( null );
 			if ( group == null ) {
 				group = new Group();
 				group.setName( "dummy group" );
