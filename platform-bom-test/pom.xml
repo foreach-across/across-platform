@@ -184,6 +184,10 @@
 		</dependency>
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>dynamic-forms-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>spring-mobile-module</artifactId>
 		</dependency>
 		<dependency>
