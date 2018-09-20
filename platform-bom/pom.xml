@@ -20,7 +20,7 @@
 
 	<groupId>com.foreach.across</groupId>
 	<artifactId>platform-bom</artifactId>
-	<version>3.0.0-SNAPSHOT</version>
+	<version>3.0.0.M1</version>
 	<packaging>pom</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
@@ -44,28 +44,28 @@
 	</developers>
 
 	<properties>
-		<across.version>4.0.0-SNAPSHOT</across.version>
-		<across.autoconfigure.version>2.0.0-SNAPSHOT</across.autoconfigure.version>
+		<across.version>4.0.0.M1</across.version>
+		<across.autoconfigure.version>2.0.0.M1</across.autoconfigure.version>
 		<foreach.common.version>1.1</foreach.common.version>
-		<asm.across-hibernate-module.version>4.0.0-SNAPSHOT</asm.across-hibernate-module.version>
-		<asm.spring-security-module.version>4.0.0-SNAPSHOT</asm.spring-security-module.version>
-		<asm.debug-web-module.version>3.0.0-SNAPSHOT</asm.debug-web-module.version>
+		<asm.across-hibernate-module.version>4.0.0.M1</asm.across-hibernate-module.version>
+		<asm.spring-security-module.version>4.0.0.M1</asm.spring-security-module.version>
+		<asm.debug-web-module.version>3.0.0.M1</asm.debug-web-module.version>
 		<asm.logging-module.version>1.1.0.RELEASE</asm.logging-module.version>
-		<asm.ehcache-module.version>2.0.0-SNAPSHOT</asm.ehcache-module.version>
-		<asm.spring-mobile-module.version>3.0.0-SNAPSHOT</asm.spring-mobile-module.version>
-		<asm.application-info-module.version>2.0.0-SNAPSHOT</asm.application-info-module.version>
-		<asm.bootstrap-ui-module.version>3.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
-		<asm.admin-web-module.version>4.0.0-SNAPSHOT</asm.admin-web-module.version>
-		<asm.file-manager-module.version>2.0.0-SNAPSHOT</asm.file-manager-module.version>
+		<asm.ehcache-module.version>2.0.0.M1</asm.ehcache-module.version>
+		<asm.spring-mobile-module.version>3.0.0.M1</asm.spring-mobile-module.version>
+		<asm.application-info-module.version>2.0.0.M1</asm.application-info-module.version>
+		<asm.bootstrap-ui-module.version>3.0.0.M1</asm.bootstrap-ui-module.version>
+		<asm.admin-web-module.version>4.0.0.M1</asm.admin-web-module.version>
+		<asm.file-manager-module.version>2.0.0.M1</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.1.RELEASE</asm.spring-batch-module.version>
-		<asm.properties-module.version>2.0.0-SNAPSHOT</asm.properties-module.version>
-		<asm.entity-module.version>4.0.0-SNAPSHOT</asm.entity-module.version>
-		<asm.spring-security-acl-module.version>4.0.0-SNAPSHOT</asm.spring-security-acl-module.version>
-		<asm.user-module.version>4.0.0-SNAPSHOT</asm.user-module.version>
-		<asm.ldap-module.version>2.0.0-SNAPSHOT</asm.ldap-module.version>
-		<asm.oauth2-module.version>3.0.0-SNAPSHOT</asm.oauth2-module.version>
-		<asm.webcms-module.version>0.1.0-SNAPSHOT</asm.webcms-module.version>
-		<asm.dynamic-forms-module.version>0.1.0-SNAPSHOT</asm.dynamic-forms-module.version>
+		<asm.properties-module.version>2.0.0.M1</asm.properties-module.version>
+		<asm.entity-module.version>4.0.0.M1</asm.entity-module.version>
+		<asm.spring-security-acl-module.version>4.0.0.M1</asm.spring-security-acl-module.version>
+		<asm.user-module.version>4.0.0.M1</asm.user-module.version>
+		<asm.ldap-module.version>2.0.0.M1</asm.ldap-module.version>
+		<asm.oauth2-module.version>3.0.0.M1</asm.oauth2-module.version>
+		<asm.webcms-module.version>0.1.0.M1</asm.webcms-module.version>
+		<asm.dynamic-forms-module.version>0.1.0.M1</asm.dynamic-forms-module.version>
 
 		<imageserver-version>4.0.0.RELEASE</imageserver-version>
 

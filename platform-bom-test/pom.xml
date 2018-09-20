@@ -20,7 +20,7 @@
 
 	<groupId>com.foreach.across</groupId>
 	<artifactId>platform-bom-test</artifactId>
-	<version>3.0.0-SNAPSHOT</version>
+	<version>3.0.0.M1</version>
 	<packaging>war</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
@@ -132,7 +132,7 @@
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>platform-bom</artifactId>
-				<version>3.0.0-SNAPSHOT</version>
+				<version>3.0.0.M1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
