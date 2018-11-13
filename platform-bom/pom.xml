@@ -44,8 +44,8 @@
 	</developers>
 
 	<properties>
-		<across.version>3.1.1-SNAPSHOT</across.version>
-		<across.autoconfigure.version>1.0.1.RELEASE</across.autoconfigure.version>
+		<across.version>3.1.1.RELEASE</across.version>
+		<across.autoconfigure.version>1.0.2-SNAPSHOT</across.autoconfigure.version>
 		<foreach.common.version>1.1</foreach.common.version>
 		<asm.across-hibernate-module.version>3.0.0.RELEASE</asm.across-hibernate-module.version>
 		<asm.spring-security-module.version>3.0.2.RELEASE</asm.spring-security-module.version>
