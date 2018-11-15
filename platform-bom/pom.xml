@@ -20,7 +20,7 @@
 
 	<groupId>com.foreach.across</groupId>
 	<artifactId>platform-bom</artifactId>
-	<version>3.0.0.M1</version>
+	<version>3.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
@@ -44,7 +44,7 @@
 	</developers>
 
 	<properties>
-		<across.version>4.0.0.M1</across.version>
+		<across.version>4.0.0-SNAPSHOT</across.version>
 		<across.autoconfigure.version>2.0.0.M1</across.autoconfigure.version>
 		<foreach.common.version>1.1</foreach.common.version>
 		<asm.across-hibernate-module.version>4.0.0.M1</asm.across-hibernate-module.version>
