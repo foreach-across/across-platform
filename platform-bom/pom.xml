@@ -54,7 +54,7 @@
 		<asm.ehcache-module.version>2.0.0.M1</asm.ehcache-module.version>
 		<asm.spring-mobile-module.version>3.0.0.M1</asm.spring-mobile-module.version>
 		<asm.application-info-module.version>2.0.0.M1</asm.application-info-module.version>
-		<asm.bootstrap-ui-module.version>3.0.0.M1</asm.bootstrap-ui-module.version>
+		<asm.bootstrap-ui-module.version>3.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
 		<asm.admin-web-module.version>4.0.0.M1</asm.admin-web-module.version>
 		<asm.file-manager-module.version>2.0.0.M1</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.1.RELEASE</asm.spring-batch-module.version>
