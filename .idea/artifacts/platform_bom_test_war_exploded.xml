@@ -8,7 +8,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.foreach.across:across-autoconfigure:2.0.0.M1" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-web/4.0.0-SNAPSHOT/across-web-4.0.0-20181115.191448-10.jar" output-file-name="across-web-4.0.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-web:4.0.0-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.0.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-json:2.0.6.RELEASE" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.7" />
@@ -22,7 +22,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.0.10.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.0.10.RELEASE" />
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.19" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-core/4.0.0-SNAPSHOT/across-core-4.0.0-20181115.191440-10.jar" output-file-name="across-core-4.0.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-core:4.0.0-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.foreach.libs:common-concurrent:1.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.0.10.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.0.10.RELEASE" />
@@ -115,8 +115,8 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-mobile-module:3.0.0.M1" />
           <element id="library" level="project" name="Maven: org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.0.10.RELEASE" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:admin-web-module:4.0.0.M1" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:bootstrap-ui-module:3.0.0.M1" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:admin-web-module:4.0.0-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:bootstrap-ui-module:3.0.0-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.thymeleaf.extras:thymeleaf-extras-springsecurity4:3.0.3.RELEASE" />
           <element id="library" level="project" name="Maven: com.foreach.across.modules:debug-web-module:3.0.0.M1" />
           <element id="library" level="project" name="Maven: org.slf4j:log4j-over-slf4j:1.7.25" />
@@ -126,7 +126,7 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:ldap-module:2.0.0.M1" />
           <element id="library" level="project" name="Maven: org.springframework.ldap:spring-ldap-core:2.3.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-ldap:5.0.9.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-test/4.0.0-SNAPSHOT/across-test-4.0.0-20181115.191454-10.jar" output-file-name="across-test-4.0.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-test:4.0.0-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:2.7.9" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:5.0.10.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-test:2.0.6.RELEASE" />
