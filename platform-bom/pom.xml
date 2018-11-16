@@ -61,7 +61,7 @@
 		<asm.properties-module.version>2.0.0.M1</asm.properties-module.version>
 		<asm.entity-module.version>4.0.0-SNAPSHOT</asm.entity-module.version>
 		<asm.spring-security-acl-module.version>4.0.0.M1</asm.spring-security-acl-module.version>
-		<asm.user-module.version>4.0.0.M1</asm.user-module.version>
+		<asm.user-module.version>4.0.0-SNAPSHOT</asm.user-module.version>
 		<asm.ldap-module.version>2.0.0.M1</asm.ldap-module.version>
 		<asm.oauth2-module.version>3.0.0.M1</asm.oauth2-module.version>
 		<asm.webcms-module.version>0.1.0.M1</asm.webcms-module.version>
