@@ -64,8 +64,8 @@
 		<asm.user-module.version>4.0.0-SNAPSHOT</asm.user-module.version>
 		<asm.ldap-module.version>2.0.0.M1</asm.ldap-module.version>
 		<asm.oauth2-module.version>3.0.0-SNAPSHOT</asm.oauth2-module.version>
-		<asm.webcms-module.version>0.1.0.M1</asm.webcms-module.version>
-		<asm.dynamic-forms-module.version>0.1.0.M1</asm.dynamic-forms-module.version>
+		<asm.webcms-module.version>0.1.0-SNAPSHOT</asm.webcms-module.version>
+		<asm.dynamic-forms-module.version>0.1.0-SNAPSHOT</asm.dynamic-forms-module.version>
 
 		<imageserver-version>4.0.0.RELEASE</imageserver-version>
 
