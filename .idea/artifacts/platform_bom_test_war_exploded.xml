@@ -1,6 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="platform-bom-test:war exploded">
     <output-path>$PROJECT_DIR$/platform-bom-test/target/platform-bom-test-2.1.4-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>platform-bom-test</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -8,7 +15,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.foreach.across:across-autoconfigure:1.0.2.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-web/3.1.2-SNAPSHOT/across-web-3.1.2-20190107.211308-3.jar" output-file-name="across-web-3.1.2-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-web:3.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.21.0-GA" />
           <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:3.0.11.RELEASE" />
           <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.11.RELEASE" />
@@ -19,7 +26,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.21.RELEASE" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.11" />
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.17" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-core/3.1.2-SNAPSHOT/across-core-3.1.2-20190107.211300-3.jar" output-file-name="across-core-3.1.2-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-core:3.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: com.foreach.libs:common-concurrent:1.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.21.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.21.RELEASE" />
@@ -72,7 +79,7 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:ehcache-module:1.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.5" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.21.RELEASE" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:entity-module:3.3.0-SNAPSHOT" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/entity-module/3.3.0-SNAPSHOT/entity-module-3.3.0-20181220.071809-1.jar" output-file-name="entity-module-3.3.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:5.3.6.Final" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
@@ -120,7 +127,7 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:ldap-module:1.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.ldap:spring-ldap-core:2.3.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-ldap:4.2.10.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-test/3.1.2-SNAPSHOT/across-test-3.1.2-20190107.211313-3.jar" output-file-name="across-test-3.1.2-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-test:3.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:2.5.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:4.3.21.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-test:1.5.18.RELEASE" />
