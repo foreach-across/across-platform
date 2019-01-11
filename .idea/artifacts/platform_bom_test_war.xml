@@ -1,7 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="war" name="platform-bom-test:war">
     <output-path>$PROJECT_DIR$/platform-bom-test/target</output-path>
-    <root id="archive" name="platform-bom-test-2.1.2-SNAPSHOT.war">
+    <properties id="maven-jee-properties">
+      <options>
+        <module>platform-bom-test</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="platform-bom-test-2.1.3.RELEASE.war">
       <element id="artifact" artifact-name="platform-bom-test:war exploded" />
     </root>
   </artifact>
