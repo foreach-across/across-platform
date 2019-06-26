@@ -15,7 +15,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.foreach.across:across-autoconfigure:1.0.2.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-web/3.2.0-SNAPSHOT/across-web-3.2.0-20190513.142601-7.jar" output-file-name="across-web-3.2.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-web:3.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.21.0-GA" />
           <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:3.0.11.RELEASE" />
           <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.11.RELEASE" />
@@ -26,7 +26,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.23.RELEASE" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.11" />
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.17" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-core/3.2.0-SNAPSHOT/across-core-3.2.0-20190513.142557-7.jar" output-file-name="across-core-3.2.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-core:3.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: com.foreach.libs:common-concurrent:1.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.23.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.23.RELEASE" />
@@ -119,8 +119,8 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-mobile-module:2.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.23.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/admin-web-module/3.1.1-SNAPSHOT/admin-web-module-3.1.1-20190313.164108-1.jar" output-file-name="admin-web-module-3.1.1-SNAPSHOT.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/bootstrap-ui-module/2.2.0-SNAPSHOT/bootstrap-ui-module-2.2.0-20190619.115732-7.jar" output-file-name="bootstrap-ui-module-2.2.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:admin-web-module:3.1.1.RELEASE" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:bootstrap-ui-module:2.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.webjars:jquery:1.11.3" />
           <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.3.7" />
           <element id="library" level="project" name="Maven: org.webjars.bower:autosize:3.0.20" />
@@ -139,7 +139,7 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:ldap-module:1.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.ldap:spring-ldap-core:2.3.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-ldap:4.2.12.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-test/3.2.0-SNAPSHOT/across-test-3.2.0-20190513.142604-7.jar" output-file-name="across-test-3.2.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-test:3.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:2.5.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:4.3.23.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-test:1.5.20.RELEASE" />
