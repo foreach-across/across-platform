@@ -27,11 +27,11 @@
 	<description>
 		Bill Of Material POM for Across Standard Modules and their dependencies.
 	</description>
-	<url>https://foreach.atlassian.net/wiki/display/AX</url>
+	<url>https://across.dev/modules</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
 		</license>
 	</licenses>
 
@@ -39,12 +39,12 @@
 		<developer>
 			<name>Arne Vandamme</name>
 			<organization>Foreach</organization>
-			<organizationUrl>http://www.foreach.be</organizationUrl>
+			<organizationUrl>https://www.foreach.be</organizationUrl>
 		</developer>
 	</developers>
 
 	<properties>
-		<across.version>3.2.0-SNAPSHOT</across.version>
+		<across.version>3.2.0.RELEASE</across.version>
 		<across.autoconfigure.version>1.0.2.RELEASE</across.autoconfigure.version>
 		<foreach.common.version>1.1</foreach.common.version>
 		<asm.across-hibernate-module.version>3.0.0.RELEASE</asm.across-hibernate-module.version>
@@ -54,7 +54,7 @@
 		<asm.ehcache-module.version>1.0.1.RELEASE</asm.ehcache-module.version>
 		<asm.spring-mobile-module.version>2.0.0.RELEASE</asm.spring-mobile-module.version>
 		<asm.application-info-module.version>1.0.1.RELEASE</asm.application-info-module.version>
-		<asm.bootstrap-ui-module.version>2.2.0-SNAPSHOT</asm.bootstrap-ui-module.version>
+		<asm.bootstrap-ui-module.version>2.2.0.RELEASE</asm.bootstrap-ui-module.version>
 		<asm.admin-web-module.version>3.1.1-SNAPSHOT</asm.admin-web-module.version>
 		<asm.file-manager-module.version>1.4.0-SNAPSHOT</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.2-SNAPSHOT</asm.spring-batch-module.version>

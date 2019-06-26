@@ -14,28 +14,167 @@
           <element id="module-output" name="platform-bom-test" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: com.foreach.across:across-autoconfigure:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:oauth2-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:ehcache-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:entity-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-security-acl-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:application-info-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-batch-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:file-manager-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:user-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:web-cms-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-mobile-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:admin-web-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:debug-web-module:unknown" />
-          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:logging-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:ldap-module:unknown" />
-          <element id="library" level="project" name="Maven: com.foreach.across:across-test:unknown" />
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-test:unknown" />
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-devtools:unknown" />
-          <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:unknown" />
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-actuator:unknown" />
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:unknown" />
+          <element id="library" level="project" name="Maven: com.foreach.across:across-autoconfigure:1.0.2.RELEASE" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-web/3.2.0-SNAPSHOT/across-web-3.2.0-20190513.142601-7.jar" output-file-name="across-web-3.2.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.21.0-GA" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:3.0.11.RELEASE" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.11.RELEASE" />
+          <element id="library" level="project" name="Maven: org.attoparser:attoparser:2.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.23.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.23.RELEASE" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.11" />
+          <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.17" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-core/3.2.0-SNAPSHOT/across-core-3.2.0-20190513.142557-7.jar" output-file-name="across-core-3.2.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.libs:common-concurrent:1.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.23.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.23.RELEASE" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.1.11" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.1.11" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.26" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.26" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.7" />
+          <element id="library" level="project" name="Maven: org.liquibase:liquibase-core:3.5.5" />
+          <element id="library" level="project" name="Maven: com.mattbertolini:liquibase-slf4j:1.2.1" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/oauth2-module/2.1.1-SNAPSHOT/oauth2-module-2.1.1-20190201.145800-1.jar" output-file-name="oauth2-module-2.1.1-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:across-hibernate-module:3.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:1.11.20.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.8.14" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.23.RELEASE" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.0.12.Final" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Maven: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1" />
+          <element id="library" level="project" name="Maven: org.jboss:jandex:2.0.0.Final" />
+          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
+          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.1.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-entitymanager:5.0.12.Final" />
+          <element id="library" level="project" name="Maven: com.querydsl:querydsl-jpa:4.1.4" />
+          <element id="library" level="project" name="Maven: com.querydsl:querydsl-core:4.1.4" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:20.0" />
+          <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:3.0.2" />
+          <element id="library" level="project" name="Maven: com.mysema.commons:mysema-commons-lang:0.2.4" />
+          <element id="library" level="project" name="Maven: com.infradna.tool:bridge-method-annotation:1.13" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:properties-module:1.1.1.RELEASE" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-security-module:3.0.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.0.17.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.23.RELEASE" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: com.querydsl:querydsl-apt:4.1.4" />
+          <element id="library" level="project" name="Maven: com.querydsl:querydsl-codegen:4.1.4" />
+          <element id="library" level="project" name="Maven: com.mysema.codegen:codegen:0.6.8" />
+          <element id="library" level="project" name="Maven: org.eclipse.jdt.core.compiler:ecj:4.3.1" />
+          <element id="library" level="project" name="Maven: org.reflections:reflections:0.9.9" />
+          <element id="library" level="project" name="Maven: com.google.code.findbugs:annotations:2.0.3" />
+          <element id="library" level="project" name="Maven: javax.jdo:jdo-api:3.0.1" />
+          <element id="library" level="project" name="Maven: javax.transaction:jta:1.1" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.14" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:ehcache-module:1.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.23.RELEASE" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/entity-module/3.3.0-SNAPSHOT/entity-module-3.3.0-20190416.193533-6.jar" output-file-name="entity-module-3.3.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:5.3.6.Final" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.3.4" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.13.20.RELEASE" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.11" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.11.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" />
+          <element id="library" level="project" name="Maven: org.atteo:evo-inflector:1.2.2" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-security-acl-module/3.0.2-SNAPSHOT/spring-security-acl-module-3.0.2-20190131.153125-3.jar" output-file-name="spring-security-acl-module-3.0.2-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:4.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.23.RELEASE" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:application-info-module:1.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: com.foreach.libs:common-spring:1.1" />
+          <element id="library" level="project" name="Maven: javax.mail:mail:1.4.1" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1.1" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-batch-module/1.0.2-SNAPSHOT/spring-batch-module-1.0.2-20190201.145834-1.jar" output-file-name="spring-batch-module-1.0.2-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: org.springframework.batch:spring-batch-core:3.0.10.RELEASE" />
+          <element id="library" level="project" name="Maven: com.ibm.jbatch:com.ibm.jbatch-tck-spi:1.0" />
+          <element id="library" level="project" name="Maven: javax.batch:javax.batch-api:1.0.1" />
+          <element id="library" level="project" name="Maven: com.thoughtworks.xstream:xstream:1.4.11.1" />
+          <element id="library" level="project" name="Maven: xmlpull:xmlpull:1.1.3.1" />
+          <element id="library" level="project" name="Maven: xpp3:xpp3_min:1.1.4c" />
+          <element id="library" level="project" name="Maven: org.codehaus.jettison:jettison:1.2" />
+          <element id="library" level="project" name="Maven: org.springframework.batch:spring-batch-infrastructure:3.0.10.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.retry:spring-retry:1.2.4.RELEASE" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/file-manager-module/1.4.0-SNAPSHOT/file-manager-module-1.4.0-20190621.143319-16.jar" output-file-name="file-manager-module-1.4.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.5" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/user-module/3.1.1-SNAPSHOT/user-module-3.1.1-20190201.150030-1.jar" output-file-name="user-module-3.1.1-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: javax.el:javax.el-api:2.2.5" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.1" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/web-cms-module/0.0.7-SNAPSHOT/web-cms-module-0.0.7-20190317.150732-4.jar" output-file-name="web-cms-module-0.0.7-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: org.webjars.npm:codemirror-minified:5.44.0" />
+          <element id="library" level="project" name="Maven: org.webjars:lodash:4.17.4" />
+          <element id="library" level="project" name="Maven: org.webjars:bootbox:4.4.0" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery-ui:1.12.1" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-mobile-module:2.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.23.RELEASE" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/admin-web-module/3.1.1-SNAPSHOT/admin-web-module-3.1.1-20190313.164108-1.jar" output-file-name="admin-web-module-3.1.1-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/bootstrap-ui-module/2.2.0-SNAPSHOT/bootstrap-ui-module-2.2.0-20190619.115732-7.jar" output-file-name="bootstrap-ui-module-2.2.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:1.11.3" />
+          <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.3.7" />
+          <element id="library" level="project" name="Maven: org.webjars.bower:autosize:3.0.20" />
+          <element id="library" level="project" name="Maven: org.webjars:momentjs:2.10.6" />
+          <element id="library" level="project" name="Maven: org.webjars.bower:autoNumeric:1.9.30" />
+          <element id="library" level="project" name="Maven: org.webjars:Eonasdan-bootstrap-datetimepicker:4.14.30" />
+          <element id="library" level="project" name="Maven: org.webjars:bootstrap-select:1.12.2" />
+          <element id="library" level="project" name="Maven: org.webjars:typeaheadjs:0.11.1" />
+          <element id="library" level="project" name="Maven: org.thymeleaf.extras:thymeleaf-extras-springsecurity4:3.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.webjars.bower:toastr:2.1.2" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:debug-web-module:2.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.slf4j:log4j-over-slf4j:1.7.26" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:logging-module:1.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: com.foreach.libs:common-web:1.1" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:ldap-module:1.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.ldap:spring-ldap-core:2.3.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-ldap:4.2.12.RELEASE" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-test/3.2.0-SNAPSHOT/across-test-3.2.0-20190513.142604-7.jar" output-file-name="across-test-3.2.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:2.5.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-test:4.3.23.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-test:1.5.20.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.3.23.RELEASE" />
+          <element id="library" level="project" name="Maven: junit:junit:4.12" />
+          <element id="library" level="project" name="Maven: xmlunit:xmlunit:1.6" />
+          <element id="library" level="project" name="Maven: org.mockito:mockito-core:1.10.19" />
+          <element id="library" level="project" name="Maven: org.objenesis:objenesis:2.5.1" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-test:1.5.20.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:1.5.20.RELEASE" />
+          <element id="library" level="project" name="Maven: com.jayway.jsonpath:json-path:2.2.0" />
+          <element id="library" level="project" name="Maven: net.minidev:json-smart:2.2.1" />
+          <element id="library" level="project" name="Maven: net.minidev:accessors-smart:1.1" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm:5.0.3" />
+          <element id="library" level="project" name="Maven: org.assertj:assertj-core:3.11.1" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-library:1.3" />
+          <element id="library" level="project" name="Maven: org.skyscreamer:jsonassert:1.4.0" />
+          <element id="library" level="project" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.23.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-devtools:1.5.20.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:1.5.20.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.5.20.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:2.3.6" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-actuator:1.5.20.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:1.5.20.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-logging:1.5.20.RELEASE" />
+          <element id="library" level="project" name="Maven: org.slf4j:jul-to-slf4j:1.7.26" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator:1.5.20.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:1.5.20.RELEASE" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.39" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-annotations-api:8.5.39" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:8.5.39" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:8.5.39" />
         </element>
       </element>
       <element id="directory" name="META-INF">
