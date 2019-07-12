@@ -54,13 +54,13 @@
 		<asm.ehcache-module.version>1.0.1.RELEASE</asm.ehcache-module.version>
 		<asm.spring-mobile-module.version>2.0.0.RELEASE</asm.spring-mobile-module.version>
 		<asm.application-info-module.version>1.0.1.RELEASE</asm.application-info-module.version>
-		<asm.bootstrap-ui-module.version>2.2.0.RELEASE</asm.bootstrap-ui-module.version>
+		<asm.bootstrap-ui-module.version>2.2.1.RELEASE</asm.bootstrap-ui-module.version>
 		<asm.admin-web-module.version>3.1.1.RELEASE</asm.admin-web-module.version>
 		<asm.file-manager-module.version>1.4.0-SNAPSHOT</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.2-SNAPSHOT</asm.spring-batch-module.version>
 		<asm.properties-module.version>1.1.1.RELEASE</asm.properties-module.version>
 		<asm.entity-module.version>3.3.0-SNAPSHOT</asm.entity-module.version>
-		<asm.spring-security-acl-module.version>3.0.2-SNAPSHOT</asm.spring-security-acl-module.version>
+		<asm.spring-security-acl-module.version>3.0.2.RELEASE</asm.spring-security-acl-module.version>
 		<asm.user-module.version>3.1.1-SNAPSHOT</asm.user-module.version>
 		<asm.ldap-module.version>1.0.1.RELEASE</asm.ldap-module.version>
 		<asm.oauth2-module.version>2.1.1-SNAPSHOT</asm.oauth2-module.version>
