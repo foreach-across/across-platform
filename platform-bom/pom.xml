@@ -42,7 +42,7 @@
 			<organizationUrl>https://www.foreach.be</organizationUrl>
 		</developer>
 	</developers>
-
+qdf
 	<properties>
 		<across.version>3.2.0.RELEASE</across.version>
 		<across.autoconfigure.version>1.0.2.RELEASE</across.autoconfigure.version>
@@ -65,7 +65,7 @@
 		<asm.ldap-module.version>1.0.1.RELEASE</asm.ldap-module.version>
 		<asm.oauth2-module.version>2.1.1.RELEASE</asm.oauth2-module.version>
 		<asm.webcms-module.version>0.0.7.RELEASE</asm.webcms-module.version>
-		<asm.dynamic-forms-module.version>0.0.2.RELEASE</asm.dynamic-forms-module.version>
+		<asm.dynamic-forms-module.version>0.0.3.RELEASE</asm.dynamic-forms-module.version>
 
 		<imageserver-version>5.0.0-SNAPSHOT</imageserver-version>
 
