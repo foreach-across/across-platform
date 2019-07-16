@@ -56,7 +56,7 @@ qdf
 		<asm.application-info-module.version>1.0.1.RELEASE</asm.application-info-module.version>
 		<asm.bootstrap-ui-module.version>2.2.1.RELEASE</asm.bootstrap-ui-module.version>
 		<asm.admin-web-module.version>3.1.1.RELEASE</asm.admin-web-module.version>
-		<asm.file-manager-module.version>1.4.0-SNAPSHOT</asm.file-manager-module.version>
+		<asm.file-manager-module.version>1.4.0.RELEASE</asm.file-manager-module.version>
 		<asm.spring-batch-module.version>1.0.2.RELEASE</asm.spring-batch-module.version>
 		<asm.properties-module.version>1.1.1.RELEASE</asm.properties-module.version>
 		<asm.entity-module.version>3.3.0.RELEASE</asm.entity-module.version>
@@ -67,7 +67,7 @@ qdf
 		<asm.webcms-module.version>0.0.7.RELEASE</asm.webcms-module.version>
 		<asm.dynamic-forms-module.version>0.0.3.RELEASE</asm.dynamic-forms-module.version>
 
-		<imageserver-version>5.0.0-SNAPSHOT</imageserver-version>
+		<imageserver-version>5.0.0.RELEASE</imageserver-version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
