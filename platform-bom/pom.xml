@@ -42,7 +42,7 @@
 			<organizationUrl>https://www.foreach.be</organizationUrl>
 		</developer>
 	</developers>
-qdf
+
 	<properties>
 		<across.version>3.2.0.RELEASE</across.version>
 		<across.autoconfigure.version>1.0.2.RELEASE</across.autoconfigure.version>
