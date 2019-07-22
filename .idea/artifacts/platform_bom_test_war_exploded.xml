@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="platform-bom-test:war exploded">
-    <output-path>$PROJECT_DIR$/platform-bom-test/target/platform-bom-test-2.1.4-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/platform-bom-test/target/platform-bom-test-2.1.5-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -37,7 +37,7 @@
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.7" />
           <element id="library" level="project" name="Maven: org.liquibase:liquibase-core:3.5.5" />
           <element id="library" level="project" name="Maven: com.mattbertolini:liquibase-slf4j:1.2.1" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/oauth2-module/2.1.1-SNAPSHOT/oauth2-module-2.1.1-20190201.145800-1.jar" output-file-name="oauth2-module-2.1.1-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:oauth2-module:2.1.1.RELEASE" />
           <element id="library" level="project" name="Maven: com.foreach.across.modules:across-hibernate-module:3.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:1.11.20.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.8.14" />
@@ -78,7 +78,7 @@
           <element id="library" level="project" name="Maven: com.foreach.across.modules:ehcache-module:1.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.5" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.23.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/entity-module/3.3.0-SNAPSHOT/entity-module-3.3.0-20190416.193533-6.jar" output-file-name="entity-module-3.3.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/entity-module/3.4.0-SNAPSHOT/entity-module-3.4.0-20190722.175537-1.jar" output-file-name="entity-module-3.4.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:5.3.6.Final" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
@@ -88,7 +88,8 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.11.3" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" />
           <element id="library" level="project" name="Maven: org.atteo:evo-inflector:1.2.2" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-security-acl-module/3.0.2-SNAPSHOT/spring-security-acl-module-3.0.2-20190131.153125-3.jar" output-file-name="spring-security-acl-module-3.0.2-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: org.webjars:lodash:4.17.4" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-security-acl-module:3.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:4.2.12.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.23.RELEASE" />
@@ -96,7 +97,7 @@
           <element id="library" level="project" name="Maven: com.foreach.libs:common-spring:1.1" />
           <element id="library" level="project" name="Maven: javax.mail:mail:1.4.1" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1.1" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-batch-module/1.0.2-SNAPSHOT/spring-batch-module-1.0.2-20190201.145834-1.jar" output-file-name="spring-batch-module-1.0.2-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-batch-module:1.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.batch:spring-batch-core:3.0.10.RELEASE" />
           <element id="library" level="project" name="Maven: com.ibm.jbatch:com.ibm.jbatch-tck-spi:1.0" />
           <element id="library" level="project" name="Maven: javax.batch:javax.batch-api:1.0.1" />
@@ -106,21 +107,20 @@
           <element id="library" level="project" name="Maven: org.codehaus.jettison:jettison:1.2" />
           <element id="library" level="project" name="Maven: org.springframework.batch:spring-batch-infrastructure:3.0.10.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.retry:spring-retry:1.2.4.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/file-manager-module/1.4.0-SNAPSHOT/file-manager-module-1.4.0-20190621.143319-16.jar" output-file-name="file-manager-module-1.4.0-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:file-manager-module:1.4.0.RELEASE" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.5" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/user-module/3.1.1-SNAPSHOT/user-module-3.1.1-20190201.150030-1.jar" output-file-name="user-module-3.1.1-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:user-module:3.1.1.RELEASE" />
           <element id="library" level="project" name="Maven: javax.el:javax.el-api:2.2.5" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.1" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/web-cms-module/0.0.7-SNAPSHOT/web-cms-module-0.0.7-20190317.150732-4.jar" output-file-name="web-cms-module-0.0.7-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:web-cms-module:0.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.webjars.npm:codemirror-minified:5.44.0" />
-          <element id="library" level="project" name="Maven: org.webjars:lodash:4.17.4" />
           <element id="library" level="project" name="Maven: org.webjars:bootbox:4.4.0" />
           <element id="library" level="project" name="Maven: org.webjars:jquery-ui:1.12.1" />
           <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-mobile-module:2.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.23.RELEASE" />
           <element id="library" level="project" name="Maven: com.foreach.across.modules:admin-web-module:3.1.1.RELEASE" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:bootstrap-ui-module:2.2.0.RELEASE" />
+          <element id="library" level="project" name="Maven: com.foreach.across.modules:bootstrap-ui-module:2.2.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.webjars:jquery:1.11.3" />
           <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.3.7" />
           <element id="library" level="project" name="Maven: org.webjars.bower:autosize:3.0.20" />
@@ -178,7 +178,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/platform-bom-test/target/platform-bom-test-2.1.4-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/platform-bom-test/target/platform-bom-test-2.1.5-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="platform-bom-test/web/Web" />
     </root>
