@@ -168,7 +168,7 @@
 			<dependency>
 				<groupId>com.foreach.libs</groupId>
 				<artifactId>common-mybatis</artifactId>
-				<version>${foreach.common.version</version>
+				<version>${foreach.common.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.libs</groupId>
