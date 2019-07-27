@@ -27,7 +27,7 @@
 	<description>
 		Test website for integration testing of all modules.
 	</description>
-	<url>https://foreach.atlassian.net/wiki/display/AX</url>
+	<url>https://across.dev/modules</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -43,7 +43,7 @@
 		<developer>
 			<name>Arne Vandamme</name>
 			<organization>Foreach</organization>
-			<organizationUrl>http://www.foreach.be</organizationUrl>
+			<organizationUrl>https://www.foreach.be</organizationUrl>
 		</developer>
 	</developers>
 
@@ -215,11 +215,6 @@
 			<artifactId>across-test</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>net.sourceforge.jtds</groupId>
-			<artifactId>jtds</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
@@ -235,6 +230,27 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- TODO: remove obsolete jtds driver -->
+		<dependency>
+			<groupId>net.sourceforge.jtds</groupId>
+			<artifactId>jtds</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

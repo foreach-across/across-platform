@@ -27,11 +27,11 @@
 	<description>
 		Bill Of Material POM for Across Standard Modules and their dependencies.
 	</description>
-	<url>https://foreach.atlassian.net/wiki/display/AX</url>
+	<url>https://across.dev/modules</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
 		</license>
 	</licenses>
 
@@ -39,7 +39,7 @@
 		<developer>
 			<name>Arne Vandamme</name>
 			<organization>Foreach</organization>
-			<organizationUrl>http://www.foreach.be</organizationUrl>
+			<organizationUrl>https://www.foreach.be</organizationUrl>
 		</developer>
 	</developers>
 
@@ -67,7 +67,7 @@
 		<asm.webcms-module.version>0.1.0-SNAPSHOT</asm.webcms-module.version>
 		<asm.dynamic-forms-module.version>0.1.0-SNAPSHOT</asm.dynamic-forms-module.version>
 
-		<imageserver-version>4.0.0.RELEASE</imageserver-version>
+		<imageserver-version>5.0.0.RELEASE</imageserver-version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
