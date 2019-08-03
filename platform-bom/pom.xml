@@ -52,12 +52,12 @@
 		<asm.debug-web-module.version>3.0.0-SNAPSHOT</asm.debug-web-module.version>
 		<asm.logging-module.version>1.1.0.RELEASE</asm.logging-module.version>
 		<asm.ehcache-module.version>2.0.0-SNAPSHOT</asm.ehcache-module.version>
-		<asm.spring-mobile-module.version>3.0.0.M1</asm.spring-mobile-module.version>
+		<asm.spring-mobile-module.version>3.0.0-SNAPSHOT</asm.spring-mobile-module.version>
 		<asm.application-info-module.version>2.0.0.M1</asm.application-info-module.version>
 		<asm.bootstrap-ui-module.version>3.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
 		<asm.admin-web-module.version>4.0.0-SNAPSHOT</asm.admin-web-module.version>
 		<asm.file-manager-module.version>3.0.0-SNAPSHOT</asm.file-manager-module.version>
-		<asm.spring-batch-module.version>1.0.1.RELEASE</asm.spring-batch-module.version>
+		<asm.spring-batch-module.version>2.0.0-SNAPSHOT</asm.spring-batch-module.version>
 		<asm.properties-module.version>2.0.0-SNAPSHOT</asm.properties-module.version>
 		<asm.entity-module.version>4.0.0-SNAPSHOT</asm.entity-module.version>
 		<asm.spring-security-acl-module.version>4.0.0-SNAPSHOT</asm.spring-security-acl-module.version>

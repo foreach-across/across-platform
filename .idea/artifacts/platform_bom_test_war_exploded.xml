@@ -100,7 +100,7 @@
           <element id="library" level="project" name="Maven: com.foreach.libs:common-spring:1.1" />
           <element id="library" level="project" name="Maven: javax.mail:mail:1.4.1" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-batch-module:1.0.1.RELEASE" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-batch-module/2.0.0-SNAPSHOT/spring-batch-module-2.0.0-20190803.085047-1.jar" output-file-name="spring-batch-module-2.0.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.springframework.batch:spring-batch-core:4.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: javax.batch:javax.batch-api:1.0" />
           <element id="library" level="project" name="Maven: org.codehaus.jettison:jettison:1.2" />
@@ -114,14 +114,14 @@
           <element id="library" level="project" name="Maven: org.webjars.npm:codemirror-minified:5.44.0" />
           <element id="library" level="project" name="Maven: org.webjars:bootbox:4.4.0" />
           <element id="library" level="project" name="Maven: org.webjars:jquery-ui:1.12.1" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/dynamic-forms-module/0.1.0-SNAPSHOT/dynamic-forms-module-0.1.0-20181116.134510-2.jar" output-file-name="dynamic-forms-module-0.1.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/dynamic-forms-module/0.1.0-SNAPSHOT/dynamic-forms-module-0.1.0-20190801.183054-3.jar" output-file-name="dynamic-forms-module-0.1.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.9" />
           <element id="library" level="project" name="Maven: com.jayway.jsonpath:json-path:2.4.0" />
           <element id="library" level="project" name="Maven: net.minidev:json-smart:2.3" />
           <element id="library" level="project" name="Maven: net.minidev:accessors-smart:1.2" />
           <element id="library" level="project" name="Maven: org.ow2.asm:asm:5.0.4" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:spring-mobile-module:3.0.0.M1" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-mobile-module/3.0.0-SNAPSHOT/spring-mobile-module-3.0.0-20190803.093109-5.jar" output-file-name="spring-mobile-module-3.0.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.1.8.RELEASE" />
           <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/admin-web-module/4.0.0-SNAPSHOT/admin-web-module-4.0.0-20190717.121924-4.jar" output-file-name="admin-web-module-4.0.0-SNAPSHOT.jar" />
