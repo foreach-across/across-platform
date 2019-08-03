@@ -79,7 +79,7 @@
           <element id="library" level="project" name="Maven: org.reflections:reflections:0.9.9" />
           <element id="library" level="project" name="Maven: com.google.code.findbugs:annotations:2.0.1" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.4" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/ehcache-module/2.0.0-SNAPSHOT/ehcache-module-2.0.0-20190727.135912-2.jar" output-file-name="ehcache-module-2.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/ehcache-module/2.0.0-SNAPSHOT/ehcache-module-2.0.0-20190803.095004-3.jar" output-file-name="ehcache-module-2.0.0-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.6" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:5.1.8.RELEASE" />
           <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/entity-module/4.0.0-SNAPSHOT/entity-module-4.0.0-20190727.142357-5.jar" output-file-name="entity-module-4.0.0-SNAPSHOT.jar" />
