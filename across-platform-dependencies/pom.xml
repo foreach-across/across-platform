@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright 2014 the original author or authors
+  Copyright 2019 the original author or authors
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -18,16 +18,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.foreach.across</groupId>
-	<artifactId>platform-bom</artifactId>
+	<parent>
+		<groupId>com.foreach.across</groupId>
+		<artifactId>across-core-dependencies</artifactId>
+		<version>5.0.0-TEST-SNAPSHOT</version>
+		<relativePath/>
+	</parent>
+
+	<artifactId>across-platform-dependencies</artifactId>
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
-	<description>
-		Bill Of Material POM for Across Standard Modules and their dependencies.
-	</description>
-	<url>https://across.dev/modules</url>
+	<description>Bill Of Material POM for Across Standard Modules and their dependencies.</description>
+	<url>https://across.dev</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -37,16 +41,18 @@
 
 	<developers>
 		<developer>
-			<name>Arne Vandamme</name>
+			<name>Foreach</name>
 			<organization>Foreach</organization>
 			<organizationUrl>https://www.foreach.be</organizationUrl>
 		</developer>
 	</developers>
 
+	<scm>
+		<url>https://bitbucket.org/beforeach/across-platform</url>
+	</scm>
+
 	<properties>
-		<across.version>5.0.0-SNAPSHOT</across.version>
 		<across.autoconfigure.version>2.0.0-SNAPSHOT</across.autoconfigure.version>
-		<foreach.common.version>1.1</foreach.common.version>
 		<asm.across-hibernate-module.version>4.0.0-SNAPSHOT</asm.across-hibernate-module.version>
 		<asm.spring-security-module.version>4.0.0-SNAPSHOT</asm.spring-security-module.version>
 		<asm.debug-web-module.version>3.0.0-SNAPSHOT</asm.debug-web-module.version>
@@ -68,115 +74,15 @@
 		<asm.dynamic-forms-module.version>0.1.0-SNAPSHOT</asm.dynamic-forms-module.version>
 
 		<imageserver-version>5.0.0.RELEASE</imageserver-version>
-
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
-	<repositories>
-		<repository>
-			<id>foreach-nexus</id>
-			<name>Foreach nexus</name>
-			<url>https://repository.foreach.be/nexus/repository/public/</url>
-		</repository>
-	</repositories>
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- Parent BOMs -->
-			<dependency>
-				<groupId>com.foreach.across</groupId>
-				<artifactId>standard-module-bom</artifactId>
-				<version>${across.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-
 			<!-- Across autoconfiguration -->
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>across-autoconfigure</artifactId>
 				<version>${across.autoconfigure.version}</version>
-			</dependency>
-
-			<!-- Non-spring managed -->
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-collections4</artifactId>
-				<version>4.1</version>
-			</dependency>
-			<dependency>
-				<groupId>com.mattbertolini</groupId>
-				<artifactId>liquibase-slf4j</artifactId>
-				<version>1.2.1</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.liquibase</groupId>
-						<artifactId>liquibase-core</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>org.slf4j</groupId>
-						<artifactId>slf4j-api</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>net.engio</groupId>
-				<artifactId>mbassador</artifactId>
-				<version>1.2.0</version>
-				<exclusions>
-					<exclusion>
-						<groupId>javax.el</groupId>
-						<artifactId>el-api</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>com.oracle</groupId>
-				<artifactId>ojdbc6</artifactId>
-				<version>11.2.0</version>
-			</dependency>
-			<dependency>
-				<groupId>cglib</groupId>
-				<artifactId>cglib</artifactId>
-				<version>3.1</version>
-			</dependency>
-
-			<!-- Foreach commons -->
-			<dependency>
-				<groupId>com.foreach.libs</groupId>
-				<artifactId>common-concurrent</artifactId>
-				<version>${foreach.common.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.libs</groupId>
-				<artifactId>common-spring</artifactId>
-				<version>${foreach.common.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.libs</groupId>
-				<artifactId>common-web</artifactId>
-				<version>${foreach.common.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.libs</groupId>
-				<artifactId>common-mybatis</artifactId>
-				<version>${foreach.common.version</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.libs</groupId>
-				<artifactId>text-synchronizer</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.libs</groupId>
-				<artifactId>common-test</artifactId>
-				<version>${foreach.common.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.mockito</groupId>
-						<artifactId>mockito-all</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 
 			<!-- Across standard modules -->
@@ -295,61 +201,44 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<scm>
-		<connection>scm:git:https://bitbucket.org/beforeach/across-platform.git</connection>
-		<developerConnection>scm:git:https://bitbucket.org/beforeach/across-platform.git</developerConnection>
-		<url>https://bitbucket.org/beforeach/across-platform</url>
-	</scm>
-
-	<profiles>
-		<profile>
-			<id>sonatype</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.5</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-			<distributionManagement>
-				<snapshotRepository>
-					<id>sonatype</id>
-					<name>Sonatype snapshots</name>
-					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-				</snapshotRepository>
-				<repository>
-					<id>sonatype</id>
-					<name>Sonatype release staging</name>
-					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-				</repository>
-			</distributionManagement>
-		</profile>
-		<profile>
-			<id>foreach</id>
-			<distributionManagement>
-				<repository>
-					<id>foreach-nexus</id>
-					<name>Foreach nexus</name>
-					<url>https://repository.foreach.be/nexus/repository/releases/</url>
-				</repository>
-				<snapshotRepository>
-					<id>foreach-nexus</id>
-					<name>Foreach nexus</name>
-					<url>https://repository.foreach.be/nexus/repository/snapshots/</url>
-				</snapshotRepository>
-			</distributionManagement>
-		</profile>
-	</profiles>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<version>1.1.0</version>
+				<inherited>false</inherited>
+				<configuration>
+					<updatePomFile>true</updatePomFile>
+					<flattenMode>resolveCiFriendliesOnly</flattenMode>
+					<pomElements>
+						<parent>keep</parent>
+						<pluginManagement>keep</pluginManagement>
+						<properties>keep</properties>
+						<repositories>remove</repositories>
+						<profiles>remove</profiles>
+						<modules>remove</modules>
+						<build>remove</build>
+					</pomElements>
+				</configuration>
+				<executions>
+					<execution>
+						<id>flatten</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>flatten</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>flatten.clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
