@@ -30,7 +30,7 @@
 	<packaging>pom</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
-	<description>Bill Of Material POM for Across Standard Modules and their dependencies.</description>
+	<description>Bill Of Material POM for Across Applications and Across Modules.</description>
 	<url>https://across.dev</url>
 	<licenses>
 		<license>
@@ -47,11 +47,20 @@
 		</developer>
 	</developers>
 
+	<repositories>
+		<repository>
+			<id>across</id>
+			<name>Across Repository</name>
+			<url>https://repository.foreach.be/nexus/repository/public/</url>
+		</repository>
+	</repositories>
+
 	<scm>
 		<url>https://bitbucket.org/beforeach/across-platform</url>
 	</scm>
 
 	<properties>
+		<maven.deploy.skip>false</maven.deploy.skip>
 		<across.autoconfigure.version>2.0.0-SNAPSHOT</across.autoconfigure.version>
 		<asm.across-hibernate-module.version>4.0.0-SNAPSHOT</asm.across-hibernate-module.version>
 		<asm.spring-security-module.version>4.0.0-SNAPSHOT</asm.spring-security-module.version>
@@ -240,5 +249,56 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>sonatype</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.5</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<distributionManagement>
+				<snapshotRepository>
+					<id>sonatype</id>
+					<name>Sonatype snapshots</name>
+					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+				</snapshotRepository>
+				<repository>
+					<id>sonatype</id>
+					<name>Sonatype release staging</name>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>across</id>
+			<distributionManagement>
+				<repository>
+					<id>across</id>
+					<name>Across Releases Repository</name>
+					<url>https://repository.foreach.be/nexus/repository/across-releases/</url>
+				</repository>
+				<snapshotRepository>
+					<id>across</id>
+					<name>Across Snapshot Repository</name>
+					<url>https://repository.foreach.be/nexus/repository/across-snapshots/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+	</profiles>
 
 </project>

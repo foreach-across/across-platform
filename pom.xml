@@ -20,7 +20,8 @@
 
 	<groupId>com.foreach.across</groupId>
 	<artifactId>platform</artifactId>
-	<version>${revision}</version>
+	<!-- This does not need to change, this artifact is not deployed -->
+	<version>1.0.0.RELEASE</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -31,54 +32,14 @@
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<!-- Across properties -->
+		<maven.deploy.skip>true</maven.deploy.skip>
 	</properties>
 
 	<modules>
-		<!--		<module>platform-bom</module>-->
 		<module>across-platform-dependencies</module>
 		<module>across-application-parent</module>
 		<module>across-module-parent</module>
 		<module>platform-bom-test</module>
 	</modules>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>flatten-maven-plugin</artifactId>
-				<version>1.1.0</version>
-				<inherited>false</inherited>
-				<configuration>
-					<updatePomFile>true</updatePomFile>
-					<flattenMode>resolveCiFriendliesOnly</flattenMode>
-					<pomElements>
-						<parent>remove</parent>
-						<pluginManagement>keep</pluginManagement>
-						<properties>keep</properties>
-						<repositories>remove</repositories>
-						<profiles>remove</profiles>
-						<modules>remove</modules>
-						<build>remove</build>
-					</pomElements>
-				</configuration>
-				<executions>
-					<execution>
-						<id>flatten</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>flatten</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>flatten.clean</id>
-						<phase>clean</phase>
-						<goals>
-							<goal>clean</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>

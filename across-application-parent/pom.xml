@@ -22,7 +22,6 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<groupId>org.springframework.boot</groupId>
 		<version>2.1.7.RELEASE</version>
-		<relativePath/>
 	</parent>
 
 	<groupId>com.foreach.across</groupId>
@@ -48,13 +47,33 @@
 		</developer>
 	</developers>
 
+	<repositories>
+		<repository>
+			<id>across</id>
+			<name>Across Repository</name>
+			<url>https://repository.foreach.be/nexus/repository/public/</url>
+		</repository>
+	</repositories>
+
 	<scm>
 		<url>https://bitbucket.org/beforeach/across-platform</url>
 	</scm>
 
 	<properties>
 		<revision>5.0.0-TEST-SNAPSHOT</revision>
+		<across.platform.version>${revision}</across.platform.version>
+		<maven.deploy.skip>false</maven.deploy.skip>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
@@ -71,6 +90,21 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addClasspath>true</addClasspath>
+						</manifest>
+						<manifestEntries>
+							<Build-Time>${maven.build.timestamp}</Build-Time>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>flatten-maven-plugin</artifactId>
@@ -108,5 +142,56 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>sonatype</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.5</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<distributionManagement>
+				<snapshotRepository>
+					<id>sonatype</id>
+					<name>Sonatype snapshots</name>
+					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+				</snapshotRepository>
+				<repository>
+					<id>sonatype</id>
+					<name>Sonatype release staging</name>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>across</id>
+			<distributionManagement>
+				<repository>
+					<id>across</id>
+					<name>Across Releases Repository</name>
+					<url>https://repository.foreach.be/nexus/repository/across-releases/</url>
+				</repository>
+				<snapshotRepository>
+					<id>across</id>
+					<name>Across Snapshot Repository</name>
+					<url>https://repository.foreach.be/nexus/repository/across-snapshots/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+	</profiles>
 
 </project>

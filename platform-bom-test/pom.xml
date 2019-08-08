@@ -31,9 +31,7 @@
 	<packaging>war</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
-	<description>
-		Test website for integration testing of all modules.
-	</description>
+	<description>Test website for integration testing of all modules.</description>
 	<url>https://across.dev/modules</url>
 	<licenses>
 		<license>
@@ -44,6 +42,8 @@
 
 	<properties>
 		<jacoco-maven-plugin.version>0.7.4.201502262128</jacoco-maven-plugin.version>
+		<maven.deploy.skip>true</maven.deploy.skip>
+		<maven.javadoc.skip>true</maven.javadoc.skip>
 	</properties>
 
 	<developers>
@@ -89,20 +89,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<configuration>
-					<skip>true</skip>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<skip>true</skip>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -160,23 +146,11 @@
 
 	<repositories>
 		<repository>
-			<id>foreach-nexus</id>
-			<name>Foreach repository</name>
+			<id>across</id>
+			<name>Across Repository</name>
 			<url>https://repository.foreach.be/nexus/repository/public/</url>
 		</repository>
 	</repositories>
-
-	<!--	<dependencyManagement>-->
-	<!--		<dependencies>-->
-	<!--			<dependency>-->
-	<!--				<groupId>com.foreach.across</groupId>-->
-	<!--				<artifactId>platform-bom</artifactId>-->
-	<!--				<version>4.0.0-SNAPSHOT</version>-->
-	<!--				<type>pom</type>-->
-	<!--				<scope>import</scope>-->
-	<!--			</dependency>-->
-	<!--		</dependencies>-->
-	<!--	</dependencyManagement>-->
 
 	<dependencies>
 		<!-- Auto configuration -->
@@ -184,7 +158,7 @@
 			<groupId>com.foreach.across</groupId>
 			<artifactId>across-autoconfigure</artifactId>
 		</dependency>
-		<!-- Modules -->
+		<!-- Across Standard Modules -->
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>oauth2-module</artifactId>

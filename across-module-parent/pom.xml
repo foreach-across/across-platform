@@ -51,6 +51,9 @@
 		<url>https://bitbucket.org/beforeach/across-platform</url>
 	</scm>
 
+	<properties>
+		<maven.deploy.skip>false</maven.deploy.skip>
+	</properties>
 
 	<build>
 		<plugins>
