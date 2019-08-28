@@ -67,14 +67,6 @@
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 	</properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<scope>provided</scope>
-		</dependency>
-	</dependencies>
-
 	<dependencyManagement>
 		<dependencies>
 			<!-- Parent BOMs -->
@@ -117,10 +109,10 @@
 						<parent>keep</parent>
 						<pluginManagement>keep</pluginManagement>
 						<properties>keep</properties>
-						<repositories>remove</repositories>
+						<repositories>keep</repositories>
 						<profiles>remove</profiles>
 						<modules>remove</modules>
-						<build>remove</build>
+						<build>keep</build>
 					</pomElements>
 				</configuration>
 				<executions>
