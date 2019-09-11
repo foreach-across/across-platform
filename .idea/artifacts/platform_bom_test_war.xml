@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="platform-bom-test-4.0.0-SNAPSHOT.war">
+    <root id="archive" name="platform-bom-test-5.0.0-TEST-SNAPSHOT.war">
       <element id="artifact" artifact-name="platform-bom-test:war exploded" />
     </root>
   </artifact>
