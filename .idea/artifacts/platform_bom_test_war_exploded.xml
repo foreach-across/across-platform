@@ -14,7 +14,7 @@
           <element id="module-output" name="platform-bom-test" />
         </element>
         <element id="directory" name="lib">
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-autoconfigure/2.0.0-SNAPSHOT/across-autoconfigure-2.0.0-20190806.124726-4.jar" output-file-name="across-autoconfigure-2.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-autoconfigure/2.0.0-SNAPSHOT/across-autoconfigure-2.0.0-20190911.103157-1.jar" output-file-name="across-autoconfigure-2.0.0-SNAPSHOT.jar" />
           <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-web/5.0.0-TEST-SNAPSHOT/across-web-5.0.0-TEST-20190905.125109-8.jar" output-file-name="across-web-5.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.1.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-json:2.1.7.RELEASE" />
@@ -42,8 +42,8 @@
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.26" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.8.1" />
           <element id="library" level="project" name="Maven: org.liquibase:liquibase-core:3.6.3" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/oauth2-module/3.0.0-SNAPSHOT/oauth2-module-3.0.0-20190731.180601-3.jar" output-file-name="oauth2-module-3.0.0-SNAPSHOT.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/across-hibernate-module/4.0.0-SNAPSHOT/across-hibernate-module-4.0.0-20190806.071313-1.jar" output-file-name="across-hibernate-module-4.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/oauth2-module/3.0.0-TEST-SNAPSHOT/oauth2-module-3.0.0-TEST-20190909.171147-1.jar" output-file-name="oauth2-module-3.0.0-TEST-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/across-hibernate-module/4.0.0-TEST-SNAPSHOT/across-hibernate-module-4.0.0-TEST-20190911.074526-2.jar" output-file-name="across-hibernate-module-4.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:2.1.10.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.9.4" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.1.9.RELEASE" />
@@ -65,8 +65,8 @@
           <element id="library" level="project" name="Maven: com.mysema.commons:mysema-commons-lang:0.2.4" />
           <element id="library" level="project" name="Maven: com.infradna.tool:bridge-method-annotation:1.13" />
           <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/properties-module/2.0.0-SNAPSHOT/properties-module-2.0.0-20190727.143140-3.jar" output-file-name="properties-module-2.0.0-SNAPSHOT.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-security-module/4.0.0-SNAPSHOT/spring-security-module-4.0.0-20190806.074718-1.jar" output-file-name="spring-security-module-4.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/properties-module/2.0.0-TEST-SNAPSHOT/properties-module-2.0.0-TEST-20190909.133809-1.jar" output-file-name="properties-module-2.0.0-TEST-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-security-module/4.0.0-TEST-SNAPSHOT/spring-security-module-4.0.0-TEST-20190905.125146-2.jar" output-file-name="spring-security-module-4.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.1.6.RELEASE" />
@@ -82,10 +82,10 @@
           <element id="library" level="project" name="Maven: org.reflections:reflections:0.9.9" />
           <element id="library" level="project" name="Maven: com.google.code.findbugs:annotations:2.0.1" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.4" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/ehcache-module/2.0.0-SNAPSHOT/ehcache-module-2.0.0-20190803.095004-3.jar" output-file-name="ehcache-module-2.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/ehcache-module/2.0.0-TEST-SNAPSHOT/ehcache-module-2.0.0-TEST-20190909.134144-2.jar" output-file-name="ehcache-module-2.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.10.6" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:5.1.9.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/entity-module/4.0.0-SNAPSHOT/entity-module-4.0.0-20190727.142357-5.jar" output-file-name="entity-module-4.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/entity-module/4.0.0-TEST-SNAPSHOT/entity-module-4.0.0-TEST-20190909.115458-1.jar" output-file-name="entity-module-4.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final" />
           <element id="library" level="project" name="Maven: org.hibernate.validator:hibernate-validator:6.0.17.Final" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:2.0.1.Final" />
@@ -96,55 +96,59 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
           <element id="library" level="project" name="Maven: org.atteo:evo-inflector:1.2.2" />
           <element id="library" level="project" name="Maven: org.webjars:lodash:4.17.4" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-security-acl-module/4.0.0-SNAPSHOT/spring-security-acl-module-4.0.0-20190728.104151-4.jar" output-file-name="spring-security-acl-module-4.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-security-acl-module/4.0.0-TEST-SNAPSHOT/spring-security-acl-module-4.0.0-TEST-20190909.134331-1.jar" output-file-name="spring-security-acl-module-4.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:5.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.1.9.RELEASE" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:application-info-module:2.0.0.M1" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/application-info-module/2.0.0-TEST-SNAPSHOT/application-info-module-2.0.0-TEST-20190906.203820-1.jar" output-file-name="application-info-module-2.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: com.foreach.libs:common-spring:1.1" />
           <element id="library" level="project" name="Maven: javax.mail:mail:1.4.1" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-batch-module/2.0.0-SNAPSHOT/spring-batch-module-2.0.0-20190803.085047-1.jar" output-file-name="spring-batch-module-2.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-batch-module/2.0.0-TEST-SNAPSHOT/spring-batch-module-2.0.0-TEST-20190910.093059-1.jar" output-file-name="spring-batch-module-2.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.springframework.batch:spring-batch-core:4.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: javax.batch:javax.batch-api:1.0" />
           <element id="library" level="project" name="Maven: org.codehaus.jettison:jettison:1.2" />
           <element id="library" level="project" name="Maven: org.springframework.batch:spring-batch-infrastructure:4.1.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.retry:spring-retry:1.2.4.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/file-manager-module/3.0.0-SNAPSHOT/file-manager-module-3.0.0-20190718.103631-2.jar" output-file-name="file-manager-module-3.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/file-manager-module/2.0.0-TEST-SNAPSHOT/file-manager-module-2.0.0-TEST-20190910.122104-13.jar" output-file-name="file-manager-module-2.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.6" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/user-module/4.0.0-SNAPSHOT/user-module-4.0.0-20190728.105242-5.jar" output-file-name="user-module-4.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/user-module/4.0.0-TEST-SNAPSHOT/user-module-4.0.0-TEST-20190909.140449-1.jar" output-file-name="user-module-4.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.1" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/web-cms-module/0.1.0-SNAPSHOT/web-cms-module-0.1.0-20190804.091836-4.jar" output-file-name="web-cms-module-0.1.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/web-cms-module/0.1.0-TEST-SNAPSHOT/web-cms-module-0.1.0-TEST-20190910.191347-1.jar" output-file-name="web-cms-module-0.1.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.webjars.npm:codemirror-minified:5.44.0" />
           <element id="library" level="project" name="Maven: org.webjars:bootbox:4.4.0" />
           <element id="library" level="project" name="Maven: org.webjars:jquery-ui:1.12.1" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/dynamic-forms-module/0.1.0-SNAPSHOT/dynamic-forms-module-0.1.0-20190801.183054-3.jar" output-file-name="dynamic-forms-module-0.1.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/dynamic-forms-module/0.1.0-TEST-SNAPSHOT/dynamic-forms-module-0.1.0-TEST-20190911.110351-1.jar" output-file-name="dynamic-forms-module-0.1.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.9" />
           <element id="library" level="project" name="Maven: com.jayway.jsonpath:json-path:2.4.0" />
           <element id="library" level="project" name="Maven: net.minidev:json-smart:2.3" />
           <element id="library" level="project" name="Maven: net.minidev:accessors-smart:1.2" />
           <element id="library" level="project" name="Maven: org.ow2.asm:asm:5.0.4" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-mobile-module/3.0.0-SNAPSHOT/spring-mobile-module-3.0.0-20190803.093109-5.jar" output-file-name="spring-mobile-module-3.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/spring-mobile-module/3.0.0-TEST-SNAPSHOT/spring-mobile-module-3.0.0-TEST-20190906.202234-1.jar" output-file-name="spring-mobile-module-3.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.springframework.mobile:spring-mobile-device:1.1.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.1.9.RELEASE" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/admin-web-module/4.0.0-SNAPSHOT/admin-web-module-4.0.0-20190717.121924-4.jar" output-file-name="admin-web-module-4.0.0-SNAPSHOT.jar" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/bootstrap-ui-module/3.0.0-SNAPSHOT/bootstrap-ui-module-3.0.0-20190727.132044-4.jar" output-file-name="bootstrap-ui-module-3.0.0-SNAPSHOT.jar" />
-          <element id="library" level="project" name="Maven: org.webjars:jquery:1.11.3" />
-          <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.3.7" />
-          <element id="library" level="project" name="Maven: org.webjars.bower:autosize:3.0.20" />
-          <element id="library" level="project" name="Maven: org.webjars:momentjs:2.10.6" />
-          <element id="library" level="project" name="Maven: org.webjars.bower:autoNumeric:1.9.30" />
-          <element id="library" level="project" name="Maven: org.webjars:Eonasdan-bootstrap-datetimepicker:4.14.30" />
-          <element id="library" level="project" name="Maven: org.webjars:bootstrap-select:1.12.2" />
-          <element id="library" level="project" name="Maven: org.webjars:typeaheadjs:0.11.1" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/admin-web-module/4.0.0-TEST-SNAPSHOT/admin-web-module-4.0.0-TEST-20190909.103634-3.jar" output-file-name="admin-web-module-4.0.0-TEST-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/bootstrap-ui-module/3.0.0-TEST-SNAPSHOT/bootstrap-ui-module-3.0.0-TEST-20190907.130812-7.jar" output-file-name="bootstrap-ui-module-3.0.0-TEST-SNAPSHOT.jar" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:3.4.1" />
+          <element id="library" level="project" name="Maven: org.webjars:bootstrap:4.3.1" />
+          <element id="library" level="project" name="Maven: org.webjars:popper.js:1.14.3" />
+          <element id="library" level="project" name="Maven: org.webjars.bower:autosize:4.0.2" />
+          <element id="library" level="project" name="Maven: org.webjars:momentjs:2.24.0" />
+          <element id="library" level="project" name="Maven: org.webjars:handlebars:4.0.14" />
+          <element id="library" level="project" name="Maven: org.webjars.npm:autonumeric:4.5.4" />
+          <element id="library" level="project" name="Maven: org.webjars:tempusdominus-bootstrap-4:5.1.2" />
+          <element id="library" level="project" name="Maven: org.webjars.npm:bootstrap-select:1.13.10" />
+          <element id="library" level="project" name="Maven: org.webjars.npm:corejs-typeahead:1.2.1" />
+          <element id="library" level="project" name="Maven: org.webjars:font-awesome:5.10.1" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/bootstrap-ui/0.0.1-SNAPSHOT/bootstrap-ui-0.0.1-20190907.130807-7.jar" output-file-name="bootstrap-ui-0.0.1-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.thymeleaf.extras:thymeleaf-extras-springsecurity5:3.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.webjars.bower:toastr:2.1.2" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/debug-web-module/3.0.0-SNAPSHOT/debug-web-module-3.0.0-20190806.080732-1.jar" output-file-name="debug-web-module-3.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/debug-web-module/3.0.0-TEST-SNAPSHOT/debug-web-module-3.0.0-TEST-20190905.140905-3.jar" output-file-name="debug-web-module-3.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.slf4j:log4j-over-slf4j:1.7.26" />
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
-          <element id="library" level="project" name="Maven: com.foreach.across.modules:logging-module:1.1.0.RELEASE" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/logging-module/3.0.0-TEST-SNAPSHOT/logging-module-3.0.0-TEST-20190906.185625-1.jar" output-file-name="logging-module-3.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: com.foreach.libs:common-web:1.1" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/ldap-module/2.0.0-SNAPSHOT/ldap-module-2.0.0-20190801.181254-4.jar" output-file-name="ldap-module-2.0.0-SNAPSHOT.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/modules/ldap-module/2.0.0-TEST-SNAPSHOT/ldap-module-2.0.0-TEST-20190909.180156-1.jar" output-file-name="ldap-module-2.0.0-TEST-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: org.springframework.ldap:spring-ldap-core:2.3.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-ldap:5.1.6.RELEASE" />
           <element id="file-copy" path="$MAVEN_REPOSITORY$/com/foreach/across/across-test/5.0.0-TEST-SNAPSHOT/across-test-5.0.0-TEST-20190905.125116-8.jar" output-file-name="across-test-5.0.0-TEST-SNAPSHOT.jar" />
