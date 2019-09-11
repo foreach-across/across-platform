@@ -3,5 +3,5 @@ target
 .idea/libraries
 .idea/excludeFromValidation
 *.iml
-
+.flattened-pom.xml
 TEST_ITPlatformApp

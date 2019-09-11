@@ -18,25 +18,32 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<parent>
+		<groupId>com.foreach.across</groupId>
+		<artifactId>across-application-parent</artifactId>
+		<version>${revision}</version>
+		<relativePath>../across-application-parent</relativePath>
+	</parent>
+
 	<groupId>com.foreach.across</groupId>
 	<artifactId>platform-bom-test</artifactId>
-	<version>4.0.0-SNAPSHOT</version>
+	<version>${revision}</version>
 	<packaging>war</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
-	<description>
-		Test website for integration testing of all modules.
-	</description>
+	<description>Test website for integration testing of all modules.</description>
 	<url>https://across.dev/modules</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
 		</license>
 	</licenses>
 
 	<properties>
 		<jacoco-maven-plugin.version>0.7.4.201502262128</jacoco-maven-plugin.version>
+		<maven.deploy.skip>true</maven.deploy.skip>
+		<maven.javadoc.skip>true</maven.javadoc.skip>
 	</properties>
 
 	<developers>
@@ -50,25 +57,42 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<version>2.8.2</version>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<version>1.1.0</version>
+				<inherited>false</inherited>
 				<configuration>
-					<skip>true</skip>
+					<updatePomFile>true</updatePomFile>
+					<flattenMode>resolveCiFriendliesOnly</flattenMode>
+					<pomElements>
+						<pluginManagement>keep</pluginManagement>
+						<properties>keep</properties>
+						<repositories>remove</repositories>
+						<profiles>remove</profiles>
+						<modules>remove</modules>
+						<build>remove</build>
+					</pomElements>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9.1</version>
-				<configuration>
-					<skip>true</skip>
-				</configuration>
+				<executions>
+					<execution>
+						<id>flatten</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>flatten</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>flatten.clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -78,7 +102,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>2.17</version>
 				<configuration>
 					<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
 				</configuration>
@@ -106,7 +129,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>2.0.4.RELEASE</version>
 				<executions>
 					<execution>
 						<goals>
@@ -118,31 +140,17 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>3.2.3</version>
 			</plugin>
 		</plugins>
-
 	</build>
 
 	<repositories>
 		<repository>
-			<id>foreach-nexus</id>
-			<name>Foreach repository</name>
-			<url>http://repository.foreach.be/nexus/repository/public/</url>
+			<id>across</id>
+			<name>Across Repository</name>
+			<url>https://repository.foreach.be/nexus/repository/public/</url>
 		</repository>
 	</repositories>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.foreach.across</groupId>
-				<artifactId>platform-bom</artifactId>
-				<version>4.0.0-SNAPSHOT</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 	<dependencies>
 		<!-- Auto configuration -->
@@ -150,7 +158,7 @@
 			<groupId>com.foreach.across</groupId>
 			<artifactId>across-autoconfigure</artifactId>
 		</dependency>
-		<!-- Modules -->
+		<!-- Across Standard Modules -->
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>oauth2-module</artifactId>
