@@ -132,7 +132,7 @@
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>platform-bom</artifactId>
-				<version>2.1.5-SNAPSHOT</version>
+				<version>2.1.6-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
