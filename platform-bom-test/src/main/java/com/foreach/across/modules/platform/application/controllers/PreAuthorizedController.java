@@ -1,5 +1,6 @@
 package com.foreach.across.modules.platform.application.controllers;
 
+import com.foreach.across.modules.spring.security.annotations.CurrentSecurityPrincipal;
 import com.foreach.across.modules.user.business.User;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
@@ -19,9 +20,9 @@ public class PreAuthorizedController
 {
 	@RequestMapping(value = "/api/testshouldbeauthenticated", produces = { MediaType.APPLICATION_JSON_VALUE })
 	@PreAuthorize("isAuthenticated() && hasRole('ROLE_ADMIN')")
-	public ResponseEntity<UserResponse> authenticatedPage( OAuth2Authentication authentication ) {
+	public ResponseEntity<UserResponse> authenticatedPage( @CurrentSecurityPrincipal User user ) {
 		UserResponse response = new UserResponse();
-		BeanUtils.copyProperties( authentication.getPrincipal(), response, "roles" );
+		BeanUtils.copyProperties( user, response, "roles" );
 		return new ResponseEntity<>( response, HttpStatus.OK );
 	}
 
