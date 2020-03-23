@@ -72,7 +72,7 @@
 		<asm.bootstrap-ui-module.version>3.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
 		<asm.admin-web-module.version>4.0.0-SNAPSHOT</asm.admin-web-module.version>
 		<asm.ax-bootstrap-theme-module.version>0.0.1-SNAPSHOT</asm.ax-bootstrap-theme-module.version>
-		<asm.asm.ax-bootstrap-4-utilities.version>0.0.1-SNAPSHOT</asm.asm.ax-bootstrap-4-utilities.version>
+		<asm.ax-bootstrap-4-utilities.version>0.0.1-SNAPSHOT</asm.ax-bootstrap-4-utilities.version>
 		<asm.entity-module.version>4.0.0-SNAPSHOT</asm.entity-module.version>
 		<asm.spring-security-acl-module.version>4.0.0-SNAPSHOT</asm.spring-security-acl-module.version>
 		<asm.properties-module.version>2.0.0-SNAPSHOT</asm.properties-module.version>
