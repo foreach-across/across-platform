@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-core-dependencies</artifactId>
-		<version>5.0.0-SNAPSHOT</version>
+		<version>5.0.0.RC1</version>
 		<relativePath/>
 	</parent>
 
@@ -61,30 +61,30 @@
 
 	<properties>
 		<maven.deploy.skip>false</maven.deploy.skip>
-		<across.autoconfigure.version>2.0.0-SNAPSHOT</across.autoconfigure.version>
-		<asm.across-hibernate-module.version>4.0.0-SNAPSHOT</asm.across-hibernate-module.version>
-		<asm.spring-security-module.version>4.0.0-SNAPSHOT</asm.spring-security-module.version>
-		<asm.debug-web-module.version>3.0.0-SNAPSHOT</asm.debug-web-module.version>
-		<asm.logging-module.version>3.0.0-SNAPSHOT</asm.logging-module.version>
-		<asm.ehcache-module.version>2.0.0-SNAPSHOT</asm.ehcache-module.version>
-		<asm.spring-mobile-module.version>3.0.0-SNAPSHOT</asm.spring-mobile-module.version>
-		<asm.application-info-module.version>2.0.0-SNAPSHOT</asm.application-info-module.version>
-		<asm.bootstrap-ui-module.version>3.0.0-SNAPSHOT</asm.bootstrap-ui-module.version>
-		<asm.admin-web-module.version>4.0.0-SNAPSHOT</asm.admin-web-module.version>
-		<asm.ax-bootstrap-theme-module.version>0.0.1-SNAPSHOT</asm.ax-bootstrap-theme-module.version>
-		<asm.ax-bootstrap-4-utilities.version>0.0.1-SNAPSHOT</asm.ax-bootstrap-4-utilities.version>
-		<asm.entity-module.version>4.0.0-SNAPSHOT</asm.entity-module.version>
-		<asm.spring-security-acl-module.version>4.0.0-SNAPSHOT</asm.spring-security-acl-module.version>
-		<asm.properties-module.version>2.0.0-SNAPSHOT</asm.properties-module.version>
-		<asm.user-module.version>4.0.0-SNAPSHOT</asm.user-module.version>
-		<asm.oauth2-module.version>3.0.0-SNAPSHOT</asm.oauth2-module.version>
-		<asm.ldap-module.version>2.0.0-SNAPSHOT</asm.ldap-module.version>
-		<asm.spring-batch-module.version>2.0.0-SNAPSHOT</asm.spring-batch-module.version>
-		<asm.file-manager-module.version>2.0.0-SNAPSHOT</asm.file-manager-module.version>
-		<asm.webcms-module.version>0.1.0-SNAPSHOT</asm.webcms-module.version>
-		<asm.dynamic-forms-module.version>0.1.0-SNAPSHOT</asm.dynamic-forms-module.version>
+		<across.autoconfigure.version>2.0.0.RC1</across.autoconfigure.version>
+		<asm.across-hibernate-module.version>4.0.0.RC1</asm.across-hibernate-module.version>
+		<asm.spring-security-module.version>4.0.0.RC1</asm.spring-security-module.version>
+		<asm.debug-web-module.version>3.0.0.RC1</asm.debug-web-module.version>
+		<asm.logging-module.version>3.0.0.RC1</asm.logging-module.version>
+		<asm.ehcache-module.version>2.0.0.RC1</asm.ehcache-module.version>
+		<asm.spring-mobile-module.version>3.0.0.RC1</asm.spring-mobile-module.version>
+		<asm.application-info-module.version>2.0.0.RC1</asm.application-info-module.version>
+		<asm.bootstrap-ui-module.version>3.0.0.RC1</asm.bootstrap-ui-module.version>
+		<asm.admin-web-module.version>4.0.0.RC1</asm.admin-web-module.version>
+		<asm.ax-bootstrap-theme-module.version>0.0.1.RC1</asm.ax-bootstrap-theme-module.version>
+		<asm.ax-bootstrap-4-utilities.version>0.0.1.RC1</asm.ax-bootstrap-4-utilities.version>
+		<asm.entity-module.version>4.0.0.RC1</asm.entity-module.version>
+		<asm.spring-security-acl-module.version>4.0.0.RC1</asm.spring-security-acl-module.version>
+		<asm.properties-module.version>2.0.0.RC1</asm.properties-module.version>
+		<asm.user-module.version>4.0.0.RC1</asm.user-module.version>
+		<asm.oauth2-module.version>3.0.0.RC1</asm.oauth2-module.version>
+		<asm.ldap-module.version>2.0.0.RC1</asm.ldap-module.version>
+		<asm.spring-batch-module.version>2.0.0.RC1</asm.spring-batch-module.version>
+		<asm.file-manager-module.version>2.0.0.RC1</asm.file-manager-module.version>
+		<asm.webcms-module.version>0.1.0.RC1</asm.webcms-module.version>
+		<asm.dynamic-forms-module.version>0.1.0.RC1</asm.dynamic-forms-module.version>
 
-		<imageserver-version>6.0.0-SNAPSHOT</imageserver-version>
+		<imageserver-version>6.0.0.RC1</imageserver-version>
 	</properties>
 
 	<dependencyManagement>
