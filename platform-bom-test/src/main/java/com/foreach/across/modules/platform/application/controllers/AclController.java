@@ -24,7 +24,7 @@ public class AclController
 
 	@RequestMapping("/acl/{groupName}")
 	public ObjectIdentity viewAcl( @PathVariable("groupName") String groupName ) {
-		Group group = groupService.getGroupByName( groupName );
+		Group group = groupService.getGroupByName( groupName ).orElse( null );
 		if ( group == null ) {
 			throw new RuntimeException( "Group not found" );
 		}
