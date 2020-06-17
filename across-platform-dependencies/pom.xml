@@ -29,7 +29,7 @@
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 
-	<name>${project.groupId}:${project.artifactId}</name>
+	<name>Across Platform Dependencies</name>
 	<description>Bill Of Material POM for Across Applications and Across Modules.</description>
 	<url>https://across.dev</url>
 	<licenses>
