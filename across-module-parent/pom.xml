@@ -29,7 +29,7 @@
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 
-	<name>${project.groupId}:${project.artifactId}</name>
+	<name>Across Module Parent</name>
 	<description>Parent POM for Across Modules.</description>
 	<url>https://across.dev</url>
 	<licenses>

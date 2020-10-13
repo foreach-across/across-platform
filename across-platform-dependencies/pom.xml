@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-core-dependencies</artifactId>
-		<version>6.0.0-SNAPSHOT</version>
+		<version>5.1.0-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
@@ -29,7 +29,7 @@
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 
-	<name>${project.groupId}:${project.artifactId}</name>
+	<name>Across Platform Dependencies</name>
 	<description>Bill Of Material POM for Across Applications and Across Modules.</description>
 	<url>https://across.dev</url>
 	<licenses>
@@ -84,7 +84,7 @@
 		<asm.webcms-module.version>0.2.0-SNAPSHOT</asm.webcms-module.version>
 		<asm.dynamic-forms-module.version>0.2.0-SNAPSHOT</asm.dynamic-forms-module.version>
 
-		<imageserver-version>6.0.0.RC1</imageserver-version>
+		<imageserver-version>6.0.0.RELEASE</imageserver-version>
 	</properties>
 
 	<dependencyManagement>
