@@ -8,9 +8,9 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.FastDateFormat;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +19,7 @@ import org.springframework.http.*;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.security.acls.model.ObjectIdentity;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
@@ -31,13 +31,13 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.UUID;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Marc Vanbrabant
  * @since 2.0.0
  */
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = PlatformTestApplication.class)
 public class ITPlatformTestApplication
 {
@@ -433,7 +433,7 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
-	@Ignore("No longer the case as of Spring Boot 2.0 - test probably irrelevant and Actuator security will be covered elsewhere")
+	@Disabled("No longer the case as of Spring Boot 2.0 - test probably irrelevant and Actuator security will be covered elsewhere")
 	public void securityIsAppliedToActuatorEndpoints() {
 		RestTemplate restTemplate = restTemplate( true );
 		ResponseEntity<String> response = restTemplate.getForEntity( url( "/health" ), String.class );
