@@ -26,7 +26,7 @@
 	</parent>
 
 	<artifactId>across-platform-dependencies</artifactId>
-	<version>5.0.1.SR1</version>
+	<version>5.0.1.SR1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Across Platform Dependencies</name>
@@ -60,7 +60,7 @@
 	</scm>
 
 	<properties>
-		<revision>5.0.1.SR1</revision>
+		<revision>5.0.1.SR1-SNAPSHOT</revision>
 		<maven.deploy.skip>false</maven.deploy.skip>
 		<across.autoconfigure.version>2.0.0.RELEASE</across.autoconfigure.version>
 		<asm.across-hibernate-module.version>4.0.0.RELEASE</asm.across-hibernate-module.version>
