@@ -26,7 +26,7 @@
 	</parent>
 
 	<artifactId>across-platform-dependencies</artifactId>
-	<version>${revision}</version>
+	<version>5.0.1.SR1</version>
 	<packaging>pom</packaging>
 
 	<name>Across Platform Dependencies</name>
@@ -60,6 +60,7 @@
 	</scm>
 
 	<properties>
+		<revision>5.0.1.SR1</revision>
 		<maven.deploy.skip>false</maven.deploy.skip>
 		<across.autoconfigure.version>2.0.0.RELEASE</across.autoconfigure.version>
 		<asm.across-hibernate-module.version>4.0.0.RELEASE</asm.across-hibernate-module.version>
@@ -74,7 +75,7 @@
 		<asm.ax-bootstrap-theme-module.version>0.0.1.RELEASE</asm.ax-bootstrap-theme-module.version>
 		<asm.ax-bootstrap-4-utilities.version>0.0.1.RELEASE</asm.ax-bootstrap-4-utilities.version>
 		<asm.entity-module.version>4.0.0.RELEASE</asm.entity-module.version>
-		<asm.spring-security-acl-module.version>4.0.0.RELEASE</asm.spring-security-acl-module.version>
+		<asm.spring-security-acl-module.version>4.0.1-SNAPSHOT</asm.spring-security-acl-module.version>
 		<asm.properties-module.version>2.0.0.RELEASE</asm.properties-module.version>
 		<asm.user-module.version>4.0.0.RELEASE</asm.user-module.version>
 		<asm.oauth2-module.version>3.0.0.RELEASE</asm.oauth2-module.version>
