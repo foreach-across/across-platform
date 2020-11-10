@@ -61,7 +61,7 @@
 
 	<properties>
 		<maven.deploy.skip>false</maven.deploy.skip>
-		<across.autoconfigure.version>3.0.0-SNAPSHOT</across.autoconfigure.version>
+		<across.autoconfigure.version>2.1.0-SNAPSHOT</across.autoconfigure.version>
 		<asm.across-hibernate-module.version>4.1.0-SNAPSHOT</asm.across-hibernate-module.version>
 		<asm.spring-security-module.version>4.1.0-SNAPSHOT</asm.spring-security-module.version>
 		<asm.debug-web-module.version>3.1.0-SNAPSHOT</asm.debug-web-module.version>
