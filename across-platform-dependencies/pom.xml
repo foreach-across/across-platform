@@ -21,12 +21,12 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-core-dependencies</artifactId>
-		<version>5.0.1.RELEASE</version>
+		<version>5.0.2-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
 	<artifactId>across-platform-dependencies</artifactId>
-	<version>5.0.1.SR1-SNAPSHOT</version>
+	<version>5.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Across Platform Dependencies</name>
@@ -60,7 +60,7 @@
 	</scm>
 
 	<properties>
-		<revision>5.0.1.SR1-SNAPSHOT</revision>
+		<revision>5.0.2-SNAPSHOT</revision>
 		<maven.deploy.skip>false</maven.deploy.skip>
 		<across.autoconfigure.version>2.0.0.RELEASE</across.autoconfigure.version>
 		<asm.across-hibernate-module.version>4.0.0.RELEASE</asm.across-hibernate-module.version>
@@ -70,7 +70,7 @@
 		<asm.ehcache-module.version>2.0.0.RELEASE</asm.ehcache-module.version>
 		<asm.spring-mobile-module.version>3.0.0.RELEASE</asm.spring-mobile-module.version>
 		<asm.application-info-module.version>2.0.0.RELEASE</asm.application-info-module.version>
-		<asm.bootstrap-ui-module.version>3.0.0.RELEASE</asm.bootstrap-ui-module.version>
+		<asm.bootstrap-ui-module.version>3.0.1-SNAPSHOT</asm.bootstrap-ui-module.version>
 		<asm.admin-web-module.version>4.0.0.RELEASE</asm.admin-web-module.version>
 		<asm.ax-bootstrap-theme-module.version>0.0.1.RELEASE</asm.ax-bootstrap-theme-module.version>
 		<asm.ax-bootstrap-4-utilities.version>0.0.1.RELEASE</asm.ax-bootstrap-4-utilities.version>
@@ -81,7 +81,7 @@
 		<asm.oauth2-module.version>3.0.0.RELEASE</asm.oauth2-module.version>
 		<asm.ldap-module.version>2.0.0.RELEASE</asm.ldap-module.version>
 		<asm.spring-batch-module.version>2.0.0.RELEASE</asm.spring-batch-module.version>
-		<asm.file-manager-module.version>2.0.0.RELEASE</asm.file-manager-module.version>
+		<asm.file-manager-module.version>2.1.0-SNAPSHOT</asm.file-manager-module.version>
 		<asm.webcms-module.version>0.1.0.RELEASE</asm.webcms-module.version>
 		<asm.dynamic-forms-module.version>0.1.0.RELEASE</asm.dynamic-forms-module.version>
 
