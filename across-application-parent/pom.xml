@@ -64,7 +64,7 @@
 		<revision>5.0.2.RELEASE</revision>
 		<across.platform.version>${revision}</across.platform.version>
 		<maven.deploy.skip>false</maven.deploy.skip>
-		<timestamp>${maven.build.${maven.build.timestamp}}</timestamp>
+		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 	</properties>
 
