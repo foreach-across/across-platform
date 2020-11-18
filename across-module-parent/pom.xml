@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-platform-dependencies</artifactId>
-		<version>5.0.2-SNAPSHOT</version>
+		<version>5.0.2.RELEASE</version>
 		<relativePath>../across-platform-dependencies</relativePath>
 	</parent>
 
@@ -52,7 +52,7 @@
 	</scm>
 
 	<properties>
-		<revision>5.0.2-SNAPSHOT</revision>
+		<revision>5.0.2.RELEASE</revision>
 		<maven.deploy.skip>false</maven.deploy.skip>
 	</properties>
 

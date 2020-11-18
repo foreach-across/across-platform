@@ -21,12 +21,12 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-core-dependencies</artifactId>
-		<version>5.0.2-SNAPSHOT</version>
+		<version>5.0.2.RELEASE</version>
 		<relativePath/>
 	</parent>
 
 	<artifactId>across-platform-dependencies</artifactId>
-	<version>5.0.2-SNAPSHOT</version>
+	<version>5.0.2.RELEASE</version>
 	<packaging>pom</packaging>
 
 	<name>Across Platform Dependencies</name>
@@ -70,18 +70,18 @@
 		<asm.ehcache-module.version>2.0.0.RELEASE</asm.ehcache-module.version>
 		<asm.spring-mobile-module.version>3.0.0.RELEASE</asm.spring-mobile-module.version>
 		<asm.application-info-module.version>2.0.0.RELEASE</asm.application-info-module.version>
-		<asm.bootstrap-ui-module.version>3.0.1-SNAPSHOT</asm.bootstrap-ui-module.version>
+		<asm.bootstrap-ui-module.version>3.0.1.RELEASE</asm.bootstrap-ui-module.version>
 		<asm.admin-web-module.version>4.0.0.RELEASE</asm.admin-web-module.version>
 		<asm.ax-bootstrap-theme-module.version>0.0.1.RELEASE</asm.ax-bootstrap-theme-module.version>
 		<asm.ax-bootstrap-4-utilities.version>0.0.1.RELEASE</asm.ax-bootstrap-4-utilities.version>
 		<asm.entity-module.version>4.0.0.RELEASE</asm.entity-module.version>
-		<asm.spring-security-acl-module.version>4.0.1-SNAPSHOT</asm.spring-security-acl-module.version>
+		<asm.spring-security-acl-module.version>4.0.1.RELEASE</asm.spring-security-acl-module.version>
 		<asm.properties-module.version>2.0.0.RELEASE</asm.properties-module.version>
 		<asm.user-module.version>4.0.0.RELEASE</asm.user-module.version>
 		<asm.oauth2-module.version>3.0.0.RELEASE</asm.oauth2-module.version>
 		<asm.ldap-module.version>2.0.0.RELEASE</asm.ldap-module.version>
 		<asm.spring-batch-module.version>2.0.0.RELEASE</asm.spring-batch-module.version>
-		<asm.file-manager-module.version>2.1.0-SNAPSHOT</asm.file-manager-module.version>
+		<asm.file-manager-module.version>2.1.0.RELEASE</asm.file-manager-module.version>
 		<asm.webcms-module.version>0.1.0.RELEASE</asm.webcms-module.version>
 		<asm.dynamic-forms-module.version>0.1.0.RELEASE</asm.dynamic-forms-module.version>
 
