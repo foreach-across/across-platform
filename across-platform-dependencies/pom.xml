@@ -60,7 +60,7 @@
 	</scm>
 
 	<properties>
-		<revision>5.0.2-SNAPSHOT</revision>
+		<revision>5.0.2.RELEASE</revision>
 		<maven.deploy.skip>false</maven.deploy.skip>
 		<across.autoconfigure.version>2.0.0.RELEASE</across.autoconfigure.version>
 		<asm.across-hibernate-module.version>4.0.0.RELEASE</asm.across-hibernate-module.version>
