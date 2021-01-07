@@ -84,7 +84,7 @@
 		<asm.webcms-module.version>0.3.0-SNAPSHOT</asm.webcms-module.version>
 		<asm.dynamic-forms-module.version>0.3.0-SNAPSHOT</asm.dynamic-forms-module.version>
 
-		<imageserver-version>6.1.0.RELEASE</imageserver-version>
+		<imageserver-version>6.2.0-SNAPSHOT</imageserver-version>
 	</properties>
 
 	<dependencyManagement>
