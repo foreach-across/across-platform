@@ -20,7 +20,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class CategoryController
 {
 	@RequestMapping("/category/{categoryPath}")
-	public String listCategoryItems( @PathVariable("categoryPath") Category selectedCategory, Model model ) {
+	public String listCategoryItems( @PathVariable(value = "categoryPath", required = false) Category selectedCategory,
+	                                 Model model ) {
 		if ( selectedCategory == null ) {
 			throw new IllegalArgumentException( "Illegal category requested." );
 		}
