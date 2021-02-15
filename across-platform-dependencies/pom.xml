@@ -69,7 +69,7 @@
 		<asm.ehcache-module.version>2.1.0.RELEASE</asm.ehcache-module.version>
 		<asm.spring-mobile-module.version>3.1.0.RELEASE</asm.spring-mobile-module.version>
 		<asm.application-info-module.version>2.1.0.RELEASE</asm.application-info-module.version>
-		<asm.bootstrap-ui-module.version>3.1.0.RELEASE</asm.bootstrap-ui-module.version>
+		<asm.bootstrap-ui-module.version>3.1.1-SNAPSHOT</asm.bootstrap-ui-module.version>
 		<asm.admin-web-module.version>4.2.0-SNAPSHOT</asm.admin-web-module.version>
 		<asm.ax-bootstrap-theme-module.version>0.0.1.RC1</asm.ax-bootstrap-theme-module.version>
 		<asm.ax-bootstrap-4-utilities.version>0.0.1.RC1</asm.ax-bootstrap-4-utilities.version>
