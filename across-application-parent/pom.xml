@@ -67,7 +67,7 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 		<!-- keep in line with across-core-dependencies -->
-		<liquibase.version>4.2.2</liquibase.version>
+		<liquibase.version>4.3.1</liquibase.version>
 	</properties>
 
 	<dependencyManagement>
