@@ -54,6 +54,15 @@
 			<name>Across Repository</name>
 			<url>https://repository.foreach.be/nexus/repository/public/</url>
 		</repository>
+		<repository>
+			<id>across</id>
+			<name>Across Snapshot Repository</name>
+			<url>https://repository.foreach.be/nexus/repository/across-snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>interval:10</updatePolicy>
+			</snapshots>
+		</repository>
 	</repositories>
 
 	<scm>
