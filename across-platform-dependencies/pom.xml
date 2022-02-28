@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-core-dependencies</artifactId>
-		<version>5.1-SNAPSHOT</version>
+		<version>5.1.1-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
