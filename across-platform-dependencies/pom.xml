@@ -67,7 +67,7 @@
 		<maven.deploy.skip>false</maven.deploy.skip>
 		<across.autoconfigure.version>2.1.0.RELEASE</across.autoconfigure.version>
 		<asm.across-hibernate-module.version>4.1.0.RELEASE</asm.across-hibernate-module.version>
-		<asm.spring-security-module.version>4.1.0.RELEASE</asm.spring-security-module.version>
+		<asm.spring-security-module.version>4.2.1-SNAPSHOT</asm.spring-security-module.version>
 		<asm.debug-web-module.version>3.1.0.RELEASE</asm.debug-web-module.version>
 		<asm.logging-module.version>3.1.0.RELEASE</asm.logging-module.version>
 		<asm.ehcache-module.version>2.1.0.RELEASE</asm.ehcache-module.version>
