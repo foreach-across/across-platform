@@ -5,8 +5,8 @@
     <file url="file://$PROJECT_DIR$/across-application-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/across-module-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/across-platform-dependencies" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/platform-bom" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platform-bom-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-bom-test/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

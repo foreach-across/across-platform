@@ -25,7 +25,6 @@
 		<relativePath>../across-application-parent</relativePath>
 	</parent>
 
-	<groupId>com.foreach.across</groupId>
 	<artifactId>platform-bom-test</artifactId>
 	<version>${revision}</version>
 	<packaging>war</packaging>
@@ -155,6 +154,10 @@
 			<id>across</id>
 			<name>Across Repository</name>
 			<url>https://repository.foreach.be/nexus/repository/public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>interval:10</updatePolicy>
+			</snapshots>
 		</repository>
 	</repositories>
 

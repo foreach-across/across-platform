@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-core-dependencies</artifactId>
-		<version>5.2.0-SNAPSHOT</version>
+		<version>5.2.1-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
@@ -52,6 +52,10 @@
 			<id>across</id>
 			<name>Across Repository</name>
 			<url>https://repository.foreach.be/nexus/repository/public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>interval:10</updatePolicy>
+			</snapshots>
 		</repository>
 	</repositories>
 
@@ -270,7 +274,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.5</version>
+						<version>${maven-gpg-plugin.version}</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
@@ -298,6 +302,24 @@
 		</profile>
 		<profile>
 			<id>across</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>${maven-gpg-plugin.version}</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 			<distributionManagement>
 				<repository>
 					<id>across</id>
