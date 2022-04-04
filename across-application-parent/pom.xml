@@ -65,11 +65,19 @@
 	</scm>
 
 	<properties>
-		<revision>5.1.1.RELEASE</revision>
+		<revision>5.1.2-SNAPSHOT</revision>
 		<across.platform.version>${revision}</across.platform.version>
 		<maven.deploy.skip>false</maven.deploy.skip>
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+
+		<maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
+
+		<!-- https://www.cve.org/CVERecord?id=CVE-2022-22965: Spring remote code execution vulnerability: -->
+		<!-- https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement: -->
+		<spring-framework.version>5.2.20.RELEASE</spring-framework.version>
+		<!-- https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative: -->
+		<tomcat.version>9.0.62</tomcat.version>
 	</properties>
 
 	<dependencyManagement>
@@ -148,7 +156,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.5</version>
+						<version>${maven-gpg-plugin.version}</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
@@ -176,6 +184,24 @@
 		</profile>
 		<profile>
 			<id>across</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>${maven-gpg-plugin.version}</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 			<distributionManagement>
 				<repository>
 					<id>across</id>
