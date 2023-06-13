@@ -5,3 +5,10 @@ target
 *.iml
 .flattened-pom.xml
 TEST_ITPlatformApp
+# Maven:
+.effective-pom.xml
+.dependency-tree.txt
+.foreach-deps.txt
+
+# Emacs:
+*~
