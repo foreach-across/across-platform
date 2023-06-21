@@ -86,7 +86,6 @@
 		<asm.spring-batch-module.version>2.2.1-SNAPSHOT</asm.spring-batch-module.version>
 		<asm.file-manager-module.version>2.3.1-SNAPSHOT</asm.file-manager-module.version>
 		<asm.webcms-module.version>0.3.0-SNAPSHOT</asm.webcms-module.version>
-		<asm.dynamic-forms-module.version>0.3.0-SNAPSHOT</asm.dynamic-forms-module.version>
 
 		<imageserver-version>6.2.0-SNAPSHOT</imageserver-version>
 	</properties>
@@ -190,11 +189,6 @@
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>web-cms-module</artifactId>
 				<version>${asm.webcms-module.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.across.modules</groupId>
-				<artifactId>dynamic-forms-module</artifactId>
-				<version>${asm.dynamic-forms-module.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
