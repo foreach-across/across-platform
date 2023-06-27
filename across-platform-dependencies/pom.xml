@@ -78,16 +78,16 @@
 		<asm.ax-bootstrap-theme-module.version>0.0.1.RC1</asm.ax-bootstrap-theme-module.version>
 		<asm.ax-bootstrap-4-utilities.version>0.0.1.RC1</asm.ax-bootstrap-4-utilities.version>
 		<asm.entity-module.version>4.2.1-SNAPSHOT</asm.entity-module.version>
-		<asm.spring-security-acl-module.version>4.2.0-SNAPSHOT</asm.spring-security-acl-module.version>
+		<asm.spring-security-acl-module.version>4.2.1-SNAPSHOT</asm.spring-security-acl-module.version>
 		<asm.properties-module.version>2.2.1-SNAPSHOT</asm.properties-module.version>
-		<asm.user-module.version>4.2.0-SNAPSHOT</asm.user-module.version>
+		<asm.user-module.version>4.2.1-SNAPSHOT</asm.user-module.version>
 		<asm.oauth2-module.version>3.2.0-SNAPSHOT</asm.oauth2-module.version>
-		<asm.ldap-module.version>2.2.0-SNAPSHOT</asm.ldap-module.version>
+		<asm.ldap-module.version>2.2.1-SNAPSHOT</asm.ldap-module.version>
 		<asm.spring-batch-module.version>2.2.1-SNAPSHOT</asm.spring-batch-module.version>
 		<asm.file-manager-module.version>2.3.1-SNAPSHOT</asm.file-manager-module.version>
-		<asm.webcms-module.version>0.3.0-SNAPSHOT</asm.webcms-module.version>
+		<asm.webcms-module.version>0.3.1-SNAPSHOT</asm.webcms-module.version>
 
-		<imageserver-version>6.2.0-SNAPSHOT</imageserver-version>
+		<imageserver-version>6.2.1-SNAPSHOT</imageserver-version>
 	</properties>
 
 	<dependencyManagement>
