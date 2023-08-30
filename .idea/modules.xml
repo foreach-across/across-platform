@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/across-application-parent/across-application-parent.iml" filepath="$PROJECT_DIR$/across-application-parent/across-application-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/across-module-parent/across-module-parent.iml" filepath="$PROJECT_DIR$/across-module-parent/across-module-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/across-platform-dependencies/across-platform-dependencies.iml" filepath="$PROJECT_DIR$/across-platform-dependencies/across-platform-dependencies.iml" />
-      <module fileurl="file://$PROJECT_DIR$/platform.iml" filepath="$PROJECT_DIR$/platform.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform-bom-test/platform-bom-test.iml" filepath="$PROJECT_DIR$/platform-bom-test/platform-bom-test.iml" />
     </modules>
   </component>
