@@ -18,19 +18,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.foreach.across</groupId>
-		<artifactId>across-core-dependencies</artifactId>
-		<version>5.2.2-SNAPSHOT</version>
-		<relativePath/>
-	</parent>
-
-	<artifactId>across-platform-dependencies</artifactId>
-	<version>${revision}</version>
+	<groupId>com.foreach.across</groupId>
+	<artifactId>across-platform-bom</artifactId>
+	<version>5.2.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Across Platform Dependencies</name>
-	<description>Across Platform Dependencies POM for Across Applications and Across Modules.</description>
+	<name>Across Platform BOM</name>
+	<description>Bill Of Material POM for Across Applications and Across Modules.</description>
 	<url>https://across.dev</url>
 	<licenses>
 		<license>
@@ -66,6 +60,8 @@
 	<properties>
 		<maven.deploy.skip>false</maven.deploy.skip>
 
+		<across.version>5.2.2-SNAPSHOT</across.version>
+
 		<!-- Keep these in sync between across-platform-dependencies and across-platform-bom: -->
 		<across.autoconfigure.version>2.2.1.RELEASE</across.autoconfigure.version>
 		<asm.across-hibernate-module.version>4.2.1.RELEASE</asm.across-hibernate-module.version>
@@ -88,12 +84,30 @@
 		<asm.spring-batch-module.version>2.2.1.RELEASE</asm.spring-batch-module.version>
 		<asm.file-manager-module.version>2.3.1.RELEASE</asm.file-manager-module.version>
 		<asm.webcms-module.version>0.3.1.RELEASE</asm.webcms-module.version>
-
 		<imageserver-version>6.2.1.RELEASE</imageserver-version>
+
+		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+
+			<dependency>
+				<groupId>com.foreach.across</groupId>
+				<artifactId>across-core</artifactId>
+				<version>${across.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across</groupId>
+				<artifactId>across-test</artifactId>
+				<version>${across.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.foreach.across</groupId>
+				<artifactId>across-web</artifactId>
+				<version>${across.version}</version>
+			</dependency>
+
 			<!-- Across autoconfiguration -->
 			<dependency>
 				<groupId>com.foreach.across</groupId>

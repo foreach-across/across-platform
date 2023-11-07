@@ -65,7 +65,7 @@
 	</scm>
 
 	<properties>
-		<revision>5.2.1.RELEASE</revision>
+		<revision>5.2.2-SNAPSHOT</revision>
 		<across.platform.version>${revision}</across.platform.version>
 		<maven.deploy.skip>false</maven.deploy.skip>
 		<timestamp>${maven.build.timestamp}</timestamp>
@@ -73,9 +73,9 @@
 
 		<!-- https://www.cve.org/CVERecord?id=CVE-2022-22965: Spring remote code execution vulnerability: -->
 		<!-- https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement: -->
-		<spring-framework.version>5.3.27</spring-framework.version>
+		<spring-framework.version>5.3.30</spring-framework.version>
 		<!-- https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative: -->
-		<tomcat.version>9.0.75</tomcat.version>
+		<tomcat.version>9.0.82</tomcat.version>
 		<!-- keep in line with across-core-dependencies -->
 		<liquibase.version>4.9.1</liquibase.version>
 		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
