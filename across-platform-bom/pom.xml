@@ -20,7 +20,7 @@
 
 	<groupId>com.foreach.across</groupId>
 	<artifactId>across-platform-bom</artifactId>
-	<version>5.2.2-SNAPSHOT</version>
+	<version>5.2.2.RELEASE</version>
 	<packaging>pom</packaging>
 
 	<name>Across Platform BOM</name>
@@ -60,7 +60,7 @@
 	<properties>
 		<maven.deploy.skip>false</maven.deploy.skip>
 
-		<across.version>5.2.2-SNAPSHOT</across.version>
+		<across.version>5.2.2.RELEASE</across.version>
 
 		<!-- Keep these in sync between across-platform-dependencies and across-platform-bom: -->
 		<across.autoconfigure.version>2.2.1.RELEASE</across.autoconfigure.version>
