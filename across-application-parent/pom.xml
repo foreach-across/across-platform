@@ -30,8 +30,6 @@
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 
-	<name>Across Application Parent</name>
-	<description>Parent POM for Across applications.</description>
 	<url>https://across.dev</url>
 	<licenses>
 		<license>
@@ -65,7 +63,7 @@
 	</scm>
 
 	<properties>
-		<revision>5.2.2.RELEASE</revision>
+		<revision>5.3-SNAPSHOT</revision>
 		<across.platform.version>${revision}</across.platform.version>
 		<maven.deploy.skip>false</maven.deploy.skip>
 		<timestamp>${maven.build.timestamp}</timestamp>

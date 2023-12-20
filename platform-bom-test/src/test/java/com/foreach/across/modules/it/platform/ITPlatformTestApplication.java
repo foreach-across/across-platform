@@ -216,20 +216,6 @@ public class ITPlatformTestApplication
 	}
 
 	@Test
-	public void springBatchCanSubmitJob() {
-		RestTemplate restTemplate = restTemplate();
-
-		ResponseEntity<Map<String, Object>> responseEntity = restTemplate.exchange( url( "/springBatch/run" ),
-		                                                                            HttpMethod.GET, null,
-		                                                                            new ParameterizedTypeReference<Map<String, Object>>()
-		                                                                            {
-		                                                                            } );
-		assertNotNull( responseEntity );
-		assertEquals( HttpStatus.OK, responseEntity.getStatusCode() );
-		assertEquals( "ok", responseEntity.getBody().get( "jobDone" ) );
-	}
-
-	@Test
 	public void springSecurityDialectLoads() {
 		RestTemplate restTemplate = restTemplate();
 
@@ -363,73 +349,6 @@ public class ITPlatformTestApplication
 		assertEquals( 1, doc.select( "h2" ).size() );
 
 		assertEquals( "Oops, we could not find what you're looking for.", doc.select( "h2" ).get( 0 ).text() );
-	}
-
-	@Test
-	public void springMobileDialectReplaceWorksCorrectly() {
-		RestTemplate restTemplate = restTemplate( true );
-
-		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/dialect" ),
-		                                                         HttpMethod.GET,
-		                                                         null,
-		                                                         String.class );
-		assertNotNull( response );
-		assertEquals( HttpStatus.OK, response.getStatusCode() );
-		Document doc = Jsoup.parse( response.getBody() );
-		assertEquals( "include: normal", doc.select( "div" ).first().text() );
-	}
-
-	@Test
-	public void springMobileShowsDesktopTemplateForFirefox() {
-		RestTemplate restTemplate = restTemplate( true );
-
-		HttpHeaders headers = new HttpHeaders();
-		headers.set( "User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0" );
-
-		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/dialect" ),
-		                                                         HttpMethod.GET,
-		                                                         new HttpEntity<>( headers ),
-		                                                         String.class );
-		assertNotNull( response );
-		assertEquals( HttpStatus.OK, response.getStatusCode() );
-		Document doc = Jsoup.parse( response.getBody() );
-		assertEquals( "include: normal", doc.select( "div" ).first().text() );
-	}
-
-	@Test
-	public void springMobileShowsDesktopTemplateForIphone() {
-		RestTemplate restTemplate = restTemplate( true );
-
-		HttpHeaders headers = new HttpHeaders();
-		headers.set( "User-Agent",
-		             "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16" );
-
-		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/dialect" ),
-		                                                         HttpMethod.GET,
-		                                                         new HttpEntity<>( headers ),
-		                                                         String.class );
-		assertNotNull( response );
-		assertEquals( HttpStatus.OK, response.getStatusCode() );
-		Document doc = Jsoup.parse( response.getBody() );
-		assertEquals( "include: mobile", doc.select( "div" ).first().text() );
-	}
-
-	@Test
-	public void springMobileShowsDesktopTemplateForIpad() {
-		RestTemplate restTemplate = restTemplate( true );
-
-		HttpHeaders headers = new HttpHeaders();
-		headers.set( "User-Agent",
-		             "Mozilla/5.0(iPad; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B314 Safari/531.21.10" );
-
-		ResponseEntity<String> response = restTemplate.exchange( url( "/springMobile/dialect" ),
-		                                                         HttpMethod.GET,
-		                                                         new HttpEntity<>( headers ),
-		                                                         String.class );
-		assertNotNull( response );
-		assertEquals( HttpStatus.OK, response.getStatusCode() );
-		Document doc = Jsoup.parse( response.getBody() );
-		assertEquals( "include: tablet", doc.select( "div" ).first().text() );
 	}
 
 	@Test

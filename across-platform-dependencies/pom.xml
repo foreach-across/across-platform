@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-core-dependencies</artifactId>
-		<version>5.2.2.RELEASE</version>
+		<version>5.3-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
@@ -29,8 +29,6 @@
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 
-	<name>Across Platform Dependencies</name>
-	<description>Across Platform Dependencies POM for Across Applications and Across Modules.</description>
 	<url>https://across.dev</url>
 	<licenses>
 		<license>
@@ -67,29 +65,12 @@
 		<maven.deploy.skip>false</maven.deploy.skip>
 
 		<!-- Keep these in sync between across-platform-dependencies and across-platform-bom: -->
-		<across.autoconfigure.version>2.2.1.RELEASE</across.autoconfigure.version>
-		<asm.across-hibernate-module.version>4.2.1.RELEASE</asm.across-hibernate-module.version>
-		<asm.spring-security-module.version>4.2.1.RELEASE</asm.spring-security-module.version>
-		<asm.debug-web-module.version>3.2.1.RELEASE</asm.debug-web-module.version>
-		<asm.logging-module.version>3.2.1.RELEASE</asm.logging-module.version>
-		<asm.ehcache-module.version>2.2.1.RELEASE</asm.ehcache-module.version>
-		<asm.spring-mobile-module.version>3.2.1.RELEASE</asm.spring-mobile-module.version>
-		<asm.application-info-module.version>2.2.1.RELEASE</asm.application-info-module.version>
-		<asm.bootstrap-ui-module.version>3.2.1.RELEASE</asm.bootstrap-ui-module.version>
-		<asm.admin-web-module.version>4.2.1.RELEASE</asm.admin-web-module.version>
-		<asm.ax-bootstrap-theme-module.version>0.0.1.RELEASE</asm.ax-bootstrap-theme-module.version>
-		<asm.ax-bootstrap-4-utilities.version>0.0.1.RELEASE</asm.ax-bootstrap-4-utilities.version>
-		<asm.entity-module.version>4.2.1.RELEASE</asm.entity-module.version>
-		<asm.spring-security-acl-module.version>4.2.1.RELEASE</asm.spring-security-acl-module.version>
-		<asm.properties-module.version>2.2.1.RELEASE</asm.properties-module.version>
-		<asm.user-module.version>4.2.1.RELEASE</asm.user-module.version>
-		<asm.oauth2-module.version>3.2.1.RELEASE</asm.oauth2-module.version>
-		<asm.ldap-module.version>2.2.1.RELEASE</asm.ldap-module.version>
-		<asm.spring-batch-module.version>2.2.1.RELEASE</asm.spring-batch-module.version>
-		<asm.file-manager-module.version>2.3.1.RELEASE</asm.file-manager-module.version>
-		<asm.webcms-module.version>0.3.1.RELEASE</asm.webcms-module.version>
+		<across-auto-configure.version>2.3-SNAPSHOT</across-auto-configure.version>
+		<across-base-modules.version>4.3-SNAPSHOT</across-base-modules.version>
+		<across-entity-admin-modules.version>4.3-SNAPSHOT</across-entity-admin-modules.version>
+		<across-user-auth-modules.version>4.3-SNAPSHOT</across-user-auth-modules.version>
+		<across-media-modules.version>6.3-SNAPSHOT</across-media-modules.version>
 
-		<imageserver-version>6.2.1.RELEASE</imageserver-version>
 	</properties>
 
 	<dependencyManagement>
@@ -98,126 +79,130 @@
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>across-autoconfigure</artifactId>
-				<version>${across.autoconfigure.version}</version>
+				<version>${across-auto-configure.version}</version>
 			</dependency>
 
 			<!-- Across standard modules -->
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>across-hibernate-module</artifactId>
-				<version>${asm.across-hibernate-module.version}</version>
+				<version>${across-base-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>ehcache-module</artifactId>
-				<version>${asm.ehcache-module.version}</version>
+				<version>${across-base-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>debug-web-module</artifactId>
-				<version>${asm.debug-web-module.version}</version>
+				<version>${across-base-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>admin-web-module</artifactId>
-				<version>${asm.admin-web-module.version}</version>
+				<version>${across-entity-admin-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>spring-security-module</artifactId>
-				<version>${asm.spring-security-module.version}</version>
+				<version>${across-base-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>spring-security-acl-module</artifactId>
-				<version>${asm.spring-security-acl-module.version}</version>
+				<version>${across-user-auth-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>oauth2-module</artifactId>
-				<version>${asm.oauth2-module.version}</version>
+				<version>${across-user-auth-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>properties-module</artifactId>
-				<version>${asm.properties-module.version}</version>
+				<version>${across-entity-admin-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>entity-module</artifactId>
-				<version>${asm.entity-module.version}</version>
+				<version>${across-entity-admin-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>user-module</artifactId>
-				<version>${asm.user-module.version}</version>
+				<version>${across-user-auth-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>application-info-module</artifactId>
-				<version>${asm.application-info-module.version}</version>
+				<version>${across-entity-admin-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>logging-module</artifactId>
-				<version>${asm.logging-module.version}</version>
+				<version>${across-base-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>file-manager-module</artifactId>
-				<version>${asm.file-manager-module.version}</version>
+				<version>${across-media-modules.version}</version>
 			</dependency>
+			<!--
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>spring-batch-module</artifactId>
 				<version>${asm.spring-batch-module.version}</version>
 			</dependency>
+			-->
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>bootstrap-ui-module</artifactId>
-				<version>${asm.bootstrap-ui-module.version}</version>
+				<version>${across-entity-admin-modules.version}</version>
 			</dependency>
+			<!--
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>spring-mobile-module</artifactId>
 				<version>${asm.spring-mobile-module.version}</version>
 			</dependency>
+			-->
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>ldap-module</artifactId>
-				<version>${asm.ldap-module.version}</version>
+				<version>${across-user-auth-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>web-cms-module</artifactId>
-				<version>${asm.webcms-module.version}</version>
+				<version>${across-media-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>ax-bootstrap-theme</artifactId>
-				<version>${asm.ax-bootstrap-theme-module.version}</version>
+				<version>${across-entity-admin-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>ax-bootstrap-4-utilities</artifactId>
-				<version>${asm.ax-bootstrap-4-utilities.version}</version>
+				<version>${across-entity-admin-modules.version}</version>
 			</dependency>
 
 			<!-- ImageServer modules -->
 			<dependency>
 				<groupId>com.foreach.imageserver</groupId>
 				<artifactId>imageserver-core</artifactId>
-				<version>${imageserver-version}</version>
+				<version>${across-media-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.imageserver</groupId>
 				<artifactId>imageserver-admin</artifactId>
-				<version>${imageserver-version}</version>
+				<version>${across-media-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.imageserver</groupId>
 				<artifactId>imageserver-client</artifactId>
-				<version>${imageserver-version}</version>
+				<version>${across-media-modules.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

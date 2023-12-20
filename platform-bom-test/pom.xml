@@ -29,8 +29,6 @@
 	<version>${revision}</version>
 	<packaging>war</packaging>
 
-	<name>${project.groupId}:${project.artifactId}</name>
-	<description>Test website for integration testing of all modules.</description>
 	<url>https://across.dev/modules</url>
 	<licenses>
 		<license>
@@ -188,10 +186,12 @@
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>application-info-module</artifactId>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>spring-batch-module</artifactId>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>file-manager-module</artifactId>
@@ -204,10 +204,12 @@
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>web-cms-module</artifactId>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>spring-mobile-module</artifactId>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>admin-web-module</artifactId>

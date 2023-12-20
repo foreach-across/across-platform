@@ -10,8 +10,6 @@ import com.foreach.across.modules.filemanager.FileManagerModule;
 import com.foreach.across.modules.hibernate.jpa.AcrossHibernateJpaModule;
 import com.foreach.across.modules.ldap.LdapModule;
 import com.foreach.across.modules.oauth2.OAuth2Module;
-import com.foreach.across.modules.spring.batch.SpringBatchModule;
-import com.foreach.across.modules.spring.mobile.SpringMobileModule;
 import com.foreach.across.modules.spring.security.acl.SpringSecurityAclModule;
 import com.foreach.across.modules.user.UserModule;
 import com.foreach.across.modules.webcms.WebCmsModule;
@@ -30,8 +28,8 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 
 @Configuration
 @AcrossApplication(modules = {
-		DebugWebModule.NAME, EhcacheModule.NAME, UserModule.NAME, SpringMobileModule.NAME,
-		ApplicationInfoModule.NAME, SpringBatchModule.NAME, FileManagerModule.NAME, EntityModule.NAME,
+		DebugWebModule.NAME, EhcacheModule.NAME, UserModule.NAME,
+		ApplicationInfoModule.NAME, FileManagerModule.NAME, EntityModule.NAME,
 		AdminWebModule.NAME,/* LoggingModule.NAME, */SpringSecurityAclModule.NAME, LdapModule.NAME, WebCmsModule.NAME
 }
 )

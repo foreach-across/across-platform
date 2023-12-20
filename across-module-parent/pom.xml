@@ -29,8 +29,6 @@
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 
-	<name>Across Module Parent</name>
-	<description>Parent POM for Across Modules.</description>
 	<url>https://across.dev</url>
 	<licenses>
 		<license>
