@@ -37,6 +37,19 @@ variables:
     GRANT SELECT ON SYS.DBA_RECYCLEBIN TO AXT;
 
 
+# I think this example workflow is exactly what we need:
+# https://docs.gitlab.com/ee/ci/yaml/workflow.html#switch-between-branch-pipelines-and-merge-request-pipelines
+# This runs:
+# - Branch pipelines when a merge request is not open for the branch.
+# - Merge request pipelines when a merge request is open for the branch.
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    - if: $CI_COMMIT_BRANCH
+
+
 # This template uses the latest Maven 3 release, e.g., 3.8.6, and OpenJDK 8 (LTS)
 # for verifying and deploying images
 # Maven 3.8.x REQUIRES HTTPS repositories.
@@ -64,7 +77,6 @@ cache:
     reports:
       junit:
         - '**/target/surefire-reports/TEST-*.xml'
-        - '**/target/failsafe-reports/TEST-*.xml'
 #  except:
 #    variables:
 #      - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
@@ -95,12 +107,11 @@ verify:jdk8:
   script:
     # - 'mvn $MAVEN_CLI_OPTS dependency:purge-local-repository -DmanualInclude=com.foreach -DreResolve=false'
     - find $CI_PROJECT_DIR/.m2/repository/com/foreach/ -type d -name "*-SNAPSHOT" | xargs rm -rf || echo "No snapshots to delete"
-    - 'mvn $MAVEN_CLI_OPTS test-compile failsafe:integration-test failsafe:verify -DacrossTest.datasource="$ACROSS_TEST_DATASOURCE" -Dmaven.javadoc.skip=true'
+    - 'mvn $MAVEN_CLI_OPTS test-compile failsafe:integration-test failsafe:verify -DacrossTest.datasource="$ACROSS_TEST_DATASOURCE"'
   artifacts:
     when: always
     reports:
       junit:
-        - '**/target/surefire-reports/TEST-*.xml'
         - '**/target/failsafe-reports/TEST-*.xml'
 
 itest:h2:
@@ -187,7 +198,7 @@ deploy:foreach:
     - gpg --pinentry-mode loopback --passphrase $ACROSS_GPG_PASSPHRASE --import $ACROSS_GPG_PRIVATE_KEY
     - gpg --list-keys
   script:
-    - mvn $MAVEN_CLI_OPTS --settings ci_settings.xml -Pacross deploy -DskipTests
+    - mvn $MAVEN_CLI_OPTS --settings ci_settings.xml --activate-profiles deploy,across deploy -DskipTests
 #  only:
 #    variables:
 #      - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
