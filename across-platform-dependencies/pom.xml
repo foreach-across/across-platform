@@ -148,25 +148,11 @@
 				<artifactId>file-manager-module</artifactId>
 				<version>${across-media-modules.version}</version>
 			</dependency>
-			<!--
-			<dependency>
-				<groupId>com.foreach.across.modules</groupId>
-				<artifactId>spring-batch-module</artifactId>
-				<version>${asm.spring-batch-module.version}</version>
-			</dependency>
-			-->
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>bootstrap-ui-module</artifactId>
 				<version>${across-entity-admin-modules.version}</version>
 			</dependency>
-			<!--
-			<dependency>
-				<groupId>com.foreach.across.modules</groupId>
-				<artifactId>spring-mobile-module</artifactId>
-				<version>${asm.spring-mobile-module.version}</version>
-			</dependency>
-			-->
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>ldap-module</artifactId>
@@ -190,17 +176,17 @@
 
 			<!-- ImageServer modules -->
 			<dependency>
-				<groupId>com.foreach.imageserver</groupId>
+				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>imageserver-core</artifactId>
 				<version>${across-media-modules.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.foreach.imageserver</groupId>
+				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>imageserver-admin</artifactId>
 				<version>${across-media-modules.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.foreach.imageserver</groupId>
+				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>imageserver-client</artifactId>
 				<version>${across-media-modules.version}</version>
 			</dependency>

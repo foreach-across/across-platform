@@ -2,6 +2,7 @@ package com.foreach.across.modules.platform;
 
 import com.foreach.across.config.AcrossApplication;
 import com.foreach.across.modules.adminweb.AdminWebModule;
+import com.foreach.across.modules.adminwebthemes.AdminWebThemesModule;
 import com.foreach.across.modules.applicationinfo.ApplicationInfoModule;
 import com.foreach.across.modules.debugweb.DebugWebModule;
 import com.foreach.across.modules.ehcache.EhcacheModule;
@@ -9,12 +10,16 @@ import com.foreach.across.modules.entity.EntityModule;
 import com.foreach.across.modules.filemanager.FileManagerModule;
 import com.foreach.across.modules.hibernate.jpa.AcrossHibernateJpaModule;
 import com.foreach.across.modules.ldap.LdapModule;
+import com.foreach.across.modules.logging.LoggingModule;
 import com.foreach.across.modules.oauth2.OAuth2Module;
 import com.foreach.across.modules.spring.security.acl.SpringSecurityAclModule;
 import com.foreach.across.modules.user.UserModule;
 import com.foreach.across.modules.webcms.WebCmsModule;
 import com.foreach.across.test.support.config.ResetDatabaseConfigurer;
 import com.foreach.across.test.support.config.TestDataSourceConfigurer;
+import com.foreach.imageserver.admin.ImageServerAdminWebModule;
+import com.foreach.imageserver.client.ImageServerClient;
+import com.foreach.imageserver.core.ImageServerCoreModule;
 import org.hibernate.cfg.AvailableSettings;
 import org.hibernate.dialect.SQLServer2008Dialect;
 import org.springframework.boot.SpringApplication;
@@ -28,9 +33,21 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 
 @Configuration
 @AcrossApplication(modules = {
-		DebugWebModule.NAME, EhcacheModule.NAME, UserModule.NAME,
-		ApplicationInfoModule.NAME, FileManagerModule.NAME, EntityModule.NAME,
-		AdminWebModule.NAME,/* LoggingModule.NAME, */SpringSecurityAclModule.NAME, LdapModule.NAME, WebCmsModule.NAME
+		AdminWebModule.NAME,
+		ApplicationInfoModule.NAME,
+		AdminWebThemesModule.NAME,
+		DebugWebModule.NAME,
+		EhcacheModule.NAME,
+		EntityModule.NAME,
+		FileManagerModule.NAME,
+		// Error: "Unable to resolve module ImageServerAdminWebModule":
+		//ImageServerAdminWebModule.NAME,
+		//ImageServerCoreModule.NAME,
+		LdapModule.NAME,
+		LoggingModule.NAME,
+		SpringSecurityAclModule.NAME,
+		UserModule.NAME,
+		WebCmsModule.NAME,
 }
 )
 @Import({ TestDataSourceConfigurer.class, ResetDatabaseConfigurer.class, LocaleConfigurer.class })

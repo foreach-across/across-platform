@@ -132,15 +132,38 @@
 	</repositories>
 
 	<dependencies>
-		<!-- Auto configuration -->
+
 		<dependency>
 			<groupId>com.foreach.across</groupId>
 			<artifactId>across-autoconfigure</artifactId>
 		</dependency>
-		<!-- Across Standard Modules -->
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>oauth2-module</artifactId>
+			<artifactId>across-hibernate-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>ax-bootstrap-theme</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>ax-bootstrap-4-utilities</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>admin-web-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>application-info-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>bootstrap-ui-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>debug-web-module</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
@@ -152,21 +175,43 @@
 		</dependency>
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>file-manager-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>imageserver-admin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>imageserver-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>imageserver-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>ldap-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>logging-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>oauth2-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
+			<artifactId>properties-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>spring-security-acl-module</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>application-info-module</artifactId>
-		</dependency>
-		<!--
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>spring-batch-module</artifactId>
-		</dependency>
-		-->
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>file-manager-module</artifactId>
+			<artifactId>spring-security-module</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
@@ -176,35 +221,15 @@
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>web-cms-module</artifactId>
 		</dependency>
-		<!--
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>spring-mobile-module</artifactId>
-		</dependency>
-		-->
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>admin-web-module</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>debug-web-module</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>logging-module</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>ldap-module</artifactId>
-		</dependency>
+
 		<dependency>
 			<groupId>com.foreach.across</groupId>
 			<artifactId>across-test</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
