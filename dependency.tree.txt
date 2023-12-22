@@ -1,1 +1,1 @@
-com.foreach.across:platform:pom:5.2.2.RELEASE
+com.foreach.across:platform:pom:5.3-SNAPSHOT

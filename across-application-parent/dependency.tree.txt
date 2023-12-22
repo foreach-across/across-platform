@@ -1,1 +1,1 @@
-com.foreach.across:across-application-parent:pom:5.2.2.RELEASE
+com.foreach.across:across-application-parent:pom:5.3-SNAPSHOT
