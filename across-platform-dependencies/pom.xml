@@ -65,7 +65,7 @@
 		<maven.deploy.skip>false</maven.deploy.skip>
 
 		<!-- Keep these in sync between across-platform-dependencies and across-platform-bom: -->
-		<across-auto-configure.version>2.3-SNAPSHOT</across-auto-configure.version>
+		<across-autoconfigure.version>2.3-SNAPSHOT</across-autoconfigure.version>
 		<across-base-modules.version>4.3-SNAPSHOT</across-base-modules.version>
 		<across-entity-admin-modules.version>4.3-SNAPSHOT</across-entity-admin-modules.version>
 		<across-user-auth-modules.version>4.3-SNAPSHOT</across-user-auth-modules.version>
@@ -79,7 +79,7 @@
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>across-autoconfigure</artifactId>
-				<version>${across-auto-configure.version}</version>
+				<version>${across-autoconfigure.version}</version>
 			</dependency>
 
 			<!-- Across standard modules -->
