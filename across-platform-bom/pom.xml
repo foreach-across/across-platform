@@ -23,6 +23,9 @@
 	<version>${revision}</version>
 	<packaging>pom</packaging>
 
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>Across Platform BOM</description>
+
 	<url>https://across.dev</url>
 	<licenses>
 		<license>
