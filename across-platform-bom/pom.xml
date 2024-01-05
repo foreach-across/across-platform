@@ -20,7 +20,7 @@
 
 	<groupId>com.foreach.across</groupId>
 	<artifactId>across-platform-bom</artifactId>
-	<version>5.3-SNAPSHOT</version>
+	<version>${revision}</version>
 	<packaging>pom</packaging>
 
 	<url>https://across.dev</url>
@@ -58,39 +58,15 @@
 	<properties>
 		<maven.deploy.skip>false</maven.deploy.skip>
 
-		<across.version>5.3-SNAPSHOT</across.version>
+		<revision>5.3-SNAPSHOT</revision>
+		<across-framework.version>5.3-SNAPSHOT</across-framework.version>
 
 		<!-- Keep these in sync between across-platform-dependencies and across-platform-bom: -->
-        <across-autoconfigure.version>2.3-SNAPSHOT</across-autoconfigure.version>
-        <across-base-modules.version>4.3-SNAPSHOT</across-base-modules.version>
-        <across-entity-admin-modules.version>4.3-SNAPSHOT</across-entity-admin-modules.version>
-        <across-user-auth-modules.version>4.3-SNAPSHOT</across-user-auth-modules.version>
+		<across-autoconfigure.version>2.3-SNAPSHOT</across-autoconfigure.version>
+		<across-base-modules.version>4.3-SNAPSHOT</across-base-modules.version>
+		<across-entity-admin-modules.version>4.3-SNAPSHOT</across-entity-admin-modules.version>
+		<across-user-auth-modules.version>4.3-SNAPSHOT</across-user-auth-modules.version>
 		<across-media-modules.version>6.3-SNAPSHOT</across-media-modules.version>
-
-<!--
-		<across.autoconfigure.version>2.2.1.RELEASE</across.autoconfigure.version>
-		<asm.across-hibernate-module.version>4.2.1.RELEASE</asm.across-hibernate-module.version>
-		<asm.spring-security-module.version>4.2.1.RELEASE</asm.spring-security-module.version>
-		<asm.debug-web-module.version>3.2.1.RELEASE</asm.debug-web-module.version>
-		<asm.logging-module.version>3.2.1.RELEASE</asm.logging-module.version>
-		<asm.ehcache-module.version>2.2.1.RELEASE</asm.ehcache-module.version>
-		<asm.spring-mobile-module.version>3.2.1.RELEASE</asm.spring-mobile-module.version>
-		<asm.application-info-module.version>2.2.1.RELEASE</asm.application-info-module.version>
-		<asm.bootstrap-ui-module.version>3.2.1.RELEASE</asm.bootstrap-ui-module.version>
-		<asm.admin-web-module.version>4.2.1.RELEASE</asm.admin-web-module.version>
-		<asm.ax-bootstrap-theme-module.version>0.0.1.RELEASE</asm.ax-bootstrap-theme-module.version>
-		<asm.ax-bootstrap-4-utilities.version>0.0.1.RELEASE</asm.ax-bootstrap-4-utilities.version>
-		<asm.entity-module.version>4.2.1.RELEASE</asm.entity-module.version>
-		<asm.spring-security-acl-module.version>4.2.1.RELEASE</asm.spring-security-acl-module.version>
-		<asm.properties-module.version>2.2.1.RELEASE</asm.properties-module.version>
-		<asm.user-module.version>4.2.1.RELEASE</asm.user-module.version>
-		<asm.oauth2-module.version>3.2.1.RELEASE</asm.oauth2-module.version>
-		<asm.ldap-module.version>2.2.1.RELEASE</asm.ldap-module.version>
-		<asm.spring-batch-module.version>2.2.1.RELEASE</asm.spring-batch-module.version>
-		<asm.file-manager-module.version>2.3.1.RELEASE</asm.file-manager-module.version>
-		<asm.webcms-module.version>0.3.1.RELEASE</asm.webcms-module.version>
-		<imageserver-version>6.2.1.RELEASE</imageserver-version>
--->
 
 		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
 	</properties>
@@ -101,17 +77,17 @@
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>across-core</artifactId>
-				<version>${across.version}</version>
+				<version>${across-framework.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>across-test</artifactId>
-				<version>${across.version}</version>
+				<version>${across-framework.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across</groupId>
 				<artifactId>across-web</artifactId>
-				<version>${across.version}</version>
+				<version>${across-framework.version}</version>
 			</dependency>
 
 			<!-- Across autoconfiguration -->
