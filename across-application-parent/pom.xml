@@ -63,7 +63,7 @@
 	</scm>
 
 	<properties>
-		<revision>5.3-SNAPSHOT</revision>
+		<revision>5.3.0-M1</revision>
 		<across.platform.version>${revision}</across.platform.version>
 		<maven.deploy.skip>false</maven.deploy.skip>
 		<timestamp>${maven.build.timestamp}</timestamp>
