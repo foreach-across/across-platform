@@ -59,6 +59,7 @@
 	</scm>
 
 	<properties>
+		<project.build.outputTimestamp>2024-01-01T00:00:00Z</project.build.outputTimestamp>
 		<maven.deploy.skip>false</maven.deploy.skip>
 
 		<revision>5.3-SNAPSHOT</revision>
@@ -72,6 +73,7 @@
 		<across-media-modules.version>6.3-SNAPSHOT</across-media-modules.version>
 
 		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
+		<flatten-maven-plugin.version>1.4.1</flatten-maven-plugin.version>
 	</properties>
 
 	<dependencyManagement>
@@ -230,7 +232,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>flatten-maven-plugin</artifactId>
-				<version>1.2.2</version>
+				<version>${flatten-maven-plugin.version}</version>
 				<inherited>false</inherited>
 				<configuration>
 					<updatePomFile>true</updatePomFile>

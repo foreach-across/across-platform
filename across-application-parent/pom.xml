@@ -67,10 +67,14 @@
 
 	<properties>
 		<revision>5.3-SNAPSHOT</revision>
+		<!--
+		Not enabling reproducible builds here, because that fails platform-bom-test with:
+		Execution repackage of goal org.springframework.boot:spring-boot-maven-plugin:2.4.13:repackage failed: Reproducible repackaging is not supported with war packaging
+		This should be fixed with Spring Boot 2.5: https://github.com/spring-projects/spring-boot/pull/25571
+		<project.build.outputTimestamp>2024-01-01T00:00:00Z</project.build.outputTimestamp>
+		-->
 		<across.platform.version>${revision}</across.platform.version>
 		<maven.deploy.skip>false</maven.deploy.skip>
-		<timestamp>${maven.build.timestamp}</timestamp>
-		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 
 		<!-- https://www.cve.org/CVERecord?id=CVE-2022-22965: Spring remote code execution vulnerability: -->
 		<!-- https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement: -->
@@ -80,6 +84,7 @@
 		<!-- keep in line with across-core-dependencies -->
 		<liquibase.version>4.9.1</liquibase.version>
 		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
+		<flatten-maven-plugin.version>1.4.1</flatten-maven-plugin.version>
 	</properties>
 
 	<dependencyManagement>
@@ -106,16 +111,13 @@
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 							<addClasspath>true</addClasspath>
 						</manifest>
-						<manifestEntries>
-							<Build-Time>${maven.build.timestamp}</Build-Time>
-						</manifestEntries>
 					</archive>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>flatten-maven-plugin</artifactId>
-				<version>1.2.2</version>
+				<version>${flatten-maven-plugin.version}</version>
 				<inherited>false</inherited>
 				<configuration>
 					<updatePomFile>true</updatePomFile>

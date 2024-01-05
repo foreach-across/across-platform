@@ -65,6 +65,7 @@
 	</scm>
 
 	<properties>
+		<project.build.outputTimestamp>2024-01-01T00:00:00Z</project.build.outputTimestamp>
 		<maven.deploy.skip>false</maven.deploy.skip>
 
 		<!-- Keep these in sync between across-platform-dependencies and across-platform-bom: -->
@@ -201,7 +202,6 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>flatten-maven-plugin</artifactId>
-				<version>1.2.2</version>
 				<inherited>false</inherited>
 				<configuration>
 					<updatePomFile>true</updatePomFile>
