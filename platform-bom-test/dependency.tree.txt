@@ -1,19 +1,19 @@
-com.foreach.across:platform-bom-test:war:5.3-SNAPSHOT
-+- com.foreach.across:across-autoconfigure:jar:2.3-SNAPSHOT:compile
-|  +- com.foreach.across:across-web:jar:5.3-SNAPSHOT:compile
+com.foreach.across:platform-bom-test:war:5.4-SNAPSHOT
++- com.foreach.across:across-autoconfigure:jar:2.4-SNAPSHOT:compile
+|  +- com.foreach.across:across-web:jar:5.4-SNAPSHOT:compile
 |  |  +- org.springframework.boot:spring-boot-starter-web:jar:2.4.13:compile
 |  |  |  \- org.springframework.boot:spring-boot-starter-json:jar:2.4.13:compile
-|  |  |     +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.11.4:compile
-|  |  |     \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.11.4:compile
+|  |  |     +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
+|  |  |     \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile
 |  |  +- org.thymeleaf:thymeleaf-spring5:jar:3.0.12.RELEASE:compile
 |  |  |  \- org.thymeleaf:thymeleaf:jar:3.0.12.RELEASE:compile
 |  |  |     +- org.attoparser:attoparser:jar:2.0.5.RELEASE:compile
 |  |  |     \- org.unbescape:unbescape:jar:1.1.6.RELEASE:compile
 |  |  +- org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE:compile
 |  |  +- org.springframework:spring-webmvc:jar:5.3.30:compile
-|  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.11.4:compile
+|  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
 |  |  \- org.yaml:snakeyaml:jar:1.27:compile
-|  \- com.foreach.across:across-core:jar:5.3-SNAPSHOT:compile
+|  \- com.foreach.across:across-core:jar:5.4-SNAPSHOT:compile
 |     +- com.foreach.libs:common-concurrent:jar:1.1:compile
 |     +- org.springframework:spring-context:jar:5.3.30:compile
 |     +- org.springframework:spring-jdbc:jar:5.3.30:compile
@@ -23,11 +23,10 @@ com.foreach.across:platform-bom-test:war:5.3-SNAPSHOT
 |     +- org.slf4j:jcl-over-slf4j:jar:1.7.32:compile
 |     +- org.apache.commons:commons-lang3:jar:3.11:compile
 |     \- org.liquibase:liquibase-core:jar:4.9.1:compile
-+- com.foreach.across.modules:across-hibernate-module:jar:4.3-SNAPSHOT:compile
-|  +- org.springframework.data:spring-data-jpa:jar:2.4.15:compile
++- com.foreach.across.modules:across-hibernate-module:jar:4.4-SNAPSHOT:compile
+|  +- org.springframework.data:spring-data-jpa:jar:2.6.10:compile
 |  |  +- org.springframework:spring-tx:jar:5.3.30:compile
-|  |  +- org.springframework:spring-beans:jar:5.3.30:compile
-|  |  \- org.aspectj:aspectjrt:jar:1.9.7:compile
+|  |  \- org.springframework:spring-beans:jar:5.3.30:compile
 |  +- org.springframework:spring-orm:jar:5.3.30:compile
 |  +- org.springframework:spring-aop:jar:5.3.30:compile
 |  +- org.hibernate:hibernate-core:jar:5.4.32.Final:compile
@@ -51,20 +50,19 @@ com.foreach.across:platform-bom-test:war:5.3-SNAPSHOT
 |  \- com.querydsl:querydsl-jpa:jar:4.4.0:compile
 |     +- com.querydsl:querydsl-core:jar:4.4.0:compile
 |     |  +- com.google.guava:guava:jar:18.0:compile
-|     |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
 |     |  +- com.mysema.commons:mysema-commons-lang:jar:0.2.4:compile
 |     |  \- com.infradna.tool:bridge-method-annotation:jar:1.13:compile
 |     \- javax.inject:javax.inject:jar:1:compile
-+- com.foreach.across.modules:ax-bootstrap-theme:jar:4.3-SNAPSHOT:compile
-+- com.foreach.across.modules:ax-bootstrap-4-utilities:jar:4.3-SNAPSHOT:compile
-+- com.foreach.across.modules:admin-web-module:jar:4.3-SNAPSHOT:compile
++- com.foreach.across.modules:ax-bootstrap-theme:jar:4.4-SNAPSHOT:compile
++- com.foreach.across.modules:ax-bootstrap-4-utilities:jar:4.4-SNAPSHOT:compile
++- com.foreach.across.modules:admin-web-module:jar:4.4-SNAPSHOT:compile
 |  +- org.thymeleaf.extras:thymeleaf-extras-springsecurity5:jar:3.0.4.RELEASE:compile
 |  \- org.webjars.bower:toastr:jar:2.1.2:compile
-+- com.foreach.across.modules:application-info-module:jar:4.3-SNAPSHOT:compile
++- com.foreach.across.modules:application-info-module:jar:4.4-SNAPSHOT:compile
 |  \- com.foreach.libs:common-spring:jar:1.1:compile
 |     \- javax.mail:mail:jar:1.4.1:compile
 |        \- javax.activation:activation:jar:1.1:compile
-+- com.foreach.across.modules:bootstrap-ui-module:jar:4.3-SNAPSHOT:compile
++- com.foreach.across.modules:bootstrap-ui-module:jar:4.4-SNAPSHOT:compile
 |  +- org.webjars:jquery:jar:3.4.1:compile
 |  +- org.webjars:bootstrap:jar:4.3.1:compile
 |  |  \- org.webjars:popper.js:jar:1.14.3:compile
@@ -80,28 +78,29 @@ com.foreach.across:platform-bom-test:war:5.3-SNAPSHOT
 |  +- org.webjars.npm:bootstrap-select:jar:1.13.11:compile
 |  +- org.webjars.npm:corejs-typeahead:jar:1.2.1:compile
 |  \- org.webjars:font-awesome:jar:5.10.1:compile
-+- com.foreach.across.modules:debug-web-module:jar:4.3-SNAPSHOT:compile
++- com.foreach.across.modules:debug-web-module:jar:4.4-SNAPSHOT:compile
 |  +- commons-io:commons-io:jar:2.11.0:compile
 |  \- org.slf4j:log4j-over-slf4j:jar:1.7.32:compile
-+- com.foreach.across.modules:ehcache-module:jar:4.3-SNAPSHOT:compile
++- com.foreach.across.modules:ehcache-module:jar:4.4-SNAPSHOT:compile
 |  +- net.sf.ehcache:ehcache:jar:2.10.9.2:compile
 |  \- org.springframework:spring-context-support:jar:5.3.30:compile
-+- com.foreach.across.modules:entity-module:jar:4.3-SNAPSHOT:compile
++- com.foreach.across.modules:entity-module:jar:4.4-SNAPSHOT:compile
 |  +- org.hibernate.validator:hibernate-validator:jar:6.1.7.Final:compile
 |  |  \- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
-|  +- org.springframework.data:spring-data-commons:jar:2.4.15:compile
-|  +- com.fasterxml.jackson.core:jackson-core:jar:2.11.4:compile
-|  +- com.fasterxml.jackson.core:jackson-databind:jar:2.11.4:compile
+|  +- org.springframework.data:spring-data-commons:jar:2.6.10:compile
+|  +- com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile
+|  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile
+|  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
 |  +- org.atteo:evo-inflector:jar:1.2.2:compile
 |  \- org.webjars:lodash:jar:4.17.4:compile
-+- com.foreach.across.modules:file-manager-module:jar:6.3-SNAPSHOT:compile
++- com.foreach.across.modules:file-manager-module:jar:6.4-SNAPSHOT:compile
 |  \- org.apache.sshd:sshd-sftp:jar:2.10.0:compile
 |     \- org.apache.sshd:sshd-core:jar:2.10.0:compile
 |        \- org.apache.sshd:sshd-common:jar:2.10.0:compile
-+- com.foreach.across.modules:imageserver-admin:jar:6.3-SNAPSHOT:compile
-+- com.foreach.across.modules:imageserver-client:jar:6.3-SNAPSHOT:compile
-|  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.11.4:compile
-+- com.foreach.across.modules:imageserver-core:jar:6.3-SNAPSHOT:compile
++- com.foreach.across.modules:imageserver-admin:jar:6.4-SNAPSHOT:compile
++- com.foreach.across.modules:imageserver-client:jar:6.4-SNAPSHOT:compile
+|  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile
++- com.foreach.across.modules:imageserver-core:jar:6.4-SNAPSHOT:compile
 |  +- commons-fileupload:commons-fileupload:jar:1.4:compile
 |  +- com.github.geko444:im4java:jar:1.4.2:compile
 |  \- org.ghost4j:ghost4j:jar:1.0.1:compile
@@ -112,49 +111,50 @@ com.foreach.across:platform-bom-test:war:5.3-SNAPSHOT
 |     |  \- commons-collections:commons-collections:jar:3.2.1:compile
 |     +- org.apache.xmlgraphics:xmlgraphics-commons:jar:1.4:compile
 |     \- com.lowagie:itext:jar:2.1.7:compile
-+- com.foreach.across.modules:ldap-module:jar:4.3-SNAPSHOT:compile
++- com.foreach.across.modules:ldap-module:jar:4.4-SNAPSHOT:compile
 |  +- org.springframework.ldap:spring-ldap-core:jar:2.3.4.RELEASE:compile
-|  \- org.springframework.security:spring-security-ldap:jar:5.4.9:compile
-+- com.foreach.across.modules:logging-module:jar:4.3-SNAPSHOT:compile
+|  \- org.springframework.security:spring-security-ldap:jar:5.6.10:compile
++- com.foreach.across.modules:logging-module:jar:4.4-SNAPSHOT:compile
 |  \- com.foreach.libs:common-web:jar:1.1:compile
-+- com.foreach.across.modules:oauth2-module:jar:4.3-SNAPSHOT:compile
++- com.foreach.across.modules:oauth2-module:jar:4.4-SNAPSHOT:compile
 |  +- org.springframework.security.oauth:spring-security-oauth2:jar:2.5.0.RELEASE:compile
 |  |  \- commons-codec:commons-codec:jar:1.15:compile
 |  +- com.querydsl:querydsl-apt:jar:4.4.0:compile
-|  |  +- com.querydsl:querydsl-codegen:jar:4.4.0:compile
-|  |  |  +- com.mysema.codegen:codegen:jar:0.6.8:compile
-|  |  |  |  \- org.eclipse.jdt.core.compiler:ecj:jar:4.3.1:compile
-|  |  |  \- org.reflections:reflections:jar:0.9.9:compile
-|  |  |     \- com.google.code.findbugs:annotations:jar:2.0.1:compile
+|  |  +- com.querydsl:querydsl-codegen:jar:5.0.0:compile
+|  |  |  +- com.querydsl:codegen-utils:jar:5.0.0:compile
+|  |  |  |  \- org.eclipse.jdt:ecj:jar:3.26.0:compile
+|  |  |  \- io.github.classgraph:classgraph:jar:4.8.108:compile
 |  |  \- jakarta.persistence:jakarta.persistence-api:jar:2.2.3:compile
 |  \- org.aspectj:aspectjweaver:jar:1.9.7:compile
-+- com.foreach.across.modules:properties-module:jar:4.3-SNAPSHOT:compile
-+- com.foreach.across.modules:spring-security-acl-module:jar:4.3-SNAPSHOT:compile
-|  \- org.springframework.security:spring-security-acl:jar:5.4.9:compile
-+- com.foreach.across.modules:spring-security-module:jar:4.3-SNAPSHOT:compile
-|  +- org.springframework.security:spring-security-core:jar:5.4.9:compile
++- com.foreach.across.modules:properties-module:jar:4.4-SNAPSHOT:compile
++- com.foreach.across.modules:spring-security-acl-module:jar:4.4-SNAPSHOT:compile
+|  +- org.springframework.security:spring-security-acl:jar:5.6.10:compile
+|  \- org.aspectj:aspectjrt:jar:1.9.7:compile
++- com.foreach.across.modules:spring-security-module:jar:4.4-SNAPSHOT:compile
+|  +- org.springframework.security:spring-security-core:jar:5.6.10:compile
+|  |  +- org.springframework.security:spring-security-crypto:jar:5.6.10:compile
 |  |  \- org.springframework:spring-expression:jar:5.3.30:compile
-|  +- org.springframework.security:spring-security-web:jar:5.4.9:compile
+|  +- org.springframework.security:spring-security-web:jar:5.6.10:compile
 |  |  \- org.springframework:spring-web:jar:5.3.30:compile
-|  \- org.springframework.security:spring-security-config:jar:5.4.9:compile
-+- com.foreach.across.modules:user-module:jar:4.3-SNAPSHOT:compile
+|  \- org.springframework.security:spring-security-config:jar:5.6.10:compile
++- com.foreach.across.modules:user-module:jar:4.4-SNAPSHOT:compile
 |  \- org.apache.commons:commons-collections4:jar:4.4:compile
-+- com.foreach.across.modules:web-cms-module:jar:6.3-SNAPSHOT:compile
++- com.foreach.across.modules:web-cms-module:jar:6.4-SNAPSHOT:compile
 |  +- org.webjars.npm:codemirror-minified:jar:5.44.0:compile
 |  +- org.webjars.bower:bootbox.js:jar:5.3.2:compile
 |  |  \- org.webjars.bower:bootstrap:jar:5.3.1:compile
 |  \- org.webjars:jquery-ui:jar:1.12.1:compile
-+- com.foreach.across:across-test:jar:5.3-SNAPSHOT:compile
-|  +- org.junit.vintage:junit-vintage-engine:jar:5.7.2:compile
-|  |  +- org.apiguardian:apiguardian-api:jar:1.1.0:compile
-|  |  +- org.junit.platform:junit-platform-engine:jar:1.7.2:compile
++- com.foreach.across:across-test:jar:5.4-SNAPSHOT:compile
+|  +- org.junit.vintage:junit-vintage-engine:jar:5.8.2:compile
+|  |  +- org.junit.platform:junit-platform-engine:jar:1.8.2:compile
 |  |  |  +- org.opentest4j:opentest4j:jar:1.2.0:compile
-|  |  |  \- org.junit.platform:junit-platform-commons:jar:1.7.2:compile
-|  |  \- junit:junit:jar:4.13.2:compile
-|  +- org.junit.jupiter:junit-jupiter:jar:5.7.2:compile
-|  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.7.2:compile
-|  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.7.2:compile
-|  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.7.2:runtime
+|  |  |  \- org.junit.platform:junit-platform-commons:jar:1.8.2:compile
+|  |  +- junit:junit:jar:4.13.2:compile
+|  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:compile
+|  +- org.junit.jupiter:junit-jupiter:jar:5.8.2:compile
+|  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.8.2:compile
+|  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.8.2:compile
+|  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:runtime
 |  +- com.zaxxer:HikariCP:jar:3.4.5:compile
 |  +- org.springframework:spring-test:jar:5.3.30:compile
 |  +- org.springframework.boot:spring-boot-test:jar:2.4.13:compile
@@ -163,25 +163,25 @@ com.foreach.across:platform-bom-test:war:5.3-SNAPSHOT
 |  +- org.mockito:mockito-core:jar:3.6.28:compile
 |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.10.22:compile
 |  |  \- org.objenesis:objenesis:jar:3.1:compile
-|  +- org.testcontainers:testcontainers:jar:1.18.3:compile
-|  |  +- org.apache.commons:commons-compress:jar:1.23.0:compile
+|  +- org.testcontainers:testcontainers:jar:1.19.1:compile
+|  |  +- org.apache.commons:commons-compress:jar:1.24.0:compile
 |  |  +- org.rnorth.duct-tape:duct-tape:jar:1.0.8:compile
 |  |  |  \- org.jetbrains:annotations:jar:17.0.0:compile
-|  |  +- com.github.docker-java:docker-java-api:jar:3.3.0:compile
-|  |  \- com.github.docker-java:docker-java-transport-zerodep:jar:3.3.0:compile
-|  |     \- com.github.docker-java:docker-java-transport:jar:3.3.0:compile
-|  +- org.testcontainers:mysql:jar:1.18.3:compile
-|  |  \- org.testcontainers:jdbc:jar:1.18.3:compile
-|  |     \- org.testcontainers:database-commons:jar:1.18.3:compile
-|  +- org.testcontainers:postgresql:jar:1.18.3:compile
-|  +- org.testcontainers:mssqlserver:jar:1.18.3:compile
-|  \- org.testcontainers:oracle-xe:jar:1.18.3:compile
+|  |  +- com.github.docker-java:docker-java-api:jar:3.3.3:compile
+|  |  \- com.github.docker-java:docker-java-transport-zerodep:jar:3.3.3:compile
+|  |     \- com.github.docker-java:docker-java-transport:jar:3.3.3:compile
+|  +- org.testcontainers:mysql:jar:1.19.1:compile
+|  |  \- org.testcontainers:jdbc:jar:1.19.1:compile
+|  |     \- org.testcontainers:database-commons:jar:1.19.1:compile
+|  +- org.testcontainers:postgresql:jar:1.19.1:compile
+|  +- org.testcontainers:mssqlserver:jar:1.19.1:compile
+|  \- org.testcontainers:oracle-xe:jar:1.19.1:compile
 +- javax.servlet:javax.servlet-api:jar:4.0.1:compile
 +- org.springframework.boot:spring-boot-starter-test:jar:2.4.13:compile
 |  +- org.springframework.boot:spring-boot-starter:jar:2.4.13:compile
 |  |  \- org.springframework.boot:spring-boot-starter-logging:jar:2.4.13:compile
 |  |     +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.13.3:compile
-|  |     |  \- org.apache.logging.log4j:log4j-api:jar:2.13.3:compile
+|  |     |  \- org.apache.logging.log4j:log4j-api:jar:2.17.2:compile
 |  |     \- org.slf4j:jul-to-slf4j:jar:1.7.32:compile
 |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.4.13:compile
 |  +- com.jayway.jsonpath:json-path:jar:2.4.0:compile
@@ -201,14 +201,8 @@ com.foreach.across:platform-bom-test:war:5.3-SNAPSHOT
 +- org.springframework.boot:spring-boot-devtools:jar:2.4.13:compile
 |  +- org.springframework.boot:spring-boot:jar:2.4.13:compile
 |  \- org.springframework.boot:spring-boot-autoconfigure:jar:2.4.13:compile
-+- com.oracle.ojdbc:ojdbc8:jar:19.3.0.0:test
-|  +- com.oracle.ojdbc:ucp:jar:19.3.0.0:test
-|  +- com.oracle.ojdbc:oraclepki:jar:19.3.0.0:test
-|  +- com.oracle.ojdbc:osdt_cert:jar:19.3.0.0:test
-|  +- com.oracle.ojdbc:osdt_core:jar:19.3.0.0:test
-|  +- com.oracle.ojdbc:simplefan:jar:19.3.0.0:test
-|  \- com.oracle.ojdbc:ons:jar:19.3.0.0:test
-+- mysql:mysql-connector-java:jar:8.0.27:test
++- com.oracle.database.jdbc:ojdbc8:jar:21.3.0.0:test
++- com.mysql:mysql-connector-j:jar:8.0.33:test
 +- org.postgresql:postgresql:jar:42.2.24:test
 |  \- org.checkerframework:checker-qual:jar:3.5.0:test
 +- com.h2database:h2:jar:1.4.200:test
@@ -219,7 +213,7 @@ com.foreach.across:platform-bom-test:war:5.3-SNAPSHOT
 +- org.springframework.boot:spring-boot-starter-actuator:jar:2.4.13:compile
 |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.4.13:compile
 |  |  \- org.springframework.boot:spring-boot-actuator:jar:2.4.13:compile
-|  \- io.micrometer:micrometer-core:jar:1.6.13:compile
+|  \- io.micrometer:micrometer-core:jar:1.8.13:compile
 |     +- org.hdrhistogram:HdrHistogram:jar:2.1.12:compile
 |     \- org.latencyutils:LatencyUtils:jar:2.0.3:runtime
 \- org.springframework.boot:spring-boot-starter-tomcat:jar:2.4.13:compile
