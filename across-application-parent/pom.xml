@@ -66,7 +66,7 @@
 	</scm>
 
 	<properties>
-		<revision>5.3.0</revision>
+		<revision>5.4-SNAPSHOT</revision>
 		<!--
 		Not enabling reproducible builds here, because that fails platform-bom-test with:
 		Execution repackage of goal org.springframework.boot:spring-boot-maven-plugin:2.4.13:repackage failed: Reproducible repackaging is not supported with war packaging
@@ -78,9 +78,10 @@
 
 		<!-- https://www.cve.org/CVERecord?id=CVE-2022-22965: Spring remote code execution vulnerability: -->
 		<!-- https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement: -->
-		<spring-framework.version>5.3.30</spring-framework.version>
+		<spring-framework.version>5.3.31</spring-framework.version>
+		<spring-security.version>5.6.12</spring-security.version>
 		<!-- https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative: -->
-		<tomcat.version>9.0.82</tomcat.version>
+		<tomcat.version>9.0.84</tomcat.version>
 		<!-- keep in line with across-core-dependencies -->
 		<liquibase.version>4.9.1</liquibase.version>
 		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
