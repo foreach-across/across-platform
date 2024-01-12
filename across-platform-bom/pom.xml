@@ -62,15 +62,15 @@
 		<project.build.outputTimestamp>2024-01-01T00:00:00Z</project.build.outputTimestamp>
 		<maven.deploy.skip>false</maven.deploy.skip>
 
-		<revision>5.4-SNAPSHOT</revision>
-		<across-framework.version>5.4-SNAPSHOT</across-framework.version>
+		<revision>5.4.0</revision>
+		<across-framework.version>5.4.0</across-framework.version>
 
 		<!-- Keep these in sync between across-platform-dependencies and across-platform-bom: -->
-		<across-autoconfigure.version>2.4-SNAPSHOT</across-autoconfigure.version>
-		<across-base-modules.version>4.4-SNAPSHOT</across-base-modules.version>
-		<across-entity-admin-modules.version>4.4-SNAPSHOT</across-entity-admin-modules.version>
-		<across-user-auth-modules.version>4.4-SNAPSHOT</across-user-auth-modules.version>
-		<across-media-modules.version>6.4-SNAPSHOT</across-media-modules.version>
+		<across-autoconfigure.version>2.4.0</across-autoconfigure.version>
+		<across-base-modules.version>4.4.0</across-base-modules.version>
+		<across-entity-admin-modules.version>4.4.0</across-entity-admin-modules.version>
+		<across-user-auth-modules.version>4.4.0</across-user-auth-modules.version>
+		<across-media-modules.version>6.4.0</across-media-modules.version>
 
 		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
 		<flatten-maven-plugin.version>1.4.1</flatten-maven-plugin.version>
