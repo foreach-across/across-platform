@@ -10,13 +10,13 @@ com.foreach.across:platform-bom-test:war:5.4-SNAPSHOT
 |  |  |     +- org.attoparser:attoparser:jar:2.0.5.RELEASE:compile
 |  |  |     \- org.unbescape:unbescape:jar:1.1.6.RELEASE:compile
 |  |  +- org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE:compile
-|  |  +- org.springframework:spring-webmvc:jar:5.3.31:compile
+|  |  +- org.springframework:spring-webmvc:jar:5.3.32:compile
 |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
 |  |  \- org.yaml:snakeyaml:jar:1.27:compile
 |  \- com.foreach.across:across-core:jar:5.4-SNAPSHOT:compile
 |     +- com.foreach.libs:common-concurrent:jar:1.1:compile
-|     +- org.springframework:spring-context:jar:5.3.31:compile
-|     +- org.springframework:spring-jdbc:jar:5.3.31:compile
+|     +- org.springframework:spring-context:jar:5.3.32:compile
+|     +- org.springframework:spring-jdbc:jar:5.3.32:compile
 |     +- ch.qos.logback:logback-classic:jar:1.2.7:compile
 |     |  \- ch.qos.logback:logback-core:jar:1.2.7:compile
 |     +- org.slf4j:slf4j-api:jar:1.7.32:compile
@@ -25,10 +25,10 @@ com.foreach.across:platform-bom-test:war:5.4-SNAPSHOT
 |     \- org.liquibase:liquibase-core:jar:4.9.1:compile
 +- com.foreach.across.modules:across-hibernate-module:jar:4.4-SNAPSHOT:compile
 |  +- org.springframework.data:spring-data-jpa:jar:2.6.10:compile
-|  |  +- org.springframework:spring-tx:jar:5.3.31:compile
-|  |  \- org.springframework:spring-beans:jar:5.3.31:compile
-|  +- org.springframework:spring-orm:jar:5.3.31:compile
-|  +- org.springframework:spring-aop:jar:5.3.31:compile
+|  |  +- org.springframework:spring-tx:jar:5.3.32:compile
+|  |  \- org.springframework:spring-beans:jar:5.3.32:compile
+|  +- org.springframework:spring-orm:jar:5.3.32:compile
+|  +- org.springframework:spring-aop:jar:5.3.32:compile
 |  +- org.hibernate:hibernate-core:jar:5.4.32.Final:compile
 |  |  +- org.jboss.logging:jboss-logging:jar:3.4.2.Final:compile
 |  |  +- javax.persistence:javax.persistence-api:jar:2.2:compile
@@ -72,7 +72,7 @@ com.foreach.across:platform-bom-test:war:5.4-SNAPSHOT
 |  +- org.webjars.npm:autonumeric:jar:4.5.4:compile
 |  +- org.webjars.npm:tempusdominus-bootstrap:jar:5.32.1:compile
 |  |  +- org.webjars.npm:bootstrap:jar:5.0.0-beta3:compile
-|  |  +- org.webjars.npm:jquery:jar:3.7.1:compile
+|  |  +- org.webjars.npm:jquery:jar:4.0.0-beta:compile
 |  |  +- org.webjars.npm:moment:jar:2.24.0:compile
 |  |  \- org.webjars.npm:popper.js:jar:1.16.1-lts:compile
 |  +- org.webjars.npm:bootstrap-select:jar:1.13.11:compile
@@ -83,7 +83,7 @@ com.foreach.across:platform-bom-test:war:5.4-SNAPSHOT
 |  \- org.slf4j:log4j-over-slf4j:jar:1.7.32:compile
 +- com.foreach.across.modules:ehcache-module:jar:4.4-SNAPSHOT:compile
 |  +- net.sf.ehcache:ehcache:jar:2.10.9.2:compile
-|  \- org.springframework:spring-context-support:jar:5.3.31:compile
+|  \- org.springframework:spring-context-support:jar:5.3.32:compile
 +- com.foreach.across.modules:entity-module:jar:4.4-SNAPSHOT:compile
 |  +- org.hibernate.validator:hibernate-validator:jar:6.1.7.Final:compile
 |  |  \- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
@@ -133,9 +133,9 @@ com.foreach.across:platform-bom-test:war:5.4-SNAPSHOT
 +- com.foreach.across.modules:spring-security-module:jar:4.4-SNAPSHOT:compile
 |  +- org.springframework.security:spring-security-core:jar:5.6.12:compile
 |  |  +- org.springframework.security:spring-security-crypto:jar:5.6.12:compile
-|  |  \- org.springframework:spring-expression:jar:5.3.31:compile
+|  |  \- org.springframework:spring-expression:jar:5.3.32:compile
 |  +- org.springframework.security:spring-security-web:jar:5.6.12:compile
-|  |  \- org.springframework:spring-web:jar:5.3.31:compile
+|  |  \- org.springframework:spring-web:jar:5.3.32:compile
 |  \- org.springframework.security:spring-security-config:jar:5.6.12:compile
 +- com.foreach.across.modules:user-module:jar:4.4-SNAPSHOT:compile
 |  \- org.apache.commons:commons-collections4:jar:4.4:compile
@@ -156,7 +156,7 @@ com.foreach.across:platform-bom-test:war:5.4-SNAPSHOT
 |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.8.2:compile
 |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:runtime
 |  +- com.zaxxer:HikariCP:jar:3.4.5:compile
-|  +- org.springframework:spring-test:jar:5.3.31:compile
+|  +- org.springframework:spring-test:jar:5.3.32:compile
 |  +- org.springframework.boot:spring-boot-test:jar:2.4.13:compile
 |  +- org.xmlunit:xmlunit-matchers:jar:2.7.0:compile
 |  |  \- org.hamcrest:hamcrest-core:jar:2.2:compile
@@ -195,8 +195,8 @@ com.foreach.across:platform-bom-test:war:5.4-SNAPSHOT
 |  +- org.mockito:mockito-junit-jupiter:jar:3.6.28:compile
 |  +- org.skyscreamer:jsonassert:jar:1.5.0:compile
 |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:compile
-|  +- org.springframework:spring-core:jar:5.3.31:compile
-|  |  \- org.springframework:spring-jcl:jar:5.3.31:compile
+|  +- org.springframework:spring-core:jar:5.3.32:compile
+|  |  \- org.springframework:spring-jcl:jar:5.3.32:compile
 |  \- org.xmlunit:xmlunit-core:jar:2.7.0:compile
 +- org.springframework.boot:spring-boot-devtools:jar:2.4.13:compile
 |  +- org.springframework.boot:spring-boot:jar:2.4.13:compile
