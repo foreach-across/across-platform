@@ -29,7 +29,7 @@
 	<version>${revision}</version>
 	<packaging>war</packaging>
 
-	<url>https://across.dev/modules</url>
+	<url>https://foreach-across.github.io/modules</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>

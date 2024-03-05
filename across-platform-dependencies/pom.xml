@@ -32,7 +32,7 @@
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Across Platform Dependencies</description>
 
-	<url>https://across.dev</url>
+	<url>https://foreach-across.github.io/</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -61,7 +61,7 @@
 	</repositories>
 
 	<scm>
-		<url>https://github.com/foreachos/across-platform</url>
+		<url>https://github.com/foreach-across/across-platform</url>
 	</scm>
 
 	<properties>
