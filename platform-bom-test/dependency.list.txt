@@ -25,7 +25,6 @@ com.foreach.across.modules:ldap-module:jar:4.5-SNAPSHOT:compile
 com.foreach.across.modules:logging-module:jar:4.5-SNAPSHOT:compile
 com.foreach.across.modules:oauth2-module:jar:4.5-SNAPSHOT:compile
 com.foreach.across.modules:properties-module:jar:4.5-SNAPSHOT:compile
-com.foreach.across.modules:spring-security-acl-module:jar:4.5-SNAPSHOT:compile
 com.foreach.across.modules:spring-security-module:jar:4.5-SNAPSHOT:compile
 com.foreach.across.modules:user-module:jar:4.5-SNAPSHOT:compile
 com.foreach.across.modules:web-cms-module:jar:6.5-SNAPSHOT:compile
@@ -160,7 +159,6 @@ org.springframework.data:spring-data-commons:jar:2.7.18:compile
 org.springframework.data:spring-data-jpa:jar:2.7.18:compile
 org.springframework.ldap:spring-ldap-core:jar:2.4.1:compile
 org.springframework.security.oauth:spring-security-oauth2:jar:2.5.0.RELEASE:compile
-org.springframework.security:spring-security-acl:jar:5.7.11:compile
 org.springframework.security:spring-security-config:jar:5.7.11:compile
 org.springframework.security:spring-security-core:jar:5.7.11:compile
 org.springframework.security:spring-security-crypto:jar:5.7.11:compile
@@ -193,7 +191,7 @@ org.thymeleaf:thymeleaf:jar:3.0.15.RELEASE:compile
 org.unbescape:unbescape:jar:1.1.6.RELEASE:compile
 org.webjars.bower:autosize:jar:4.0.2:compile
 org.webjars.bower:bootbox.js:jar:5.3.2:compile
-org.webjars.bower:bootstrap:jar:5.3.1:compile
+org.webjars.bower:bootstrap:jar:5.3.3:compile
 org.webjars.bower:toastr:jar:2.1.2:compile
 org.webjars.npm:autonumeric:jar:4.5.4:compile
 org.webjars.npm:bootstrap-select:jar:1.13.11:compile

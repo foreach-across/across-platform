@@ -114,11 +114,6 @@
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
-				<artifactId>spring-security-acl-module</artifactId>
-				<version>${across-user-auth-modules.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>oauth2-module</artifactId>
 				<version>${across-user-auth-modules.version}</version>
 			</dependency>
