@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>com.foreach.across</groupId>
 		<artifactId>across-core-dependencies</artifactId>
-		<version>5.5-SNAPSHOT</version>
+		<version>dev-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
@@ -69,11 +69,11 @@
 		<maven.deploy.skip>false</maven.deploy.skip>
 
 		<!-- Keep these in sync between across-platform-dependencies and across-platform-bom: -->
-		<across-autoconfigure.version>2.5-SNAPSHOT</across-autoconfigure.version>
-		<across-base-modules.version>4.5-SNAPSHOT</across-base-modules.version>
-		<across-entity-admin-modules.version>4.5-SNAPSHOT</across-entity-admin-modules.version>
-		<across-user-auth-modules.version>4.5-SNAPSHOT</across-user-auth-modules.version>
-		<across-media-modules.version>6.5-SNAPSHOT</across-media-modules.version>
+		<across-autoconfigure.version>dev-SNAPSHOT</across-autoconfigure.version>
+		<across-base-modules.version>dev-SNAPSHOT</across-base-modules.version>
+		<across-entity-admin-modules.version>dev-SNAPSHOT</across-entity-admin-modules.version>
+		<across-user-auth-modules.version>dev-SNAPSHOT</across-user-auth-modules.version>
+		<across-media-modules.version>dev-SNAPSHOT</across-media-modules.version>
 
 	</properties>
 

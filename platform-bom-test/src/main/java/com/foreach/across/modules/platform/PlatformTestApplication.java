@@ -11,7 +11,6 @@ import com.foreach.across.modules.filemanager.FileManagerModule;
 import com.foreach.across.modules.hibernate.jpa.AcrossHibernateJpaModule;
 import com.foreach.across.modules.ldap.LdapModule;
 import com.foreach.across.modules.logging.LoggingModule;
-import com.foreach.across.modules.oauth2.OAuth2Module;
 import com.foreach.across.modules.user.UserModule;
 import com.foreach.across.modules.webcms.WebCmsModule;
 import com.foreach.across.test.support.config.ResetDatabaseConfigurer;
@@ -24,9 +23,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerEndpointsConfiguration;
-import org.springframework.security.oauth2.provider.token.AuthorizationServerTokenServices;
-import org.springframework.security.oauth2.provider.token.TokenStore;
 
 @EnableWebSecurity(debug = true)
 @Configuration
