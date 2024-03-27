@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 com.foreach.across:across-platform-dependencies:pom:5.5-SNAPSHOT
+=======
+com.foreach.across:across-platform-dependencies:pom:dev-SNAPSHOT
+>>>>>>> origin/5.4
