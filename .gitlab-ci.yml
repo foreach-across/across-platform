@@ -7,6 +7,13 @@ include:
       - '/gitlab-ci/deploy.gitlab-ci.yml'
 
 variables:
+  ACROSS_FRAMEWORK_VERSION: 5.4-SNAPSHOT
+  ACROSS_AUTOCONFIGURE_VERSION: 2.4-SNAPSHOT
+  ACROSS_BASE_MODULES_VERSION: 4.4-SNAPSHOT
+  ACROSS_ENTITY_ADMIN_MODULES_VERSION: 4.4-SNAPSHOT
+  ACROSS_USER_AUTH_MODULES_VERSION: 4.4-SNAPSHOT
+  ACROSS_MEDIA_MODULES_VERSION: 6.4-SNAPSHOT
+  REVISION: 5.4-SNAPSHOT
   # Maven needs more memory in this repository, because the
   # maven-war-plugin:war goal runs out-of-memory with 256m:
   MAVEN_OPTS: >-
