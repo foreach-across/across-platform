@@ -17,4 +17,7 @@
 <configuration>
 	<include resource="org/springframework/boot/logging/logback/base.xml"/>
 	<logger name="com.foreach.across.modules.spring.security.config.AcrossWebSecurityConfiguration" level="DEBUG"/>
+	<!--
+	<logger name="com.foreach.across" level="DEBUG"/>
+	-->
 </configuration>

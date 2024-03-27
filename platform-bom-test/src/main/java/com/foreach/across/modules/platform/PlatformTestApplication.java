@@ -15,8 +15,6 @@ import com.foreach.across.modules.user.UserModule;
 import com.foreach.across.modules.webcms.WebCmsModule;
 import com.foreach.across.test.support.config.ResetDatabaseConfigurer;
 import com.foreach.across.test.support.config.TestDataSourceConfigurer;
-import org.hibernate.cfg.AvailableSettings;
-import org.hibernate.dialect.SQLServer2008Dialect;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
@@ -24,7 +22,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
-@EnableWebSecurity(debug = true)
+@EnableWebSecurity//(debug = true)
 @Configuration
 @AcrossApplication(modules = {
 		AdminWebModule.NAME,
@@ -63,11 +61,6 @@ public class PlatformTestApplication extends SpringBootServletInitializer
 
 	@Bean
 	public AcrossHibernateJpaModule acrossHibernateJpaModule() {
-		AcrossHibernateJpaModule acrossHibernateJpaModule = new AcrossHibernateJpaModule();
-//		if ( "mssql-acrossplatform".equals( System.getProperty( "acrossTest.datasource" ) ) ) {
-//			acrossHibernateJpaModule.setHibernateProperty( AvailableSettings.DIALECT,
-//			                                               SQLServer2008Dialect.class.getName() );
-//		}
-		return acrossHibernateJpaModule;
+		return new AcrossHibernateJpaModule();
 	}
 }

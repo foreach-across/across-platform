@@ -32,7 +32,6 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author Marc Vanbrabant
  * @since 2.0.0
  */
-@EnableWebSecurity
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = PlatformTestApplication.class)
 public class ITPlatformTestApplication
