@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-com.foreach.across:platform:pom:5.5-SNAPSHOT
-=======
 com.foreach.across:platform:pom:dev-SNAPSHOT
->>>>>>> origin/5.4

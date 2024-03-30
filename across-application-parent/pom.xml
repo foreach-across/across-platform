@@ -79,9 +79,9 @@
 		<!-- https://www.cve.org/CVERecord?id=CVE-2022-22965: Spring remote code execution vulnerability: -->
 		<!-- https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement: -->
 		<spring-framework.version>5.3.33</spring-framework.version>
-		<spring-security.version>5.6.12</spring-security.version>
+		<!--spring-security.version>5.6.12</spring-security.version-->
 		<!-- https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative: -->
-		<tomcat.version>9.0.84</tomcat.version>
+		<tomcat.version>9.0.86</tomcat.version>
 		<!-- keep in line with across-core-dependencies -->
 		<liquibase.version>4.9.1</liquibase.version>
 		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
