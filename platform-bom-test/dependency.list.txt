@@ -91,9 +91,9 @@ org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile
 org.apache.sshd:sshd-common:jar:2.10.0:compile
 org.apache.sshd:sshd-core:jar:2.10.0:compile
 org.apache.sshd:sshd-sftp:jar:2.10.0:compile
-org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.84:compile
-org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.84:compile
-org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.84:compile
+org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.86:compile
+org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.86:compile
+org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.86:compile
 org.apache.xmlgraphics:xmlgraphics-commons:jar:1.4:compile
 org.apiguardian:apiguardian-api:jar:1.1.2:compile
 org.aspectj:aspectjrt:jar:1.9.7:compile

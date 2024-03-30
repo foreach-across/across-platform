@@ -209,6 +209,6 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |     \- org.latencyutils:LatencyUtils:jar:2.0.3:runtime
 \- org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.18:compile
    +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
-   +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.84:compile
-   +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.84:compile
-   \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.84:compile
+   +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.86:compile
+   +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.86:compile
+   \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.86:compile
