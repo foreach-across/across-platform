@@ -18,7 +18,6 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
-import org.springframework.security.acls.model.ObjectIdentity;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.client.ResponseErrorHandler;
@@ -225,19 +224,6 @@ public class ITPlatformTestApplication
 		assertEquals( 1, doc.select( "input[name=password]" ).size() );
 		assertTrue( !loginPage.getBody().contains( "sec:authorize" ) );
 		assertTrue( !loginPage.getBody().contains( "isAuthenticated()" ) );
-	}
-
-	@Test
-	public void springSecurityAclEntriesAreCreatedAndReturned() {
-		RestTemplate restTemplate = restTemplate();
-
-		ResponseEntity<CustomObjectIdentity> objectIdentityResponseEntity = restTemplate.getForEntity(
-				url( "/acl/dummy group" ), CustomObjectIdentity.class );
-		assertEquals( HttpStatus.OK, objectIdentityResponseEntity.getStatusCode() );
-		ObjectIdentity body = objectIdentityResponseEntity.getBody();
-		assertEquals( Group.class.getName(), body.getType() );
-		Group group = groupService.getGroupByName( "dummy group" ).orElse( null );
-		assertEquals( group.getId(), body.getIdentifier() );
 	}
 
 	@Test
@@ -465,27 +451,4 @@ public class ITPlatformTestApplication
 
 	}
 
-	public static class CustomObjectIdentity implements ObjectIdentity
-	{
-		private String type;
-		private Long identifier;
-
-		@Override
-		public Serializable getIdentifier() {
-			return identifier;
-		}
-
-		public void setIdentifier( Long identifier ) {
-			this.identifier = identifier;
-		}
-
-		@Override
-		public String getType() {
-			return type;
-		}
-
-		public void setType( String type ) {
-			this.type = type;
-		}
-	}
 }

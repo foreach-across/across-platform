@@ -12,7 +12,6 @@ import com.foreach.across.modules.hibernate.jpa.AcrossHibernateJpaModule;
 import com.foreach.across.modules.ldap.LdapModule;
 import com.foreach.across.modules.logging.LoggingModule;
 import com.foreach.across.modules.oauth2.OAuth2Module;
-import com.foreach.across.modules.spring.security.acl.SpringSecurityAclModule;
 import com.foreach.across.modules.user.UserModule;
 import com.foreach.across.modules.webcms.WebCmsModule;
 import com.foreach.across.test.support.config.ResetDatabaseConfigurer;
@@ -45,7 +44,6 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 		//ImageServerCoreModule.NAME,
 		LdapModule.NAME,
 		LoggingModule.NAME,
-		SpringSecurityAclModule.NAME,
 		UserModule.NAME,
 		WebCmsModule.NAME,
 }

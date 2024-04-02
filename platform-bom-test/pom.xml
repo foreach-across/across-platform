@@ -237,10 +237,6 @@
 		</dependency>
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>spring-security-acl-module</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>spring-security-module</artifactId>
 		</dependency>
 		<dependency>
