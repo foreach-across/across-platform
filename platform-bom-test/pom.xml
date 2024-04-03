@@ -227,14 +227,26 @@
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>logging-module</artifactId>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>oauth2-module</artifactId>
 		</dependency>
+		-->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+		<!--
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>properties-module</artifactId>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>spring-security-module</artifactId>
@@ -261,10 +273,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ojdbc8</artifactId>

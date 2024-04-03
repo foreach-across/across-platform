@@ -9,7 +9,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 /**
  * @author Marc Vanbrabant
  */
-@ModuleConfiguration(OAuth2Module.NAME)
+//@ModuleConfiguration(OAuth2Module.NAME)
 public class TokenEndpointsConfigurer extends AuthorizationServerConfigurerAdapter
 {
 	@Override

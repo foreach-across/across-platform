@@ -2,13 +2,15 @@ package com.foreach.across.modules.platform.extensions;
 
 import com.foreach.across.core.annotations.ModuleConfiguration;
 import com.foreach.across.modules.oauth2.OAuth2Module;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.security.web.util.matcher.OrRequestMatcher;
 
-@ModuleConfiguration(OAuth2Module.NAME)
+//@ModuleConfiguration(OAuth2Module.NAME)
+//@Configuration
 public class ApiResourcesConfiguration extends ResourceServerConfigurerAdapter
 {
 	@Override

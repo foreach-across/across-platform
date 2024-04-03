@@ -16,11 +16,11 @@ import java.util.HashSet;
 /**
  * @author Marc Vanbrabant
  */
-@Installer(
-		description = "Installs a dummy client id.",
-		version = 1,
-		phase = InstallerPhase.AfterModuleBootstrap
-)
+//@Installer(
+//		description = "Installs a dummy client id.",
+//		version = 1,
+//		phase = InstallerPhase.AfterModuleBootstrap
+//)
 public class ClientInstaller extends AcrossLiquibaseInstaller
 {
 
