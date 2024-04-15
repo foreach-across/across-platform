@@ -23,7 +23,6 @@ com.foreach.across.modules:imageserver-client:jar:dev-SNAPSHOT:compile
 com.foreach.across.modules:imageserver-core:jar:dev-SNAPSHOT:compile
 com.foreach.across.modules:ldap-module:jar:dev-SNAPSHOT:compile
 com.foreach.across.modules:logging-module:jar:dev-SNAPSHOT:compile
-com.foreach.across.modules:oauth2-module:jar:dev-SNAPSHOT:compile
 com.foreach.across.modules:properties-module:jar:dev-SNAPSHOT:compile
 com.foreach.across.modules:spring-security-module:jar:dev-SNAPSHOT:compile
 com.foreach.across.modules:user-module:jar:dev-SNAPSHOT:compile
@@ -144,7 +143,6 @@ org.slf4j:slf4j-api:jar:1.7.36:compile
 org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.18:compile
 org.springframework.boot:spring-boot-actuator:jar:2.7.18:compile
 org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
-org.springframework.boot:spring-boot-devtools:jar:2.7.18:compile
 org.springframework.boot:spring-boot-starter-actuator:jar:2.7.18:compile
 org.springframework.boot:spring-boot-starter-json:jar:2.7.18:compile
 org.springframework.boot:spring-boot-starter-logging:jar:2.7.18:compile
@@ -158,7 +156,6 @@ org.springframework.boot:spring-boot:jar:2.7.18:compile
 org.springframework.data:spring-data-commons:jar:2.7.18:compile
 org.springframework.data:spring-data-jpa:jar:2.7.18:compile
 org.springframework.ldap:spring-ldap-core:jar:2.4.1:compile
-org.springframework.security.oauth:spring-security-oauth2:jar:2.5.0.RELEASE:compile
 org.springframework.security:spring-security-config:jar:5.8.11:compile
 org.springframework.security:spring-security-core:jar:5.8.11:compile
 org.springframework.security:spring-security-crypto:jar:5.8.11:compile

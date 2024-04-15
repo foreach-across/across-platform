@@ -12,6 +12,7 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  |  +- org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE:compile
 |  |  +- org.springframework:spring-webmvc:jar:5.3.33:compile
 |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
+|  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
 |  |  \- org.yaml:snakeyaml:jar:1.30:compile
 |  \- com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
 |     +- com.foreach.libs:common-concurrent:jar:1.1:compile
@@ -117,10 +118,8 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  \- org.springframework.security:spring-security-ldap:jar:5.8.11:compile
 +- com.foreach.across.modules:logging-module:jar:dev-SNAPSHOT:compile
 |  \- com.foreach.libs:common-web:jar:1.1:compile
-+- com.foreach.across.modules:oauth2-module:jar:dev-SNAPSHOT:compile
-|  +- org.springframework.security.oauth:spring-security-oauth2:jar:2.5.0.RELEASE:compile
-|  |  \- commons-codec:commons-codec:jar:1.15:compile
-|  \- org.aspectj:aspectjweaver:jar:1.9.7:compile
++- commons-codec:commons-codec:jar:1.15:compile
++- org.aspectj:aspectjweaver:jar:1.9.7:compile
 +- com.foreach.across.modules:properties-module:jar:dev-SNAPSHOT:compile
 +- com.foreach.across.modules:spring-security-module:jar:dev-SNAPSHOT:compile
 |  +- org.springframework.security:spring-security-core:jar:5.8.11:compile
@@ -151,6 +150,7 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  +- com.zaxxer:HikariCP:jar:4.0.3:compile
 |  +- org.springframework:spring-test:jar:5.3.33:compile
 |  +- org.springframework.boot:spring-boot-test:jar:2.7.18:compile
+|  |  \- org.springframework.boot:spring-boot:jar:2.7.18:compile
 |  +- org.xmlunit:xmlunit-matchers:jar:2.9.1:compile
 |  |  \- org.hamcrest:hamcrest-core:jar:2.2:compile
 |  +- org.mockito:mockito-core:jar:4.5.1:compile
@@ -191,9 +191,6 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  +- org.springframework:spring-core:jar:5.3.33:compile
 |  |  \- org.springframework:spring-jcl:jar:5.3.33:compile
 |  \- org.xmlunit:xmlunit-core:jar:2.9.1:compile
-+- org.springframework.boot:spring-boot-devtools:jar:2.7.18:compile
-|  +- org.springframework.boot:spring-boot:jar:2.7.18:compile
-|  \- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
 +- com.oracle.database.jdbc:ojdbc8:jar:21.5.0.0:test
 +- com.mysql:mysql-connector-j:jar:8.0.33:test
 +- org.postgresql:postgresql:jar:42.3.8:test
