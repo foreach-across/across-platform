@@ -1,7 +1,5 @@
 package com.foreach.across.modules.platform.application.config;
 
-import com.foreach.across.modules.debugweb.DebugWebModuleSettings;
-import com.foreach.across.modules.debugweb.config.DebugWebSecurityConfiguration;
 import com.foreach.across.modules.platform.application.controllers.PreAuthorizedController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,5 +15,4 @@ public class PlatformTestApplicationControllerConfiguration
 	public PreAuthorizedController preAuthorizedController() {
 		return new PreAuthorizedController();
 	}
-
 }
