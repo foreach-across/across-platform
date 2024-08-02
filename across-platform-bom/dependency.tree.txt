@@ -1,1 +1,1 @@
-com.foreach.across:across-platform-bom:pom:5.5-SNAPSHOT
+com.foreach.across:across-platform-bom:pom:dev-SNAPSHOT
