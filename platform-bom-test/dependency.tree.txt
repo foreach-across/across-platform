@@ -15,7 +15,7 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
 |  |  \- org.yaml:snakeyaml:jar:1.30:compile
 |  \- com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
-|     +- com.foreach.libs:common-concurrent:jar:1.1:compile
+|     +- com.foreach.libs:common-concurrent:jar:2.0.0-beta-1:compile
 |     +- org.springframework:spring-context:jar:5.3.34:compile
 |     +- org.springframework:spring-jdbc:jar:5.3.34:compile
 |     +- ch.qos.logback:logback-classic:jar:1.2.13:compile
@@ -57,9 +57,8 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  +- org.thymeleaf.extras:thymeleaf-extras-springsecurity5:jar:3.0.5.RELEASE:compile
 |  \- org.webjars.bower:toastr:jar:2.1.2:compile
 +- com.foreach.across.modules:application-info-module:jar:dev-SNAPSHOT:compile
-|  \- com.foreach.libs:common-spring:jar:1.1:compile
-|     \- javax.mail:mail:jar:1.4.1:compile
-|        \- javax.activation:activation:jar:1.1:compile
+|  \- com.foreach.libs:common-spring:jar:2.0.0-beta-1:compile
+|     \- javax.mail:javax.mail-api:jar:1.6.2:compile
 +- com.foreach.across.modules:bootstrap-ui-module:jar:dev-SNAPSHOT:compile
 |  +- org.webjars:jquery:jar:3.4.1:compile
 |  +- org.webjars:bootstrap:jar:4.3.1:compile
@@ -92,9 +91,15 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  +- org.atteo:evo-inflector:jar:1.2.2:compile
 |  \- org.webjars:lodash:jar:4.17.4:compile
 +- com.foreach.across.modules:file-manager-module:jar:dev-SNAPSHOT:compile
-|  \- org.apache.sshd:sshd-sftp:jar:2.12.1:compile
-|     \- org.apache.sshd:sshd-core:jar:2.12.1:compile
-|        \- org.apache.sshd:sshd-common:jar:2.12.1:compile
+|  +- org.apache.sshd:sshd-sftp:jar:2.12.1:compile
+|  |  \- org.apache.sshd:sshd-core:jar:2.12.1:compile
+|  |     \- org.apache.sshd:sshd-common:jar:2.12.1:compile
+|  \- com.querydsl:querydsl-apt:jar:5.0.0:compile
+|     \- com.querydsl:querydsl-codegen:jar:5.0.0:compile
+|        +- com.querydsl:codegen-utils:jar:5.0.0:compile
+|        |  \- org.eclipse.jdt:ecj:jar:3.26.0:compile
+|        +- javax.inject:javax.inject:jar:1:compile
+|        \- io.github.classgraph:classgraph:jar:4.8.108:compile
 +- com.foreach.across.modules:imageserver-admin:jar:dev-SNAPSHOT:compile
 +- com.foreach.across.modules:imageserver-client:jar:dev-SNAPSHOT:compile
 |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile
@@ -113,7 +118,7 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  +- org.springframework.ldap:spring-ldap-core:jar:2.4.1:compile
 |  \- org.springframework.security:spring-security-ldap:jar:5.8.12:compile
 +- com.foreach.across.modules:logging-module:jar:dev-SNAPSHOT:compile
-|  \- com.foreach.libs:common-web:jar:1.1:compile
+|  \- com.foreach.libs:common-web:jar:2.0.0-beta-1:compile
 +- commons-codec:commons-codec:jar:1.15:compile
 +- org.aspectj:aspectjweaver:jar:1.9.7:compile
 +- com.foreach.across.modules:properties-module:jar:dev-SNAPSHOT:compile
@@ -126,12 +131,6 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  \- org.springframework.security:spring-security-config:jar:5.8.12:compile
 +- com.foreach.across.modules:user-module:jar:dev-SNAPSHOT:compile
 |  +- org.apache.commons:commons-collections4:jar:4.4:compile
-|  +- com.querydsl:querydsl-apt:jar:5.0.0:compile
-|  |  \- com.querydsl:querydsl-codegen:jar:5.0.0:compile
-|  |     +- com.querydsl:codegen-utils:jar:5.0.0:compile
-|  |     |  \- org.eclipse.jdt:ecj:jar:3.26.0:compile
-|  |     +- javax.inject:javax.inject:jar:1:compile
-|  |     \- io.github.classgraph:classgraph:jar:4.8.108:compile
 |  \- org.aspectj:aspectjrt:jar:1.9.7:compile
 +- com.foreach.across.modules:web-cms-module:jar:dev-SNAPSHOT:compile
 |  +- org.webjars.npm:codemirror-minified:jar:5.44.0:compile
