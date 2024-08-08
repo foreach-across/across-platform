@@ -15,7 +15,7 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
 |  |  \- org.yaml:snakeyaml:jar:1.30:compile
 |  \- com.foreach.across:across-core:jar:dev-SNAPSHOT:compile
-|     +- com.foreach.libs:common-concurrent:jar:2.0.0-beta-1:compile
+|     +- com.foreach.libs:common-concurrent:jar:2.0.0-beta-2:compile
 |     +- org.springframework:spring-context:jar:5.3.34:compile
 |     +- org.springframework:spring-jdbc:jar:5.3.34:compile
 |     +- ch.qos.logback:logback-classic:jar:1.2.13:compile
@@ -57,7 +57,7 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  +- org.thymeleaf.extras:thymeleaf-extras-springsecurity5:jar:3.0.5.RELEASE:compile
 |  \- org.webjars.bower:toastr:jar:2.1.2:compile
 +- com.foreach.across.modules:application-info-module:jar:dev-SNAPSHOT:compile
-|  \- com.foreach.libs:common-spring:jar:2.0.0-beta-1:compile
+|  \- com.foreach.libs:common-spring:jar:2.0.0-beta-2:compile
 |     \- javax.mail:javax.mail-api:jar:1.6.2:compile
 +- com.foreach.across.modules:bootstrap-ui-module:jar:dev-SNAPSHOT:compile
 |  +- org.webjars:jquery:jar:3.4.1:compile
@@ -118,7 +118,7 @@ com.foreach.across:platform-bom-test:war:dev-SNAPSHOT
 |  +- org.springframework.ldap:spring-ldap-core:jar:2.4.1:compile
 |  \- org.springframework.security:spring-security-ldap:jar:5.8.12:compile
 +- com.foreach.across.modules:logging-module:jar:dev-SNAPSHOT:compile
-|  \- com.foreach.libs:common-web:jar:2.0.0-beta-1:compile
+|  \- com.foreach.libs:common-web:jar:2.0.0-beta-2:compile
 +- commons-codec:commons-codec:jar:1.15:compile
 +- org.aspectj:aspectjweaver:jar:1.9.7:compile
 +- com.foreach.across.modules:properties-module:jar:dev-SNAPSHOT:compile
