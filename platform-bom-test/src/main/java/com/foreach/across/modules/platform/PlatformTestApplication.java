@@ -7,14 +7,15 @@ import com.foreach.across.modules.applicationinfo.ApplicationInfoModule;
 import com.foreach.across.modules.debugweb.DebugWebModule;
 import com.foreach.across.modules.ehcache.EhcacheModule;
 import com.foreach.across.modules.entity.EntityModule;
-import com.foreach.across.modules.filemanager.FileManagerModule;
 import com.foreach.across.modules.hibernate.jpa.AcrossHibernateJpaModule;
 import com.foreach.across.modules.ldap.LdapModule;
 import com.foreach.across.modules.logging.LoggingModule;
 import com.foreach.across.modules.user.UserModule;
-import com.foreach.across.modules.webcms.WebCmsModule;
 import com.foreach.across.test.support.config.ResetDatabaseConfigurer;
 import com.foreach.across.test.support.config.TestDataSourceConfigurer;
+import com.foreach.common.filemanager.services.DateFormatPathGenerator;
+import com.foreach.common.filemanager.services.FileManagerImpl;
+import com.foreach.common.filemanager.services.LocalFileRepositoryFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
@@ -29,14 +30,9 @@ import org.springframework.context.annotation.Import;
 		DebugWebModule.NAME,
 		EhcacheModule.NAME,
 		EntityModule.NAME,
-		FileManagerModule.NAME,
-		// Error: "Unable to resolve module ImageServerAdminWebModule":
-		//ImageServerAdminWebModule.NAME,
-		//ImageServerCoreModule.NAME,
 		LdapModule.NAME,
 		LoggingModule.NAME,
-		UserModule.NAME,
-		WebCmsModule.NAME,
+		UserModule.NAME
 }
 )
 @Import({ TestDataSourceConfigurer.class, ResetDatabaseConfigurer.class, LocaleConfigurer.class })
@@ -61,4 +57,13 @@ public class PlatformTestApplication extends SpringBootServletInitializer
 	public AcrossHibernateJpaModule acrossHibernateJpaModule() {
 		return new AcrossHibernateJpaModule();
 	}
+
+	@Bean
+	FileManagerImpl fileManager() {
+		FileManagerImpl fileManager = new FileManagerImpl();
+		LocalFileRepositoryFactory repositoryFactory = new LocalFileRepositoryFactory( "/tmp", DateFormatPathGenerator.YEAR_MONTH_DAY );
+		fileManager.setFileRepositoryFactory( repositoryFactory );
+		return fileManager;
+	}
+
 }

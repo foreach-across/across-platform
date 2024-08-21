@@ -70,7 +70,6 @@
 		<across-base-modules.version>dev-SNAPSHOT</across-base-modules.version>
 		<across-entity-admin-modules.version>dev-SNAPSHOT</across-entity-admin-modules.version>
 		<across-user-auth-modules.version>dev-SNAPSHOT</across-user-auth-modules.version>
-		<across-media-modules.version>dev-SNAPSHOT</across-media-modules.version>
 
 		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
 		<flatten-maven-plugin.version>1.4.1</flatten-maven-plugin.version>
@@ -160,11 +159,6 @@
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
-				<artifactId>file-manager-module</artifactId>
-				<version>${across-media-modules.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>bootstrap-ui-module</artifactId>
 				<version>${across-entity-admin-modules.version}</version>
 			</dependency>
@@ -172,11 +166,6 @@
 				<groupId>com.foreach.across.modules</groupId>
 				<artifactId>ldap-module</artifactId>
 				<version>${across-user-auth-modules.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.across.modules</groupId>
-				<artifactId>web-cms-module</artifactId>
-				<version>${across-media-modules.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.foreach.across.modules</groupId>
@@ -189,22 +178,6 @@
 				<version>${across-entity-admin-modules.version}</version>
 			</dependency>
 
-			<!-- ImageServer modules -->
-			<dependency>
-				<groupId>com.foreach.imageserver</groupId>
-				<artifactId>imageserver-core</artifactId>
-				<version>${across-media-modules.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.imageserver</groupId>
-				<artifactId>imageserver-admin</artifactId>
-				<version>${across-media-modules.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.foreach.imageserver</groupId>
-				<artifactId>imageserver-client</artifactId>
-				<version>${across-media-modules.version}</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 

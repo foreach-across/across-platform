@@ -3,7 +3,7 @@ package com.foreach.across.modules.platform;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
@@ -13,7 +13,7 @@ import java.util.Locale;
  * @author Marc Vanbrabant
  */
 @Configuration
-public class LocaleConfigurer extends WebMvcConfigurerAdapter
+public class LocaleConfigurer implements WebMvcConfigurer
 {
 	@Override
 	public void addInterceptors( InterceptorRegistry registry ) {

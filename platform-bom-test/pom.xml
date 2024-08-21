@@ -38,7 +38,6 @@
 	</licenses>
 
 	<properties>
-		<jacoco-maven-plugin.version>0.7.4.201502262128</jacoco-maven-plugin.version>
 		<maven.deploy.skip>true</maven.deploy.skip>
 		<maven.javadoc.skip>true</maven.javadoc.skip>
 	</properties>
@@ -205,28 +204,18 @@
 		</dependency>
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>file-manager-module</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>imageserver-admin</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>imageserver-client</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>imageserver-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>ldap-module</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>logging-module</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.foreach.libs</groupId>
+			<artifactId>common-file-manager</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
@@ -247,10 +236,6 @@
 			<groupId>com.foreach.across.modules</groupId>
 			<artifactId>user-module</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.foreach.across.modules</groupId>
-			<artifactId>web-cms-module</artifactId>
-		</dependency>
 
 		<dependency>
 			<groupId>com.foreach.across</groupId>
@@ -258,8 +243,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

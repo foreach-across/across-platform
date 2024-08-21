@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
-         updateCheck="false" monitoring="autodetect" dynamicConfig="false">
+<config xmlns="http://www.ehcache.org/v3">
 
-    <cache name="securityAclCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
-           memoryStoreEvictionPolicy="LRU">
+    <cache alias="securityPrincipalCache">
+        <resources>
+            <heap unit="entries">10</heap>
+        </resources>
     </cache>
-    <cache name="securityPrincipalCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
-           memoryStoreEvictionPolicy="LRU">
+    <cache alias="userCache">
+        <resources>
+            <heap unit="entries">10</heap>
+        </resources>
     </cache>
-    <cache name="oauth2ClientCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
-           memoryStoreEvictionPolicy="LRU">
+    <cache alias="userPropertiesCache">
+        <resources>
+            <heap unit="entries">10</heap>
+        </resources>
     </cache>
-    <cache name="oauth2AuthenticationByAccessTokenCache" statistics="true" maxElementsInMemory="10"
-           timeToLiveSeconds="3600"
-           memoryStoreEvictionPolicy="LRU">
+    <cache alias="groupCache">
+        <resources>
+            <heap unit="entries">10</heap>
+        </resources>
     </cache>
-    <cache name="userCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
-           memoryStoreEvictionPolicy="LRU">
+    <cache alias="groupPropertiesCache">
+        <resources>
+            <heap unit="entries">10</heap>
+        </resources>
     </cache>
-    <cache name="userPropertiesCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
-           memoryStoreEvictionPolicy="LRU">
-    </cache>
-    <cache name="groupCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
-           memoryStoreEvictionPolicy="LRU">
-    </cache>
-    <cache name="groupPropertiesCache" statistics="true" maxElementsInMemory="10" timeToLiveSeconds="3600"
-           memoryStoreEvictionPolicy="LRU">
-    </cache>
-</ehcache>
+
+</config>

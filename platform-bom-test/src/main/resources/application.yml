@@ -22,10 +22,3 @@ logging:
   method:
     enabled: true
     default-minimum-duration: 5
-
-springMobile:
-  device-resolver-registration: interceptor
-
-userModule:
-  enable-default-acls: true
-

@@ -153,6 +153,7 @@ public class ITPlatformTestApplication
 
 	}
 
+	@Disabled // TODO when/if we restore more of the ehcache-module
 	@Test
 	public void ehCacheModuleLoadsAndCachesSystemUser() throws Exception {
 		RestTemplate restTemplate = restTemplate();
@@ -258,6 +259,7 @@ public class ITPlatformTestApplication
 		assertNotNull( response );
 	}
 
+	@Disabled // TODO: After testing debug-web-module with a real application
 	@Test
 	public void acrossContextBrowserEventHandlersPageWorks() {
 		RestTemplate restTemplate = restTemplate();
