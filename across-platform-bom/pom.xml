@@ -42,18 +42,6 @@
 		</developer>
 	</developers>
 
-	<repositories>
-		<repository>
-			<id>across</id>
-			<name>Across Repository</name>
-			<url>https://repository.antwerpen.io-external.com/nexus/repository/public/</url>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>interval:10</updatePolicy>
-			</snapshots>
-		</repository>
-	</repositories>
-
 	<scm>
 		<url>https://github.com/foreach-across/across-platform</url>
 	</scm>
@@ -72,8 +60,8 @@
 		<across-user-auth-modules.version>dev-SNAPSHOT</across-user-auth-modules.version>
 		<across-media-modules.version>dev-SNAPSHOT</across-media-modules.version>
 
-		<maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
-		<flatten-maven-plugin.version>1.4.1</flatten-maven-plugin.version>
+		<maven-gpg-plugin.version>3.2.3</maven-gpg-plugin.version>
+		<flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
 	</properties>
 
 	<dependencyManagement>
