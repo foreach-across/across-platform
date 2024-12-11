@@ -20,9 +20,9 @@
 
 	<parent>
 		<groupId>com.foreach.across</groupId>
-		<artifactId>across-application-parent</artifactId>
-		<version>${revision}</version>
-		<relativePath>../across-application-parent</relativePath>
+		<artifactId>across-core-dependencies</artifactId>
+		<version>dev-SNAPSHOT</version>
+		<relativePath/>
 	</parent>
 
 	<artifactId>platform-bom-test</artifactId>
@@ -147,6 +147,18 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.foreach.across</groupId>
+				<artifactId>across-platform-bom</artifactId>
+				<version>${project.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<dependencies>
 
@@ -283,7 +295,6 @@
 			<!-- jsoup HTML parser library @ http://jsoup.org/ -->
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
-			<version>1.9.1</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

@@ -75,12 +75,14 @@
 		<!--<liquibase.version>4.17.0</liquibase.version>-->
 		<!-- Across properties -->
 		<maven.deploy.skip>false</maven.deploy.skip>
-		<foreach-common-bom.version>3.0-SNAPSHOT</foreach-common-bom.version>
+		<foreach-common-bom.version>3.0.0</foreach-common-bom.version>
 		<commons-collections4.version>4.4</commons-collections4.version>
-		<testcontainers-bom.version>1.19.8</testcontainers-bom.version>
+		<dozer-spring-boot-starter.version>6.5.2</dozer-spring-boot-starter.version>
 		<commons-io.version>2.18.0</commons-io.version>
 		<maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
 		<flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
+		<httpclient4.version>4.5.14</httpclient4.version>
+		<testcontainers-bom.version>1.20.4</testcontainers-bom.version>
 		<jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
 		<!-- Spring Boot now comes with Lombok 1.18.22, but there is no corresponding version
 			 of the (de)lombok-maven-plugin, so we stay with the old version for now:
