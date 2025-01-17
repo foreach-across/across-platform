@@ -1,1 +1,1 @@
-com.foreach.across:across-module-parent:pom:dev-SNAPSHOT
+com.foreach.across:across-module-parent:pom:6.0.1
